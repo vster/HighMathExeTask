@@ -1,6 +1,6 @@
 syms x
 
-y=2^(3*x)/3^(2*x)
+y=sqrt(1-3*x^2)
 pretty(y)
 subplot(2,1,1)
 ezplot(y)

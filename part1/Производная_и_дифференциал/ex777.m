@@ -1,6 +1,6 @@
 syms x
 
-y=2^(3*x)/3^(2*x)
+y=x^2*sin(x)+2*x*cos(x)-2*sin(x)
 pretty(y)
 subplot(2,1,1)
 ezplot(y)
