@@ -1,0 +1,3 @@
+syms x y z a b
+[sol_x,sol_y] = solve(a^2*x-2*(a^2+b^2)*y+b^2*z==0,...
+                      2*x+2*y-3*z==0)
