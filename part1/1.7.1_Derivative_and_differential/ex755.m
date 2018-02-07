@@ -9,3 +9,5 @@ dy=diff(y)
 subplot(2,1,2)
 ezplot(dy)
 grid
+
+y2=int(dy)
