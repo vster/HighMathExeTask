@@ -1,5 +1,5 @@
 syms t
-x=exp(-t)*sin(t)
-y=exp(t)*cos(t)
+x=cosh(t)
+y=sinh(t)
 Dyx=diff(y,t)/diff(x,t)
 Dyx=simplify(Dyx)
