@@ -1,8 +1,8 @@
 syms x
 
-y=atan(sqrt(4*x^2-1))
+y=exp(-x)-sin(exp(-x))*cos(exp(-x));
 pretty(y)
-subplot(2,1,1)
+subplot(3,1,1)
 ezplot(y)
 grid
 
@@ -10,9 +10,12 @@ dy=diff(y)
 dy=simplify(dy)
 pretty(dy)
 
-subplot(2,1,2)
+subplot(3,1,2)
 ezplot(dy)
 grid
 
 y2=simplify(int(dy))
 pretty(y2)
+subplot(3,1,3)
+ezplot(y2)
+grid

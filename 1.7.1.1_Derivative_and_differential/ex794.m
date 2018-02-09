@@ -1,8 +1,8 @@
-syms x a
+syms x
 
-y=atan(x/sqrt(a^2-x^2))
+y=atan((1-sqrt(1-x^2))/x)
 pretty(y)
-subplot(2,1,1)
+subplot(3,1,1)
 ezplot(y)
 grid
 
@@ -10,9 +10,12 @@ dy=diff(y)
 dy=simplify(dy)
 pretty(dy)
 
-subplot(2,1,2)
+subplot(3,1,2)
 ezplot(dy)
 grid
 
 y2=simplify(int(dy))
 pretty(y2)
+subplot(3,1,3)
+ezplot(y2)
+grid
