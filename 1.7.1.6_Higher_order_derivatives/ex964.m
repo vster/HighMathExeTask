@@ -1,6 +1,5 @@
 syms x n;
-y=2^x
+y=x^n*sqrt(x)
 for n=1:6
     dy=simplify(diff(y,x,n))
 end
-

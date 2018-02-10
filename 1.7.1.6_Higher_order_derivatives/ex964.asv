@@ -1,0 +1,5 @@
+syms x n;
+n=1:6
+y=x^n*sqrt(x)
+for
+dy=simplify(diff(y,x,n))
