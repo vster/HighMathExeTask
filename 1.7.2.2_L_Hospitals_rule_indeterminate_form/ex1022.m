@@ -1,0 +1,10 @@
+syms x
+y=(tan(x))^(2*cos(x))
+z=log(y)
+z=2*cos(x)*log(tan(x))
+num=2*log(tan(x))
+denom=1/cos(x)
+lim1=limit(num/denom,x,pi/2)
+lim2=limit(diff(num,x)/diff(denom,x),x,pi/2)
+exp(lim1)
+exp(lim2)
