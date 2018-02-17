@@ -11,6 +11,7 @@ dzyM=subs(dzy,[x y],M)
 gdz=[dzxM dzyM]
 
 dzl=sqrt(gdz(1)^2+gdz(2)^2)
+dzl2=sqrt(sum(gdz.*gdz))
 
 gdz2=gradient(z)
 gdz2M=subs(gdz2,[x y],M)
