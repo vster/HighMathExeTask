@@ -1,28 +1,23 @@
 syms x;
-y=x^2/(x^2-4)
+y=log(x)/sqrt(x)
 
-% 1
-assume(x,'real')
-assume(x~=2 & x~=-2)
+%1
+assume(x>0)
 
-ezplot(y)
+ezplot(y,[0 20])
 hold on
 
 % 3
 s_x=solve(y)
 
-%4
-xv1=-2
-yv1=limit(y,x,xv1,'left')
-xv2=2
-yv2=limit(y,x,xv2,'right')
+xv1=0
+yv1=limit(y,x,xv1,'right')
 
-plot([xv1 xv1],[-5 5],'r')
-plot([xv2 xv2],[-5 5],'r')
+plot([xv1 xv1],[-2 2],'r')
 
 k1=limit(y/x,x,inf)
 b1=limit(y-k1*x,x,inf)
-x1=-7:7
+x1=-1:7
 y1=k1*x1+b1
 plot(x1,y1,'g')
 
@@ -37,3 +32,4 @@ s_d2x=solve(d2y)
 
 grid
 hold off
+
