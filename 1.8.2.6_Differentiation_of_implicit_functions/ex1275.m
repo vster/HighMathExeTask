@@ -1,7 +1,7 @@
 syms x y;
 F(x,y)=y-sin(y)-x
 
-ezplot(F)
+ezsurf(F)
 
 DFx=diff(F,x)
 DFy=diff(F,y)
