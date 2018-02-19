@@ -1,5 +1,9 @@
 syms x
 y=2/3*x^5-1/9*x^3
+
+ezplot(y)
+grid
+
 dy=simplify(diff(y))
 alpha=atan(subs(dy,x,1))
 digits(5)
