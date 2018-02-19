@@ -2,6 +2,8 @@ syms x y
 z=x^2-y^2
 M=[1 1]
 
+ezsurf(z)
+
 alfa=60*pi/180
 
 dzx=diff(z,x)

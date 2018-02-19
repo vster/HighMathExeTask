@@ -3,6 +3,8 @@ z=x^2-x*y+y^2;
 M=[1 1]
 L=[6 8]
 
+ezsurf(z)
+
 LL=sqrt(sum(L.*L))
 cos_a=L(1)/LL
 sin_a=L(2)/LL

@@ -2,6 +2,8 @@ syms x y;
 z=log(x^2+y^2)
 M=[3 4]
 
+ezsurf(z)
+
 dzx=diff(z,x)
 dzy=diff(z,y)
 
