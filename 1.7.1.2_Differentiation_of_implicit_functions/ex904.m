@@ -1,7 +1,7 @@
 syms x y;
 F(x,y)=sin(y-x^2)-log(y-x^2)+2*sqrt(y-x^2)-3
 
-ezplot(F)
+ezsurf(F)
 
 DFx=diff(F,x)
 pretty(DFx)

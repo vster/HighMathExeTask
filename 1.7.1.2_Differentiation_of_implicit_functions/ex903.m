@@ -1,7 +1,7 @@
 syms x y;
 F(x,y)=exp(x)+exp(y)-2^(x*y)-1
 
-ezplot(F)
+ezsurf(F)
 
 DFx=diff(F,x)
 pretty(DFx)

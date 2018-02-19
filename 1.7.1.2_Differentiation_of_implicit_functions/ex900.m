@@ -1,7 +1,7 @@
 syms x y;
 F(x,y)=x^4-6*x^2*y^2+9*y^4-5*x^2+15*y^2-100
 
-ezplot(F)
+ezsurf(F)
 
 DFx=diff(F,x)
 pretty(DFx)
