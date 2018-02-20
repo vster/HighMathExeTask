@@ -1,7 +1,10 @@
 syms x;
-y=3*x^(1/3)-x
+y=(x-1)*sqrt(x)
 
-ezplot(y,[-1,10])
+%1
+assume(x>0)
+
+ezplot(y)
 hold on
 
 s_x=solve(y)
@@ -15,6 +18,7 @@ plot(double(s_dx), double(s_dy),'ro')
 % 6
 d2y=simplify(diff(y,2))
 s_d2x=solve(d2y)
+s_d2y=subs(y,x,s_d2x)
 
 grid
 hold off
