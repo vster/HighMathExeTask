@@ -2,6 +2,8 @@ syms t;
 r=[1/sqrt(2)*exp(t)*sin(t);1;1/sqrt(2)*exp(t)*cos(t)]
 t0=0
 
+ezplot3(r(1),r(2),r(3))
+
 dr=simplify(diff(r,t))
 
 rM=subs(r,t,t0)
