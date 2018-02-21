@@ -1,6 +1,5 @@
 syms x y;
-F=x^3+y^4-2
-M=[1 1]
+F=x^2/25+y^2/9-1
 
 ezsurf(F)
 
@@ -10,8 +9,5 @@ DFy=diff(F,y)
 Dyx=simplify(-diff(F,x)/diff(F,y))
 pretty(Dyx)
 
-DyxM=subs(Dyx,[x y],M)
-
 % Не закончено!
 % 2-я производная неявной фукнции
-
