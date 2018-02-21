@@ -1,4 +1,7 @@
 syms t a b c x y z;
+x=cos(t)
+y=sin(t)
+z=sqrt(3)*t
 r=[cos(t);sin(t);sqrt(3)*t]
 t0=pi/2
 

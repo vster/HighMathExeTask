@@ -1,4 +1,4 @@
-syms t;
+syms t x y z;
 r=[cos(t);sin(t);2*sqrt(2)*t]
 t0=pi/4
 

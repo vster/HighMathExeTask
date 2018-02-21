@@ -1,4 +1,4 @@
-syms t;
+syms t x y z;
 r=[1/sqrt(2)*exp(t)*sin(t);1;1/sqrt(2)*exp(t)*cos(t)]
 t0=0
 
