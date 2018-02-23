@@ -6,6 +6,7 @@ y2=x^2
 ezplot(y1)
 hold on
 ezplot(y2)
+hold off
 
 dy1=diff(y1)
 dy2=diff(y2)
