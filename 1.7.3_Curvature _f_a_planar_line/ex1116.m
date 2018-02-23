@@ -1,7 +1,7 @@
 syms t;
 x(t)=exp(t)*sin(t)
 y(t)=exp(t)*cos(t)
-t=1
+t0=1
 
 %ezplot(x,y)
 
@@ -10,7 +10,11 @@ D2xt=diff(x,2)
 Dyt=diff(y,t)
 D2yt=diff(y,2)
 
-DxtM=subs(Dxt,t,1)
-D2xtM=subs(D2xt,t,1)
-DytM=subs(Dyt,t,1)
-D2ytM=subs(D2yt,t,1)
+Dxt0=subs(Dxt,t,t0)
+D2xt0=subs(D2xt,t,t0)
+Dyt0=subs(Dyt,t,t0)
+D2yt0=subs(D2yt,t,t0)
+
+k=abs(Dxt0*D2yt0-Dyt0*D2xt0)/(Dxt0^2+Dyt0^2)^(3/2)
+k=simplify(k)
+pretty(k)

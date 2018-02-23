@@ -22,9 +22,9 @@ D2yx=-x*(2*y-3*x*Dyx)*3/(4*y^4)
 pretty(D2yx)
 simplify(D2yx)
 pretty(D2yx)
-D2yxM=subs(Dyx,[x y],M)
+D2yxM=subs(D2yx,[x y],M)
 
+ksi=M(1)-(1+DyxM^2)*DyxM/D2yxM
+eta=M(2)+(1+DyxM^2)/D2yxM
 
-% Не закончено!
-% 2-я производная неявной фукнции
 

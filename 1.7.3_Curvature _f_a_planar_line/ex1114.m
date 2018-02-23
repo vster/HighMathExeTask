@@ -1,5 +1,6 @@
 syms x y;
 F=x^2/25+y^2/9-1
+M=[0 3]
 
 ezsurf(F)
 
@@ -21,5 +22,7 @@ pretty(D2yx)
 D2yx=simplify(D2yx)
 pretty(D2yx)
 
-% Не закончено!
-% 2-я производная неявной фукнции
+DyxM=subs(Dyx,[x y],M)
+D2yxM=subs(D2yx,[x y],M)
+
+k=abs(D2yxM)/(1+DyxM^2)^(3/2)

@@ -21,5 +21,9 @@ pretty(D2yx)
 D2yx=simplify(D2yx)
 pretty(D2yx)
 
-% Не закончено!
-% 2-я производная неявной фукнции
+x=y^2-1/2
+ksi=x-(1+Dyx^2)*Dyx/D2yx
+ksi=simplify(ksi)
+
+eta=y+(1+Dyx^2)/D2yx
+eta=simplify(eta)
