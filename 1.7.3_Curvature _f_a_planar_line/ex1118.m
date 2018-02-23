@@ -12,9 +12,11 @@ ksi=x-dyt*(1+dyt^2)/d2yt
 eta=y+(1+dyt^2)/d2yt
 
 ksi=simplify(ksi)
+pretty(ksi)
 eta=simplify(eta)
+pretty(eta)
 
-ezplot(x,y)
-hold on
-ezplot(ksi,eta)
-hold off
+%ezplot(x,y)
+%hold on
+%ezplot(ksi,eta)
+%hold off
