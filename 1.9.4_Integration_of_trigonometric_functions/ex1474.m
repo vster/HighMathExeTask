@@ -17,3 +17,5 @@ pretty(y2)
 subplot(3,1,3)
 ezplot(y2)
 grid
+
+c=simplify(y-y2)
