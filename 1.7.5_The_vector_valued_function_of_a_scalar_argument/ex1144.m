@@ -16,6 +16,6 @@ dr2M=subs(dr2,v,M(2))
 % len1=norm(dr1M)
 % len2=norm(dr2M)
 
-cos_a=dot(dr1M,dr2M)/(norm(len1)*norm(len2))
+cos_a=dot(dr1M,dr2M)/(norm(dr1M)*norm(dr2M))
 a=acos(cos_a)
 vpa(a)
