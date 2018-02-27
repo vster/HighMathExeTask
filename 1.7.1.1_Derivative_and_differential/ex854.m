@@ -1,6 +1,6 @@
-syms x
+syms x real
 
-y=exp(x)*2^(5*x)/3^(4*x)
+y=log((sqrt(x^4+1)-x^2)/((sqrt(x^4+1))+x^2))
 pretty(y)
 subplot(3,1,1)
 ezplot(y)

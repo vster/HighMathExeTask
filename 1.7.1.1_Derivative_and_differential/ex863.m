@@ -1,6 +1,6 @@
-syms x
+syms x real
 
-y=exp(x)*2^(5*x)/3^(4*x)
+y=x^(asin(x))
 pretty(y)
 subplot(3,1,1)
 ezplot(y)

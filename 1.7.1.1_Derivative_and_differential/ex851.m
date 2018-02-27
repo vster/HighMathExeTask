@@ -1,6 +1,6 @@
-syms x
+syms x real
 
-y=exp(x)*2^(5*x)/3^(4*x)
+y=log(tan(x/2))-x/sin(x)
 pretty(y)
 subplot(3,1,1)
 ezplot(y)
