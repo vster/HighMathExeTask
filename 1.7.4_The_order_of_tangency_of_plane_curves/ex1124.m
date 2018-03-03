@@ -1,4 +1,4 @@
-syms x;
+syms x y;
 f(x,y)=x^2+y^2-2*y
 g(x,y)=x^2+y^2-4*y
 
