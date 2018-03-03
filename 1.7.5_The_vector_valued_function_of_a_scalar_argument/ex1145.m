@@ -1,4 +1,5 @@
 syms t dt;
+% Уравнение винтовой линии
 r=[4*cos(t) 4*sin(t) 3*t]
 
 dr=diff(r)
