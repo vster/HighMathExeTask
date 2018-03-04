@@ -20,5 +20,10 @@ eq1=(xn-M(1))/DzxM
 eq2=(yn-M(2))/DzyM
 eq3=(zn-M(3))/(-1)
 
+xn=DzxM*t+M(1)
+yn=DzyM*t+M(2)
+zn=t+M(3)
+
+ezplot3(xn,yn,zn)
 
 hold off
