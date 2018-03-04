@@ -10,10 +10,17 @@ DfxM=subs(Dfx,[x y z],M)
 DfyM=subs(Dfy,[x y z],M)
 DfzM=subs(Dfz,[x y z],M)
 
+% Касательная плоскость
 pn=DfxM*(x-M(1))+DfyM*(y-M(2))+DfyM*(z-M(3))
 
-syms xn yn zn;
-eq1=(xn-M(1))/DfxM
-eq2=(yn-M(2))/DfyM
-eq3=(zn-M(3))/DfzM
+% Нормаль
+xn=DfxM*t+M(1)
+yn=DfyM*t+M(2)
+zn=DfzM*t+M(3)
+
+plot3(M(1),M(2),M(3),'ro')
+hold on
+ezplot3(xn,yn,zn,[-3,3])
+hold off
+
 

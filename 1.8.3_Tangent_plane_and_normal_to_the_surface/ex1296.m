@@ -14,5 +14,9 @@ DFxM1=subs(DFx,[x y z],M1)
 DFyM1=subs(DFy,[x y z],M1)
 DFzM1=subs(DFz,[x y z],M1)
 
+% Уравнение касательной плоскости
 pk=DFxM1*(x-M1(1))+DFyM1*(y-M1(2))+DFzM1*(z-M1(3))
 pk=simplify(pk)
+pk=simplify(pk/(2*sqrt(6)))
+
+pretty(pk)
