@@ -6,5 +6,5 @@ dr=simplify(diff(r,t))
 d2r=simplify(diff(r,t,2))
 d3r=simplify(diff(r,t,3))
 Bn=a*R
-
+% Кручение sigma винтовой линии
 sigma=simplify(dot(dr,cross(d2r,d3r))/Bn^2)

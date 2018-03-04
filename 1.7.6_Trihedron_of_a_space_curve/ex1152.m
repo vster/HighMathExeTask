@@ -7,6 +7,7 @@ drn=simplify(norm(dr))
 
 dr1=subs(dr,t,t1)
 drn1=subs(drn,t,t1)
+% Тангенциальный единичный вектор tau
 tau=dr1/drn1
 
 ezplot3(r(1),r(2),r(3))

@@ -8,6 +8,7 @@ d2r=diff(r,t,2)
 B=simplify(cross(dr, d2r))
 Bn=simplify(norm(B))
 
+% Единичный вектор бинормали beta
 beta=simplify(B/Bn)
 pretty(beta)
 

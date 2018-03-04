@@ -9,5 +9,6 @@ drn=simplify(norm(dr))
 B=simplify(cross(dr, d2r))
 Bn=simplify(norm(B))
 
+% Кривизна K кривой
 K=simplify(Bn/drn^3)
 K1=subs(K,t,t1)

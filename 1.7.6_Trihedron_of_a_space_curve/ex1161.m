@@ -5,6 +5,7 @@ t1=1
 dr=diff(r,t)
 drn=simplify(norm(dr))
 
+% Тангенциальный единичный вектор tau
 tau=simplify(dr/drn)
 pretty(tau)
 tau1=subs(tau,t,t1)
