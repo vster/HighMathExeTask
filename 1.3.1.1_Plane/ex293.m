@@ -1,4 +1,4 @@
-syms x y z;
+syms x y z lam;
 f1=x+3*y+5*z-4
 f2=x-y-2*z+7
 
