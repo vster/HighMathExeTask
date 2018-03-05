@@ -1,5 +1,5 @@
 syms t a;
-x=a*cos(t)
-y=a*sin(t)
-z=exp(x^2+y^2)
+f(t)=a*cos(t)
+g(t)=a*sin(t)
+z=exp(f^2+g^2)
 dzt=simplify(diff(z,t))
