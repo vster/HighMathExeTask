@@ -2,9 +2,10 @@ syms x y z lam;
 f1=x+y+5*z-1
 f2=2*x+3*y-z+2
 M=[3,2,1]
+R=[x,y,z]
 
 f3=f1+lam*f2
-f3M=subs(f3,[x y z],M)
+f3M=subs(f3,R,M)
 slam=solve(f3M)
 f3=subs(f3,lam,slam)
 f3=-f3*13
