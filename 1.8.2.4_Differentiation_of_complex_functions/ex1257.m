@@ -11,5 +11,5 @@ dvx=diff(vf,x)
 
 Dzx=simplify(dzu*dux+dzv*dvx)
 pretty(Dzx)
-Dzx=((tan(x)^2 + 1)*(vf*tan(x)^4 + uf))/(uf*vf*tan(x)^3)
+Dzx=simplify(((tan(x)^2 + 1)*(vf*tan(x)^4 + uf))/(uf*vf*tan(x)^3))
 pretty(Dzx)
