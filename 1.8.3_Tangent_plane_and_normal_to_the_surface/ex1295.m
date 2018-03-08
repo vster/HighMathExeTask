@@ -1,6 +1,7 @@
 syms x y;
 z=x^2-2*x*y+y^2-x+2*y;
-M=[1 1 1]
+M=[1,1,1]
+R=[x,y,z]
 
 ezsurf(z)
 hold on
@@ -9,8 +10,8 @@ plot3(M(1),M(2),M(3),'ro')
 Dzx=diff(z,x)
 Dzy=diff(z,y)
 
-DzxM=subs(Dzx,[x y z],M)
-DzyM=subs(Dzy,[x y z],M)
+DzxM=subs(Dzx,R,M)
+DzyM=subs(Dzy,R,M)
 
 % Касательная плоскость
 zn=M(3)+DzxM*(x-M(1))+DzyM*(y-M(2))

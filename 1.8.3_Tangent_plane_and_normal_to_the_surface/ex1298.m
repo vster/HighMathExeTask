@@ -6,14 +6,16 @@ Dfx=diff(F,x)
 Dfy=diff(F,y)
 Dfz=diff(F,z)
 
-DfxM=subs(Dfx,[x y z],M)
-DfyM=subs(Dfy,[x y z],M)
-DfzM=subs(Dfz,[x y z],M)
+R=[x,y,z]
+DfxM=subs(Dfx,R,M)
+DfyM=subs(Dfy,R,M)
+DfzM=subs(Dfz,R,M)
 
 % Касательная плоскость
 pn=DfxM*(x-M(1))+DfyM*(y-M(2))+DfyM*(z-M(3))
 
 % Нормаль
+syms t;
 xn=DfxM*t+M(1)
 yn=DfyM*t+M(2)
 zn=DfzM*t+M(3)

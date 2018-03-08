@@ -9,19 +9,16 @@ plot3(M(1),M(2),M(3),'ro')
 Dzx=diff(z,x)
 Dzy=diff(z,y)
 
-DzxM=subs(Dzx,[x y z],M)
-DzyM=subs(Dzy,[x y z],M)
+R=[x,y,z]
+DzxM=subs(Dzx,R,M)
+DzyM=subs(Dzy,R,M)
 
 % Касательная плоскость
 zn=M(3)+DzxM*(x-M(1))+DzyM*(y-M(2))
 ezsurf(zn)
 
-syms xn yn zn;
-eq1=(xn-M(1))/DzxM
-eq2=(yn-M(2))/DzyM
-eq3=(zn-M(3))/(-1)
-
 % Нормаль
+syms t;
 xn=DzxM*t+M(1)
 yn=DzyM*t+M(2)
 zn=t+M(3)
