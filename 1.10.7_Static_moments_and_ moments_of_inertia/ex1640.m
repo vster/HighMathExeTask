@@ -4,12 +4,15 @@ y=sqrt(r^2-x^2)
 
 dy=diff(y,x)
 
-f=y*sqrt(1+dy^2)
+f1=1+dy^2
+f1=factor(f1)
+
+f=y*r/sqrt((r - x)*(r + x))
 f=simplify(f)
 pretty(f)
 
-f=r
-Mx=int(r,x,-r,r)
+% f=r
+Mx=int(f,x,-r,r)
 % 2*r^2
 
 g=y^2*sqrt(1+dy^2)
