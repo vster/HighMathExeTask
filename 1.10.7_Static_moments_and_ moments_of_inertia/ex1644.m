@@ -10,10 +10,10 @@ f1=1+dy^2
 f1=factor(f1)
 pretty(f1)
 
-dL=1/2*(exp(2*x/a)+1)/sqrt(exp(2*x/a))
-pretty(f)
-
+%dL=1/2*(exp(2*x/a)+1)/sqrt(exp(2*x/a))
+dL=(exp((2*x)/a) + 1)/(2*exp(x/a))
 f=simplify(y*dL)
+pretty(f)
 Mx=int(f,0,a)
 
 g=simplify(y^2*dL)
