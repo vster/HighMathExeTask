@@ -5,6 +5,7 @@ M=[0,2,1]
 R=[x,y,z]
 
 f3=f1+lam*f2
+f3=collect(f3,R)
 f3M=subs(f3,R,M)
 slam=solve(f3M)
 f3=subs(f3,lam,slam)
