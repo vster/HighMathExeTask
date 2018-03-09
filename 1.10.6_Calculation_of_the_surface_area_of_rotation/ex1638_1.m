@@ -11,5 +11,6 @@ dy=diff(y)
 
 y2=simplify(y*sqrt(1+dy^2))
 pretty(y2)
+y2=r
 
 S=simplify(2*pi*int(y2,x,-r,r))

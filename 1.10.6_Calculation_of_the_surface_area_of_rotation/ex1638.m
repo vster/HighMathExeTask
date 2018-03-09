@@ -9,6 +9,11 @@ ezplot(y1)
 
 dy=diff(y,x)
 
+%y1=1+dy^2
+%y1=factor(y1)
+%y1=simplify(y1)
+%y2=simplify(y*sqrt(y1))
+
 y2=simplify(y*sqrt(1+dy^2))
 pretty(y2)
 
