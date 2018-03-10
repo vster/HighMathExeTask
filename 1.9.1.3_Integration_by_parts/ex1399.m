@@ -8,3 +8,5 @@ pretty(F)
 
 y2=simplify(diff(F))
 pretty(y2)
+
+c=simplify(y-y2)
