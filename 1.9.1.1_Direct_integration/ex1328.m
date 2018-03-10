@@ -13,3 +13,5 @@ y2=diff(F)
 subplot(3,1,3)
 ezplot(y2)
 grid
+
+c=simplify(y-y2)
