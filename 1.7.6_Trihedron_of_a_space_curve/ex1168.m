@@ -1,4 +1,4 @@
-syms t real;
+syms t x y z real;
 r=[6*t, 3*t^2, t^3]
 t1=1
 
