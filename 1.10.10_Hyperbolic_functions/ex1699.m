@@ -1,0 +1,13 @@
+syms x y;
+% sinh(x) + sinh(y) = 2*sinh(1/2*(x+y))*cosh(1/2*(x-y))
+z1=2*sinh(1/2*(x+y))*cosh(1/2*(x-y))
+simplify(z1)
+% sinh(x) - sinh(y) = 2*cosh(1/2*(x+y))*sinh(1/2*(x-y))
+z2=2*cosh(1/2*(x+y))*sinh(1/2*(x-y))
+simplify(z2)
+% cosh(x) + cosh(y) = 2*cosh(1/2*(x-y))*cosh(1/2*(x+y))
+z3=2*cosh(1/2*(x-y))*cosh(1/2*(x+y))
+simplify(z3)
+% cosh(x) - cosh(y) = 2*sinh(1/2*(x-y))*sinh(1/2*(x+y))
+z4=2*sinh(1/2*(x-y))*sinh(1/2*(x+y))
+simplify(z4)
