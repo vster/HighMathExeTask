@@ -1,4 +1,4 @@
-syms t t1 t2;
+syms t t1 t2 a;
 x=a*cosh(t);
 y=a*sinh(t);
 
