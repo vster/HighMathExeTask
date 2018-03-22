@@ -7,3 +7,9 @@ I1=subs(I1,log(e),1)
 I2=int(I1,x,0,4)
 % 8
 
+ID1=int(int(f,y,1,e),x,0,4)
+ID1=subs(ID1,log(e),1)
+
+ID2=int(int(f,x,0,4),y,1,e)
+ID2=subs(ID2,log(e),1)
+
