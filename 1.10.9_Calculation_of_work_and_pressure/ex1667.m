@@ -1,4 +1,4 @@
-syms a b c h x dx;
+syms a b c h x dx ro;
 
 l=(b-a)*(x-c)/(2*h)
 dS=(a+2*l)*dx
