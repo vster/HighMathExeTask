@@ -11,6 +11,7 @@ syms u v;
 x=1/2*(u+v)
 y=1/2*(u-v)
 
+% якобиан
 J=det([diff(x,u),diff(x,v);diff(y,u),diff(y,v)])
 J=abs(J)
 

@@ -10,8 +10,11 @@ syms u v;
 syms x y;
 slv=solve(x*y==u*v,x^2/y==v)
 x1=slv.x(1)
+% (u^2*v)^(2/3)/u
 y1=slv.y(1)
+% (u^2*v)^(1/3)
 
+% якобиан
 J=det([diff(x1,u),diff(x1,v);diff(y1,u),diff(y1,v)])
 J=abs(J)
 % 1/3
