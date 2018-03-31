@@ -16,5 +16,6 @@ J=det([diff(x,u),diff(x,v);diff(y,u),diff(y,v)])
 J=abs(J)
 
 f=J*(x+y)^3*(x-y)^2
+% f=(u^3*v^2)/2
 ID=int(int(f,v,-1,1),u,1,3)
 % 20/3
