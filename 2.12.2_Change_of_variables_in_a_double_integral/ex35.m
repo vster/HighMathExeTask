@@ -6,6 +6,7 @@
 syms u v;
 x=u*(1-v)
 y=u*v
+% slv=solve(x==u*(1-v),y==u*v)
 
 % якобиан
 J=det([diff(x,u),diff(x,v);diff(y,u),diff(y,v)])
