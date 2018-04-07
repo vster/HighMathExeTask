@@ -11,21 +11,23 @@ z=sqrt(a^2-x^2-y^2)
 dzx=diff(z,x)
 dzy=diff(z,y)
 
-ff=sqrt(1+dzx^2+dzy^2)
-ff=simplify(ff)
-ff=a/sqrt(a^2-x^2-y^2)
+fs=sqrt(1+dzx^2+dzy^2)
+fs=simplify(fs)
+fs=a/sqrt(a^2-x^2-y^2)
 
 % S=4*int(int(ff),D)
 
 syms ro teta real;
 x=ro*cos(teta)
 y=ro*sin(teta)
-ff=a/sqrt(a^2-x^2-y^2)
-ff=simplify(ff)
+fs=a/sqrt(a^2-x^2-y^2)
+fs=simplify(fs)
 % a/(a^2 - ro^2)^(1/2)
 
-S1=a*int(ro/(a^2 - ro^2)^(1/2),ro,0,a*sin(teta))
+S1=int(fs*ro,ro,0,a*sin(teta))
+% S1=a*int(ro/(a^2 - ro^2)^(1/2),ro,0,a*sin(teta))
 S1=a*((a^2)^(1/2) - (a^2*cos(teta)^2)^(1/2))
 S1=a^2*(1-cos(teta))
 S=4*int(S1,teta,0,pi/2)
 % 2*a^2*(pi - 2)
+
