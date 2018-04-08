@@ -11,9 +11,7 @@ fs=sqrt(1+diff(z,x)^2+diff(z,y)^2)
 fs=simplify(fs)
 
 syms ro teta;
-x=ro*cos(teta)
-y=ro*sin(teta)
-fs=2*(-1/(x^2 - 4))^(1/2)
+fs=subs(fs,[x y],[ro*cos(teta) ro*sin(teta)])
 fs=simplify(fs)
 % 2*(-1/(ro^2*cos(teta)^2 - 4))^(1/2)
 
