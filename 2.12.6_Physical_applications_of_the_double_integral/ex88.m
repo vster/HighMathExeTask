@@ -16,7 +16,7 @@ x2=3-y
 
 slv=solve(y==2*sqrt(x), x+y==3)
 [slv.x slv.y]
-% [ 4 - 2*3^(1/2), 2*3^(1/2) - 2]
+% [ 1, 2]
 Ix=int(int(y^2,x,x1,x2),y,0,2)
 vpa(Ix)
 % 2.4
