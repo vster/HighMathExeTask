@@ -1,0 +1,1 @@
+g=gamma(sym(5/4))*gamma(sym(-5/4))
