@@ -8,8 +8,8 @@
 syms t dt;
 x=cos(t)
 y=sin(t)
-ds=sqrt(diff(x)^2+diff(y)^2)*dt
+ds=sqrt(diff(x)^2+diff(y)^2)
 ds=simplify(ds)
-% dt
-M=int(y,t,0,pi)
+% 1
+M=int(y*ds,t,0,pi)
 % 2

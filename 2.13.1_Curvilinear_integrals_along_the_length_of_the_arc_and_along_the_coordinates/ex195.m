@@ -8,10 +8,11 @@
 syms x dx;
 y=cosh(x)
 dy=diff(y)
-ds=sqrt(1+dy^2)*dx
-s=int((sinh(x)^2 + 1)^(1/2),x,0,log(sym(2)))
+ds=sqrt(1+dy^2)
+% (sinh(x)^2 + 1)^(1/2)
+s=int(ds,x,0,log(sym(2)))
 % 3/4
-xm=1/s*int(x*(sinh(x)^2 + 1)^(1/2),x,0,log(sym(2)))
+xm=1/s*int(x*ds,x,0,log(sym(2)))
 % log(2) - 1/3
-ym=1/s*int(y*(sinh(x)^2 + 1)^(1/2),x,0,log(sym(2)))
+ym=1/s*int(y*ds,x,0,log(sym(2)))
 % (2*log(2))/3 + 5/8
