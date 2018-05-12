@@ -3,7 +3,7 @@
 % x=a*cos(t),y=a*sin(t),z=b*t
 
 syms t a b;
-assume(a<0)
+assume(a>0)
 assume(b>0)
 x=a*cos(t)
 y=a*sin(t)
