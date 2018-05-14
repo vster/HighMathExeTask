@@ -16,7 +16,7 @@ dy1=diff(y1)*dt
 df=subs(df,[x y dx dy],[x1 y1 dx1 dy1])
 df=simplify(df)
 % dt*(8*t^2 + 11*t + 3)
-I=int((8*t^2 + 11*t + 3),t,0,1)
+I=int(df/dt,t,0,1)
 % 67/6
 
 

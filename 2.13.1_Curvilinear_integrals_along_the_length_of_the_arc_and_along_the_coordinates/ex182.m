@@ -16,5 +16,5 @@ df=subs(df,[x y dx dy],[x1 y1 dx1 dy1])
 df=simplify(df)
 % df=dt/2
 
-I=int(1/2,t,0,pi/2)
+I=int(df/dt,t,0,pi/2)
 % pi/4

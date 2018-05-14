@@ -15,7 +15,8 @@ dy1=0
 dx1=2*dt
 df1=subs(df,[x y dx dy],[x1 y1 dx1 dy1])
 % 8*dt*t^2
-I1=int(8*t^2,t,0,1)
+I1=int(df1/dt,t,0,1)
+% 8/3
 
 % AB
 % (y-0)/2=(x-2)/2
@@ -27,6 +28,7 @@ dy2=diff(y2)*dt
 df2=subs(df,[x y dx dy],[x2 y2 dx2 dy2])
 df2=simplify(df2)
 % 8*dt + 2*dt*(4*t + 2)^2
-I2=int(8 + 2*(4*t + 2)^2,t,0,1)
+I2=int(df2/dt,t,0,1)
+% 128/3
 I=I1+I2
 % 136/3
