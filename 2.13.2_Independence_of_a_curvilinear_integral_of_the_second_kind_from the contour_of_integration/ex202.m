@@ -1,4 +1,4 @@
-% Найти первообразную функцию U, если
+% Find an antiderivative function U, if
 % dU=(y+log(x+1))dx+(x+1-exp(y))dy
 
 syms x y dx dy;
@@ -11,8 +11,8 @@ dQx=diff(Q,x)
 % 1
 % dPy=dQx
 
-% Пусть x0=0,y0=0 и контуром K
-% является ломаная OMN
+% Let x0=0,y0=0 and contour K
+% is an broken line OMN
 x0=0
 y0=0
 

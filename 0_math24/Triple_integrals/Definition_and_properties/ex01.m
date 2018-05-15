@@ -1,7 +1,7 @@
 % I = int int int (U) sqrt(100-x^2-y^2-z^2) dx dy dz
-% U - шар с центром в начале координат и радиусом R=6
+% U - A ball with center at the origin and radius R=6
 
-% Уравнение шара
+% The equation of the ball
 % x^2+y^2+z^2>=36
 
 % I<=M*V

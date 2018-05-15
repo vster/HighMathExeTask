@@ -1,4 +1,4 @@
-% Найти объем области U, заданной неравнествами
+% Find the volume of the domain U, given by inequalities
 % 0<=z<=2, 0<=y+z<=5, 0<=x+y+z<=10
 
 syms x y z;
@@ -9,7 +9,7 @@ w=z
 
 % V = int int int (U) dx dy dz = int int int (U1) |I(u,v,w)| du dv dw
 
-% Вычислим Якобиан данного преобразования
+% We compute the Jacobian of this transformation
 % d(u,v,w)/d(x,y,z) = ?
 I1=[diff(u,x) diff(u,y) diff(u,z); diff(v,x) diff(v,y) diff(v,z); diff(w,x) diff(w,y) diff(w,z)]
 dI1=det(I1)

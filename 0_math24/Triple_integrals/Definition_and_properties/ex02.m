@@ -1,10 +1,10 @@
-% ќценить макс и мин знач тр интеграла
+% Estimate the max and min values of the integral
 % I = int int int (U) 1/log(e+x+y+z) dV
-% где U={(x,y,z)|0<=x<=1,0<=y<=2,0<=z<=3}
+% where U={(x,y,z)|0<=x<=1,0<=y<=2,0<=z<=3}
 
 V=1*2*3
 
-% ќценка интеграла
+% Estimate of the integral
 % m*V<=I<=M*V
 
 syms e;
