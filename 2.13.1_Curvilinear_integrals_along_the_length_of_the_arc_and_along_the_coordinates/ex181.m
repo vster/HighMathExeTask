@@ -1,9 +1,9 @@
-% Вычислить 
+% Calculate 
 % I = int (K) (x-y) ds
-% где K - отрезок прямой от A(0;0) до B(4;3)
+% where K - line segment from A(0;0) to B(4;3)
 
 syms x;
-% Уравнение прямой AB
+% The equation of the line AB
 y=3/4*x
 dy=diff(y)
 % 3/4

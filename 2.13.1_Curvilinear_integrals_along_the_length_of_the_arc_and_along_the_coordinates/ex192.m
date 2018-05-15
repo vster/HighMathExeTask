@@ -1,6 +1,6 @@
-% Вычислить криволинейный интеграл
+% Compute the curvilinear integral
 % I = int (K) dy/x-dx/y 
-% где K - 1 четверть окружности 
+% where K - 1 quarter of a circle 
 % x=r*cos(t), y=r*sin(t)
 
 syms x y dx dy;

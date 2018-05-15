@@ -1,5 +1,5 @@
 % I = int (K) sqrt(x^2+y^2) ds,
-% где K - окружность x^2+y^2=ax
+% where K - circle x^2+y^2=ax
 
 syms x a;
 y=sqrt(a*x-x^2)

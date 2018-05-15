@@ -1,5 +1,5 @@
 % I = int (OA) x*y*dx+y*z*dy+z*x*dz
-% где OA - четверть окружности
+% where OA - quarter of a circle
 % x=cos(t),y=sin(t),z=1
 
 syms t dt;

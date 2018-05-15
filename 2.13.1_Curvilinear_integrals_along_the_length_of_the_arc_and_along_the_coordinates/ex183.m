@@ -1,6 +1,6 @@
-% Найти массу M кривой
+% Find mass M of curve
 % x=t,y=t^2/2,z=t^3/3 (0<=t<=1)
-% линейная плотность которой мен по закону 
+% the linear density of which varies according to the law
 % gamma=sqrt(2*y)
 
 syms t;

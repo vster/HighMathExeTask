@@ -1,6 +1,6 @@
-% Найти массу дуги окружности
+% Find the mass of an arc of a circle
 % x=cos(t),y=sin(t) (0<=t<=pi)
-% если линейная плотность в точке (x;y) равна y
+% if the linear density at the point (x;y) is y
 % gamma=f(x;y)=y
 
 % M = int (K) f(x,y) ds

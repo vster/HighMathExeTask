@@ -1,6 +1,6 @@
-% ¬ычислить криволинейный интеграл
+% Compute the curvilinear integral
 % I = int (K) y*dx+2x*dy
-% где K - пробегает против хода час стрелки контур ромба,
+% where K - runs contour of the rhombus against the clockwise direction
 % x/3+y/2=+-1, x/3-y/2=+/1
 
 syms x y dx dy;

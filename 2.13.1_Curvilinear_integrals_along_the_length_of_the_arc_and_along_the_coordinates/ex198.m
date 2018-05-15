@@ -1,5 +1,5 @@
 % I = int (K) ds/(x^2+y^2+z^2)
-% где K - первый виток винтовой линии
+% where K - first coil of the helix
 % x=a*cos(t),y=a*sin(t),z=b*t
 
 syms t a b;

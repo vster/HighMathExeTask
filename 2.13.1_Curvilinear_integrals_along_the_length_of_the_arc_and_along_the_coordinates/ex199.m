@@ -1,6 +1,6 @@
-% Найти массу первого витка винтовой линии
+% first coil of the helix
 % x=cos(t),y=sin(t),z=t
-% если плотность в каждой точке равна радиус-вектору этой точки
+% If the density at each point is equal to the radius vector of this point
 % gamma=sqrt(x^2+y^2+z^2)
 
 syms t;

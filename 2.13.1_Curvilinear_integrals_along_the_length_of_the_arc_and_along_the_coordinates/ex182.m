@@ -1,6 +1,6 @@
-% Вычислить
+% Calculate
 % int (K) x^2*y*dy-y^2*x*dx
-% если
+% if
 % x=sqrt(cos(t)), y=sqrt(sin(t)), 0<=t<=pi/2
 
 syms x y dx dy;

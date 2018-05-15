@@ -1,6 +1,6 @@
-% Вычислить криволинейный интеграл
+% Compute the curvilinear integral
 % I = int (AB) y*ds/sqrt(x)
-% где AB - дуга полукубической параболы y^2=4/9*x^3 
+% where AB - arc of a semicubic parabola y^2=4/9*x^3 
 % от A(3;2*sqrt(3)) до B(8;32*sqrt(2)/3)
 
 syms x y;

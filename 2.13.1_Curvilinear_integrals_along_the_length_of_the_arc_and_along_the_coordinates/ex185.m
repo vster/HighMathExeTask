@@ -1,8 +1,8 @@
-% Найти коорд ЦТ для окружности
+% Find the coordinates of the center of gravity for the circle
 % x^2+y^2=R^2 (0<=x<=R, 0<=y<=R)
 
 syms x R;
-% Четверть дуги окружности
+% A quarter of the arc of a circle
 s=pi*R/2
 % xm=ym
 % xm=1/s * int (K) x ds

@@ -1,6 +1,6 @@
-% ¬ычислить криволинейный интеграл
+% Compute the curvilinear integral
 % I = int (K) (x-y)^2 dx + (x+y)^2 dy
-% где K - ломана€ OAB, O(0;0), A(2;0), B(4;2)
+% where K - broken line OAB, O(0;0), A(2;0), B(4;2)
 
 syms x y dx dy;
 df=(x-y)^2*dx+(x+y)^2*dy

@@ -1,6 +1,6 @@
-% ¬ычислить криволинейный интеграл
+% Compute the curvilinear integral
 % I = int (K) 2x*dy-3y*dx
-% где K - контур треугольника с вершинами
+% where K - triangle contour with vertices
 % A(1;2), B(3;1), C(2;5)
 
 syms x y dx dy;

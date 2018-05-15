@@ -1,7 +1,7 @@
-% Найти координаты ЦТ дуги циклоиды
+% Find the coordinates of the center of gravity of the arc of the cycloid
 % x=t-sin(t),y=1-cos(t) (0<=t<=pi)
 
-% Координаты ЦТ
+% Coordinates of the center of gravity
 % xm=1/s * int (K) x ds
 % ym=1/s * int (K) y ds
 
@@ -17,6 +17,6 @@ ds=2*sin(t/2)
 s=int(ds,t,0,pi)
 % 4
 xm=1/s*int(x*ds,t,0,pi)
-% 4/3  (?) 8/3 - правильно(?)
+% 4/3  (?) 8/3 - correct(?)
 ym=1/s*int(y*ds,t,0,pi)
 % 4/3

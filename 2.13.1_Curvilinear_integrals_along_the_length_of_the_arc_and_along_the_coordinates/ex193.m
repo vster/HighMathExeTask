@@ -1,6 +1,6 @@
-% Вычислить криволинейный интеграл
+% Compute the curvilinear integral
 % I = int (K) x^2*y*dx+x^3*dy
-% K - контур, ограниченный параболами
+% K - contour bounded by parabolas
 % y^2=x, x^2=y
 
 syms x y dx dy;

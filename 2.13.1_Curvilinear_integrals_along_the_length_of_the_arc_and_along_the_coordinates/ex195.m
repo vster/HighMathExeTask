@@ -1,7 +1,7 @@
-% Найти коорд ЦТ однородной дуги кривой
+% Find the coordinates of the center of gravity of the homogeneous arc of the curve
 % y=cosh(x) (0<=x<=log(2))
 
-% Координаты ЦТ
+% Coordinates of the center of gravity
 % xm=1/s * int (K) x ds
 % ym=1/s * int (K) y ds
 

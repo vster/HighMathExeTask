@@ -1,12 +1,12 @@
-% Вычислить криволинейный интеграл
+% Compute the curvilinear integral
 % I = int (AB) (x^2-y^2)dx + x*y dy
-% где AB - путь от A(1;1) до B(3;4)
+% where AB - way from A(1;1) to B(3;4)
 
 syms x y dx dy;
 df=(x^2-y^2)*dx + x*y*dy
 
 syms t dt;
-% Уравнение прямой AB
+% The equation of the line AB
 % (y-y1)/(y2-y1)=(x-x1)/(x2-x1)
 % (y-1)/3=(x-1)/2
 x1=2*t+1
