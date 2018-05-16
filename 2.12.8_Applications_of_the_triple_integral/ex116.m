@@ -1,4 +1,4 @@
-% Найти массу куба
+% Find the cube mass
 % 0<=x<=a, 0<=y<=a, 0<=z<=a
 % gam=x+y+z
 

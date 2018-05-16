@@ -1,6 +1,6 @@
-% Найти момент инерции куба
+% Find the moment of inertia of the cube
 % 0<=x<=a, 0<=y<=a, 0<=z<=a
-% относительно его ребра
+% with respect to its edge
 
 syms x y z a;
 

@@ -1,7 +1,7 @@
-% Найти объем тела, огр. поверхностями
+% Find the volume of a body bounded by surfaces
 % z=0,
-% цилиндрической поверхностью z=0.5*(x^2+y^2)
-% и сферой x^2+y^2+z^2=4
+% cylindrical surface z=0.5*(x^2+y^2)
+% and the sphere x^2+y^2+z^2=4
 
 syms x y z;
 z1=0.5*(x^2+z^2)
@@ -12,4 +12,4 @@ hold on
 ezmesh(z2)
 hold off
 
-% Не понятно
+% Not understand

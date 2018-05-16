@@ -1,4 +1,4 @@
-% Найти объем тела, огр. поверхностями
+% Find the volume of a body bounded by surfaces
 % z=sqrt(x^2+y^2), z=x^2+y^2
 % V = int int int (T) dx dy dz
 
@@ -6,7 +6,7 @@ syms x y z h;
 f1=sqrt(x^2+y^2)
 f2=x^2+y^2
 
-% Переход к цилиндрическим координатам
+% Transition to cylindrical coordinates
 syms ro phi z;
 x1=ro*cos(phi);
 y1=ro*sin(phi);

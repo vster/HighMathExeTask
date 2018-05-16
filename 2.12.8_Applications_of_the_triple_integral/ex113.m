@@ -1,5 +1,5 @@
-% Найти координаты ЦТ призматического тела, 
-% ограниченного плоскостями
+% Find the coordinates of the center of gravity 
+% of the prismatic body bounded by the planes
 % x=0, z=0, y=1, y=3, x+2z=3
 
 syms x y z;
