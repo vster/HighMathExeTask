@@ -13,15 +13,8 @@ dQx=diff(Q,x)
 x0=1
 y0=1
 
-% I1
 P=subs(P,y,y0)
 % 1/x + 1
-I1=int(P,x,1,x)
-% x + log(x) - 1
-
-% I2
-I2=int(Q,y,1,y)
-% 2*log(y) + x*(1/y - 1)
-I=I1+I2
-I=expand(I)
+U=int(P,x,1,x)+int(Q,y,1,y)
+U=expand(U)
 % log(x) + 2*log(y) + x/y - 1
