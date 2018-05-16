@@ -8,4 +8,5 @@ ezplot(y2,[-2,2])
 hold off
 grid on
 
-I=int(int(f,y,-sqrt(1-x^2),1-x^2),x,-1,1)
+I1=int(f,y,-sqrt(1-x^2),1-x^2)
+I=int(I1,x,-1,1)
