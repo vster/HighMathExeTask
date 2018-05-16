@@ -6,5 +6,5 @@ dI=diff(I,lam)
 
 I=int(dI,lam)
 % (pi*asinh(lam))/2
-% pi/2*log(lam+sqrt(1+lam^2)) - прав.ответ
+% pi/2*log(lam+sqrt(1+lam^2)) - correct
 
