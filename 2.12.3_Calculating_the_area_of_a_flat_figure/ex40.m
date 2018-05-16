@@ -2,7 +2,9 @@ syms x y a;
 eq1=x^3+y^3-a*x*y
 
 syms ro teta;
-eq1=subs(eq1,[x y],[ro*cos(teta), ro*sin(teta)])
+x1=ro*cos(teta)
+y1=ro*sin(teta)
+eq1=subs(eq1,[x y],[x1 y1])
 eq1=simplify(eq1)
 % ro^3*cos(teta)^3 + ro^3*sin(teta)^3 - a*ro^2*cos(teta)*sin(teta)
 eq1=ro*cos(teta)^3 + ro*sin(teta)^3 - a*cos(teta)*sin(teta)
