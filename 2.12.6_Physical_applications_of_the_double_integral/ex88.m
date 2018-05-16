@@ -1,4 +1,4 @@
-% Вычислить момент инерции
+% Calculate the moment of inertia
 % y=2*sqrt(x), x+y=3, x=0, y=0
 
 syms x y;

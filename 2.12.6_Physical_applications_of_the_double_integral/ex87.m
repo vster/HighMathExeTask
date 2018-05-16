@@ -1,4 +1,4 @@
-% Найти ЦТ
+% Find the center of gravity
 % y=sqrt(2*x-x^2), y=0
 
 syms x y;

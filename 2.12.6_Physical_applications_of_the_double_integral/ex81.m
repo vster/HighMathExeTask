@@ -1,6 +1,5 @@
-% Найти ЦТ
-% y=x^2, y=2*x^2
-% x=1, x=2
+% Find the center of gravity
+% y=x^2, y=2*x^2, x=1, x=2
 
 syms x y;
 y1=x^2

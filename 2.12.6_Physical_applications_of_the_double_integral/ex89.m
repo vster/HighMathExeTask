@@ -1,4 +1,4 @@
-% Вычислить полярный момент инерции
+% Calculate the polar moment of inertia
 % x+y=2, x=0, y=0
 
 syms x y;

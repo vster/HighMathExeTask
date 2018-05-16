@@ -1,4 +1,4 @@
-% Вычислить момент инерции отн Ox
+% Calculate the moment of inertia from Ox
 % y=4-x^2, y=0
 
 syms x y;

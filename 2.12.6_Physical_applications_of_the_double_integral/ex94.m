@@ -1,4 +1,4 @@
-% Вычислить стат момент пластинки
+% Calculate the static moment of the plate
 
 syms x y a b;
 gam=y

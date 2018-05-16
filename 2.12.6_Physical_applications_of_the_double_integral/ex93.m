@@ -1,4 +1,4 @@
-% Вычислить массу круглой пластинки радиуса r
+% Calculate the mass of a circular plate of radius r
 % gam=delta*r/ro
 
 syms ro teta r delta;

@@ -1,6 +1,5 @@
-% Ќайти координаты центра т€жести фигуры
-% y^2=4*x+4
-% y^2=-2*x+4
+% Find the coordinates of the center of gravity of the figure
+% y^2=4*x+4, y^2=-2*x+4
 
 syms x y;
 f1=y^2-4*x-4

@@ -1,6 +1,5 @@
-% Ќайти координаты центра т€жести фигуры
-% x^2/25+y^2/9=1
-% x/5+y/3=1
+% Find the coordinates of the center of gravity of the figure
+% x^2/25+y^2/9=1, x/5+y/3=1
 
 syms x y;
 y1=3/5*sqrt(25-x^2)

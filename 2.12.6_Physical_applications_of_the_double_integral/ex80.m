@@ -1,8 +1,9 @@
-% Вычислить момент инерции отн. оси 0x, ограниченной кардиоидой
+% Calculate the moment of inertia about the 0x axis, 
+% bounded by the cardioid
 % ro=a*(1+cos(teta))
 
 % Ix = int int (D) y^2 dx dy 
-% В полярных координатах
+% In polar coordinates
 % Ix = int int (D) ro^2*sin(teta)^2*ro d_ro d_teta
 
 syms ro teta a;

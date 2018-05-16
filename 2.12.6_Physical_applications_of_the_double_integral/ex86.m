@@ -1,4 +1,4 @@
-% Найти ЦТ
+% Find the center of gravity
 % y^2=2*p*x, x=2*p
 
 syms x y p;

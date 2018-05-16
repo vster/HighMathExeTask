@@ -1,4 +1,4 @@
-% Найти ЦТ
+% Find the center of gravity
 % y^2=x, x^2=y
 
 syms x y;

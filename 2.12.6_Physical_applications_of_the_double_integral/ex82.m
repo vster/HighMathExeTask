@@ -1,4 +1,4 @@
-% Найти ЦТ
+% Find the center of gravity
 % ro=a*(1+cos(teta))
 % x=ro*cos(teta)
 % y=ro*sin(teta)

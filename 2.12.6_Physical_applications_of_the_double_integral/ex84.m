@@ -1,8 +1,7 @@
-% Найти ЦТ
+% Find the center of gravity
 % ro=a*sin(2*teta)
 
 syms a teta ro;
-
 ro1=sin(2*teta)
 ezpolar(ro1)
 
