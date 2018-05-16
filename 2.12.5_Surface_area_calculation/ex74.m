@@ -1,7 +1,7 @@
 syms x y;
-% Площадь части конуса
+% The area of the cone part
 z=sqrt(x^2-y^2)
-% расположенной внутри цилиндра
+% located inside the cylinder
 % x^2+y^2=1
 
 dzx=diff(z,x)

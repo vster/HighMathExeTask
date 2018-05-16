@@ -1,6 +1,6 @@
-% Найти площади части поверхности
+% Find the surface area of a surface
 % x^2+z^2=4
-% расположенного внутри цилиндра
+% located inside the cylinder
 % x^2+y^2=4
 
 syms x y;

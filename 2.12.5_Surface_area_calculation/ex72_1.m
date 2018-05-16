@@ -1,9 +1,9 @@
 syms x y;
-% Площадь части плоскости 
+% Area of part of the plane  
 z=x
-% которая заключена внутри цилиндра
+% which is enclosed inside the cylinder
 % x^2+y^2=4
-% выше плоскости
+% above the plane
 % z=0
 
 fs=sqrt(1+diff(z,x)^2+diff(z,y)^2)

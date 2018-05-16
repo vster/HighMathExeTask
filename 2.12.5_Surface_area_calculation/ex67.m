@@ -1,15 +1,15 @@
 syms x y;
-% Найти площадь части конуса
+% Find the area of the cone part
 z=sqrt(x^2+y^2)
-% заключенной внури цилиндра
+% enclosed inside the cylinder
 % x^2+y^2=2*x
 
 dzx=diff(z,x)
 dzy=diff(z,y)
 
-% Область интегрирования D
+% Integration domain D
 % x^2+y^2=2*x
-% или
+% or
 % ro=2*cos(teta)
 
 fs=sqrt(1+dzx^2+dzy^2)

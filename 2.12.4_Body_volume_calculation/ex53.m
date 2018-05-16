@@ -1,4 +1,4 @@
-% Вычисление объема тела
+% Calculation of body volume
 % V=int int f(x,y)*dx*dy
 
 % z=1-x^2-y^2

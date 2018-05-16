@@ -1,6 +1,6 @@
-% Площадь части сферы
+% Area of the sphere
 % x^2+y^2+z^2=4
-% вырезанной цилиндром
+% cut by a cylinder
 % x^2/4+y^2=1
 
 syms x y;

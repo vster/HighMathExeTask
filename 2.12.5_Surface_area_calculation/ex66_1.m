@@ -18,7 +18,9 @@ fs=a/sqrt(a^2-x^2-y^2)
 % S=4*int(int(ff),D)
 
 syms ro teta real;
-fs=subs(fs,[x y],[ro*cos(teta) ro*sin(teta)])
+x1=ro*cos(teta)
+y1=ro*sin(teta)
+fs=subs(fs,[x y],[x1 y1])
 fs=simplify(fs)
 % a/(a^2 - ro^2)^(1/2)
 

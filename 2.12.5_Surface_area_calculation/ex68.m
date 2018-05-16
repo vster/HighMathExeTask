@@ -1,6 +1,6 @@
-% Вычислить площадь поверхности цилиндра 
+% Calculate the surface area of the cylinder 
 % x^2=2*z
-% отсеченной плоскостями
+% clipped planes
 % x-2*y=0
 % y=2*x
 % x=2*sqrt(2)

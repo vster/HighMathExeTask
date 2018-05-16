@@ -1,7 +1,7 @@
 syms y z;
-% Вычислить площадь части поверхносит параболоида
+% Calculate the area of a paraboloid
 x=1-y^2-z^2
-% вырезанной цилиндром
+% cut by a cylinder
 % y^2+z^2=1
 
 dxy=diff(x,y)
@@ -11,7 +11,9 @@ fs=sqrt(1+dxy^2+dxz^2)
 % (4*y^2 + 4*z^2 + 1)^(1/2)
 
 syms ro teta;
-fs=subs(fs,[y z],[ro*cos(teta) ro*sin(teta)])
+y1=ro*cos(teta)
+z1=ro*sin(teta)
+fs=subs(fs,[y z],[y1 z1])
 fs=simplify(fs)
 % (4*ro^2 + 1)^(1/2)
 

@@ -1,9 +1,9 @@
 % z=f(x,y)
 % S = int int sqrt(1+diff(z,x)^2+diff(z,y)^2) dx*dy
 
-% Найти площадь части сферы
+% Find the area of a sphere
 % x^2+y^2+z^2=a^2
-% заключенной внутри цилиндра
+% enclosed inside the cylinder
 % x^2+y^2=a*y
 
 syms x y a;
@@ -18,9 +18,9 @@ fs=a/sqrt(a^2-x^2-y^2)
 % S=4*int(int(ff),D)
 
 syms ro teta real;
-x=ro*cos(teta)
-y=ro*sin(teta)
-fs=a/sqrt(a^2-x^2-y^2)
+x1=ro*cos(teta)
+y1=ro*sin(teta)
+fs=subs(fs,[x y],[x1 y1])
 fs=simplify(fs)
 % a/(a^2 - ro^2)^(1/2)
 
