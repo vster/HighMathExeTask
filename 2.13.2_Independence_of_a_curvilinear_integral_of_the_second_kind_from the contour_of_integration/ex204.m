@@ -16,10 +16,7 @@ dQx=diff(Q,x)
 % U=C
 
 % Let A(0;0) and B(x;y)
-x0=0
-y0=0
-
-P=subs(P,y,y0)
+P=subs(P,y,0)
 % 8
 U=int(P,x,0,x)+int(Q,y,0,y)
 % x^4*y^3 - 3*x*y^2 + 8*x - y = C

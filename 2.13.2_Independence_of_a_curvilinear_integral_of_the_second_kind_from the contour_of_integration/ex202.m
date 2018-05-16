@@ -14,10 +14,7 @@ dQx=diff(Q,x)
 
 % Let x0=0,y0=0 and contour K
 % is an broken line OMN
-x0=0
-y0=0
-
-P=subs(P,y,y0)
+P=subs(P,y,0)
 % log(x + 1)
 U=int(P,x,0,x)+int(Q,y,0,y)
 % y - exp(y) + x*y + (log(x + 1) - 1)*(x + 1) + 2

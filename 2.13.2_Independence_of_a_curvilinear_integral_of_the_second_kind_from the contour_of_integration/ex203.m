@@ -10,10 +10,7 @@ dQx=diff(Q,x)
 % dPy=dQx
 
 % Let take as (x0;y0) point A0(1;1)
-x0=1
-y0=1
-
-P=subs(P,y,y0)
+P=subs(P,y,1)
 % 1/x + 1
 U=int(P,x,1,x)+int(Q,y,1,y)
 U=expand(U)

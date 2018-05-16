@@ -11,7 +11,7 @@ dQx=diff(Q,x)
 % sin(x - y) + exp(x + y)
 % dPy=dQx
 
-P=subs(P,y,sym(0))
+P=subs(P,y,0)
 % cos(x) + exp(x)
 U=int(P,x,0,x)+int(Q,y,0,y)
 U=simplify(U)
