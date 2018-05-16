@@ -1,5 +1,5 @@
 a=[2 3 5]
 b=[1 2 1]
 
-% Векторное произведение векторов
+% Vector product of vectors
 c=cross(a,b)
