@@ -14,7 +14,7 @@ x1=slv.x(1)
 y1=slv.y(1)
 % (u^2*v)^(1/3)
 
-% якобиан
+% Jacobian
 J=det([diff(x1,u),diff(x1,v);diff(y1,u),diff(y1,v)])
 J=abs(J)
 % 1/3

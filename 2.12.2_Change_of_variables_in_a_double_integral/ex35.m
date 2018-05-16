@@ -11,7 +11,7 @@ u1=slv.u
 v1=slv.v
 % v = y/(x + y)
 
-% якобиан
+% Jacobian
 x=u*(1-v)
 y=u*v
 J=det([diff(x,u),diff(x,v);diff(y,u),diff(y,v)])

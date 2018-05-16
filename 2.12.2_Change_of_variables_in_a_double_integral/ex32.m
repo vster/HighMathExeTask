@@ -7,20 +7,22 @@ eq=x^2+y^2-2*x
 % ezplot(eq)
 % grid on
 
-syms ro teta;
-x=ro*cos(teta)
-y=ro*sin(teta)
 f=x^2+y^2
-f=simplify(f)
-
 D=x^2+y^2-2*a*x
+
+syms ro teta;
+x1=ro*cos(teta)
+y1=ro*sin(teta)
+f=subs(f,[x y],[x1 y1])
+f=simplify(f)
+% ro^2
+
+D=subs(D,[x y],[x1 y1])
 D=simplify(D)
 % ro^2 = 2*a*cos(teta)*ro
 % ro=2*a*cos(teta)
 
 % ezpolar(2*cos(teta))
 
-I1=int(ro^3,ro,0,2*a)
-ID=int(I1,teta,0,2*pi)
-
-% Не сходится!
+ID=int(int(f*ro,ro,0,2*a*cos(teta)),teta,0,pi)
+% (3*pi*a^4)/2
