@@ -7,6 +7,6 @@ f=x/a+y/a+z/a-1
 
 fM=subs(f,R,A)
 sa=solve(fM)
-% Уравнение плоскости
+% The equation of the plane
 f=subs(f,a,sa)
 f=f*12
