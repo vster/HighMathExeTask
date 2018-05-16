@@ -1,8 +1,8 @@
-% Даны радиус-векторы 3-х вершин параллелограмма ABCD
+% The radius vectors of the 3 vertices of the parallelogram ABCD are given
 rA=[1 1 1]
 rB=[1 3 5]
 rC=[7 9 11]
-% Найти D
+% Find D
 
 plot3(rA(1),rA(2),rA(3),'ro')
 hold on

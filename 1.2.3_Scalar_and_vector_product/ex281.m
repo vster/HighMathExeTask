@@ -1,4 +1,4 @@
-% Вычислить площадь треугольникв с вершинами
+% Calculate the area of a triangle with vertices
 A=[2,2,2]
 B=[4,0,3]
 C=[0,1,0]

@@ -2,7 +2,7 @@ syms m real;
 a=[1, 1, m]
 b=[1, 1, m+1]
 c=[1, -1, m]
-% Показать, что векторы не могут быть компланарными
+% Show that vectors can not be coplanar
 
-% Смешанное произвдение
+% The mixed product
 p=dot(a,cross(b,c))

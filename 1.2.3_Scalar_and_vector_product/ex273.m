@@ -1,6 +1,6 @@
 a=[1 1 2]
 b=[2 1 1]
-% Найти единичный вектор, перпендикулярный a и b
+% Find the unit vector perpendicular to a and b
 
 n=cross(a,b)
 n=n/norm(n)

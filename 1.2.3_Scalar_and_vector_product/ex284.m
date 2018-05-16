@@ -7,15 +7,15 @@ AB=B-A
 AC=C-A
 AD=D-A
 
-% Объем пирамиды
+% Volume of the pyramid
 V=1/6*dot(AB,cross(AC,AD))
 
 BC=C-B
 BD=D-B
-% площадь основания BCD
+% base area BCD
 S=1/2*norm(cross(BC,BD))
 
 % V=1/3*S*h
 % h=3*V/S
-% Высота,опущенная на грань BCD
+% Height, lowered to the face of BCD
 h=3*V/S
