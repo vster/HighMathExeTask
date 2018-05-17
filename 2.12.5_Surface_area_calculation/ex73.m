@@ -1,7 +1,7 @@
 syms x y;
-% Найти часть площади поверхности
+% Find a part of the surface area
 z=x^2
-% вырезанной плоскостями 
+% cut planes 
 % x+y=sqrt(2)
 % x=0
 % y=0
