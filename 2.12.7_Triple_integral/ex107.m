@@ -1,14 +1,14 @@
-% Вычислить тройной интеграл
+% Calculate the triple integral
 % I = int int int (T) (x^2+y^2+z^2)^3 dx dy dz
-% T - ограничена цилиндром
+% T - bounded by a cylinder
 % x^2+z^2=1
-% и плоскостями y=0 и y=1
+% and planes y=0 и y=1
 
 syms x y z;
 f1=(x^2+y^2+z^2)^3
 f2=x^2+z^2-1
 
-% Переход к цилиндрическим координатам
+% Transition to cylindrical coordinates
 syms ro phi z;
 x1=ro*cos(phi);
 z1=ro*sin(phi);

@@ -1,5 +1,5 @@
-% Найти координаты ЦТ тела, 
-% ограниченного поверхностями
+% Find the coordinates of the center of gravity 
+% of a body bounded by surfaces
 % x+y=1, z=x^2+y^2, x=0, y=0, z=0
 
 syms x y z;

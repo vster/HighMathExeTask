@@ -1,4 +1,4 @@
-% Вычислить тройной интеграл
+% Calculate the triple integral
 % I= int int int (T) z dx dy dz
 % x^2/9+y^2/4+z^2<=1
 

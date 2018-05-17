@@ -1,4 +1,4 @@
-% Вычислить тройной интеграл
+% Calculate the triple integral
 % I= int int int (T) z dx dy dz
 % 0<=x<=1/2
 % x<=y<=2x

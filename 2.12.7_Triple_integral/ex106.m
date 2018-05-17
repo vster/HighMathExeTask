@@ -1,6 +1,6 @@
-% Вычислить тройной интеграл
+% Calculate the triple integral
 % I = int int int (T) x dx dy dz
-% T - ограничена поверхностями
+% T - bounded by surfaces
 % x=0, y=0, z=0, y=3, x+z=2
 
 syms x y z;

@@ -1,4 +1,4 @@
-% Вычислить тройной интеграл
+% Calculate the triple integral
 % I= int int int (T) x^2 dx dy dz
 % x^2+y^2+z^2<=R^2
 

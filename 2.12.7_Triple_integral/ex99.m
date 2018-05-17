@@ -1,4 +1,4 @@
-% Вычислить тройной интеграл
+% Calculate the triple integral
 % I= int int int (T) z*sqrt(x^2+y^2) dx dy dz
 % x^2+y^2=2*x, y=0, z=0, z=a
 
@@ -6,7 +6,7 @@ syms x y z a;
 f1=z*sqrt(x^2+y^2)
 f2=x^2+y^2-2*x
 
-% Переход к цилиндрическим координатам
+% Transition to cylindrical coordinates
 syms ro phi z;
 x1=ro*cos(phi);
 y1=ro*sin(phi);

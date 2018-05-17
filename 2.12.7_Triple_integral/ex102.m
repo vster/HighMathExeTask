@@ -1,7 +1,7 @@
-% Вычислить тройной интеграл
+% Calculate the triple integral
 % I = int int int (T) x*y*z dx dy dz
-% T - ограничена сферой x^2+y^2+z^2=1
-% и плоскостями x=0, y=0, z=0
+% T - is limited to the sphere x^2+y^2+z^2=1
+% and planes x=0, y=0, z=0
 
 syms x y z;
 f1=x*y*z

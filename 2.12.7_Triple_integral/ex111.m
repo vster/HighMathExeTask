@@ -1,11 +1,11 @@
-% Вычислить тройной интеграл
+% Calculate the triple integral
 % I = int int int (T) sqrt(1+(x^2+y^2+z^2)^(3/2)) dx dy dz
-% T - шар x^2+y^2+z^2<=1
+% T - ball x^2+y^2+z^2<=1
 
 syms x y z;
 f1=sqrt(1+(x^2+y^2+z^2)^(3/2))
 
-% Введем сферические координаты
+% We introduce the spherical coordinates
 syms ro phi teta;
 x1=ro*sin(teta)*cos(phi);
 y1=ro*sin(teta)*sin(phi);

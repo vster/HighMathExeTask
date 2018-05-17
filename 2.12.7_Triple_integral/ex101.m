@@ -1,6 +1,6 @@
-% Вычислить тройной интеграл
+% Calculate the triple integral
 % I = int int int (T) (x^2+y^2+z^2) dx dy dz
-% T - прямоугольный параллелепипед
+% T - rectangular parallelepiped
 % 0<=x<=a
 % 0<=y<=b
 % 0<=z<=c

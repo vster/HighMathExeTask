@@ -1,4 +1,4 @@
-% Вычислить тройной интеграл
+% Calculate the triple integral
 % I = int int int (T) (x^2+y^2) dx dy dz
 % T-верхняя половина шара: x^2+y^2+z^2<=r^2
 
@@ -6,7 +6,7 @@ syms x y z r;
 f1=x^2+y^2;
 f2=x^2+y^2+z^2-r^2;
 
-% Введем сферические координаты
+% We introduce the spherical coordinates
 syms ro phi teta;
 x1=ro*sin(teta)*cos(phi);
 y1=ro*sin(teta)*sin(phi);

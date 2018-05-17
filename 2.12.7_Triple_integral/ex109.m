@@ -1,13 +1,13 @@
-% ¬ычислить тройной интеграл
+% Calculate the triple integral
 % I = int int int (T) (x^2+y^2) dx dy dz
-% T - ограничена поверхност€ми
+% T - bounded by surfaces
 % z=0.5*(x^2+y^2), z=2
 
 syms x y z;
 f1=x^2+y^2
 f2=z-0.5*(x^2+y^2)
 
-% ѕереход к цилиндрическим координатам
+% Transition to cylindrical coordinates
 syms ro phi z;
 x1=ro*cos(phi);
 y1=ro*sin(phi);
