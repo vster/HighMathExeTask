@@ -1,8 +1,5 @@
 % x^2+y^2=8
-% x=0
-% y=0
-% z=0
-% x+y+z=4
+% x=0,y=0,z=0,x+y+z=4
 
 syms x y;
 slv=solve(x^2+y^2==8,x+y==4)
