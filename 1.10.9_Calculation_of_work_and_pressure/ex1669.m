@@ -1,6 +1,6 @@
-% h = 3.5 Ï
-% r = 1.5 Ï
-% ro = 900 Í„/Ï^3
+% h = 3.5 m
+% r = 1.5 m
+% ro = 900 kg/m^3
 % P=ro*g*h*S
 syms ro g h r;
 dP=ro*g*x*(2*pi*r)
