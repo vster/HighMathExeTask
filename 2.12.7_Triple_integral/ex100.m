@@ -1,6 +1,6 @@
 % Calculate the triple integral
 % I = int int int (T) (x^2+y^2) dx dy dz
-% T-верхн€€ половина шара: x^2+y^2+z^2<=r^2
+% T-upper half of the ball: x^2+y^2+z^2<=r^2
 
 syms x y z r;
 f1=x^2+y^2;

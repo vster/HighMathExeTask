@@ -24,6 +24,6 @@ f2=simplify(f2)
 
 I=int(int(int(f1*ro,y,0,1),ro,0,1),phi,0,2*pi)
 % (431*pi)/420 - ?
-% Должно быть 3*pi/2
+% Must be 3*pi/2
 
 
