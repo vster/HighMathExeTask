@@ -7,9 +7,9 @@ syms x y real;
 P=sqrt(x^2+y^2)
 Q=y*(x*y+log(x+sqrt(x^2+y^2)))
 
-f2=diff(Q,x)-diff(P,y)
-f2=simplify(f2)
+f=diff(Q,x)-diff(P,y)
+f=simplify(f)
 % y^2
 
-I=int(int(f2,y,0,2),x,1,4)
+I=int(int(f,y,0,2),x,1,4)
 % 8
