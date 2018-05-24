@@ -1,0 +1,31 @@
+% Compute the area bounded by parabolas
+% y^2=x, x^2=y
+
+% S=1/2*int (C) x*dy-y*dx
+syms x y dx dy;
+df=x*dy-y*dx
+
+slv=solve(y==x^2,y^2==x)
+A=[slv.x(2),slv.y(2)]
+
+% S = 1/2 int (OA) x*dy-y*dx + 1/2 int (AO) x*dy-y*dx
+
+% OA
+y1=x^2
+dy1=diff(y1)*dx
+df1=subs(df,[y dy],[y1 dy1])
+% dx*x^2
+S1=1/2*int(df1/dx,x,0,1)
+% 1/6
+
+% AO
+y2=sqrt(x)
+dy2=diff(y2)*dx
+df2=subs(df,[y dy],[y2 dy2])
+% -(dx*x^(1/2))/2
+S2=1/2*int(df2/dx,x,1,0)
+% 1/6
+
+S=S1+S2
+% 1/3
+
