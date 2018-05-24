@@ -1,6 +1,7 @@
 syms x y;
 f1=x*y-4*sqrt(2)
 f2=x^2-6*x+y^2
+% y=0,x=4
 
 ezplot(f1)
 hold on
@@ -8,11 +9,10 @@ ezplot(f2)
 grid on
 hold off
 
-slv1=solve(f1,f2)
+slv=solve(f1,f2)
+slv.x
 
-S1=int(sqrt(6*x-x^2),0,2)
-vpa(S1)
-S2=int(4*sqrt(2)/x,2,4)
-vpa(S2)
-S=S1+S2
-vpa(S)
+y1=4*sqrt(2)/x
+y2=sqrt(6*x-x^2)
+S=int(y2-y1,x,2,4)
+

@@ -8,8 +8,9 @@ ezplot(y2)
 hold off
 
 slv=solve(y==16/x^2,y==17-x^2)
+slv.x
+% 4 -4 1 -1
 
-a=1
-b=4
-
-S=int(17-x^2-16/x^2,1,4)
+% S = int (a-b) (f2(x)-f1(x)) dx
+S=int(y2-y1,x,1,4)
+% 18

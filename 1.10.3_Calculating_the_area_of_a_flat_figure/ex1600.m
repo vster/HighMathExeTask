@@ -15,9 +15,7 @@ syms x y;
 slv1=solve(y==cos(x),y==sin(x))
 slv1.x
 
-S1=int(sin(x),pi/4,pi)
-S2=int(cos(x),pi/4,pi/2)
-S=S1-S2
-vpa(S)
+S=int(y2-y1,x,0,pi/4)
+% 2^(1/2) - 1
 
 

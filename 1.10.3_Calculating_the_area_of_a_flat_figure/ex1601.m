@@ -11,5 +11,5 @@ syms x y;
 slv1=solve(y==0.25*x^2,y==3*x-0.5*x^2)
 slv1.x
 
-y3=y2-y1
-S=int(y3,0,4)
+S=int(y2-y1,x,0,4)
+% 8
