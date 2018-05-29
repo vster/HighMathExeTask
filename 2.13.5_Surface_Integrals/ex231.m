@@ -2,7 +2,7 @@
 % moment Mx of the upper hemisphere
 
 % We introduce the spherical coordinates
-syms x y;
+syms x y z;
 gamma=sqrt(x^2+y^2)
 
 syms R phi teta d_phi d_teta;

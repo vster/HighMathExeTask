@@ -3,7 +3,7 @@
 % on the upper side of the upper half of the sphere
 % x^2+y^2+z^2=R^2
 
-% Proection on xOy is curcle D: x^2+y^2=R^2
+% Proection on xOy is circle D: x^2+y^2=R^2
 
 syms x y R real;
 z=sqrt(R^2-x^2-y^2)
