@@ -14,10 +14,12 @@ f=x^2*y^2*sqrt(R^2-x^2-y^2)
 syms ro teta;
 x1=ro*cos(teta)
 y1=ro*sin(teta)
+J=ro
+
 f1=subs(f,[x y],[x1 y1])
 f1=simplify(f1)
 % -(ro^4*(R^2 - ro^2)^(1/2)*(cos(4*teta) - 1))/8
 
-I=4*int(int(f1*ro,ro,0,R),teta,0,pi/2)
+I=4*int(int(f1*J,ro,0,R),teta,0,pi/2)
 % (2*pi*R^7)/105
 

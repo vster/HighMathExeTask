@@ -21,6 +21,7 @@ f2=x^2+y^2-1
 syms ro teta;
 x1=ro*cos(teta)
 y1=ro*sin(teta)
+J=ro
 
 f1=subs(f1,[x y],[x1 y1])
 f1=simplify(f1)
@@ -30,5 +31,5 @@ f2=subs(f2,[x y],[x1 y1])
 f2=simplify(f2)
 %  ro<=1
 
-I=4*int(int(f1*ro,ro,0,1),teta,0,pi/2)
+I=4*int(int(f1*J,ro,0,1),teta,0,pi/2)
 % (pi*2^(1/2))/2

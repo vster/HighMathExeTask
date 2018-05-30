@@ -16,6 +16,7 @@ f2=2-0.5*(x^2+y^2)
 syms ro teta;
 x1=ro*cos(teta)
 y1=ro*sin(teta)
+J=ro
 
 dS1=subs(dS,[x y],[x1 y1])
 dS1=simplify(dS1)
@@ -43,10 +44,10 @@ fz=simplify(fz)
 S=int(int(dS1*ro,ro,0,2),teta,0,2*pi)
 %(2*pi*(5*5^(1/2) - 1))/3
 
-xm=1/S*int(int(fx*ro,ro,0,2),teta,0,2*pi)
+xm=1/S*int(int(fx*J,ro,0,2),teta,0,2*pi)
 % 0
-ym=1/S*int(int(fy*ro,ro,0,2),teta,0,2*pi)
+ym=1/S*int(int(fy*J,ro,0,2),teta,0,2*pi)
 % 0
-zm=1/S*int(int(fz*ro,ro,0,2),teta,0,2*pi)
+zm=1/S*int(int(fz*J,ro,0,2),teta,0,2*pi)
 zm=simplify(zm)
 % 307/310 - (3*5^(1/2))/62
