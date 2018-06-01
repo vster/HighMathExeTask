@@ -3,6 +3,8 @@
 % along the arc of the helix
 % x=R*cos(t),y=R*sin(t),z=a*t, if 0<=t<=2*pi
 
+% Linear integral
+% int (K) F*dr = int (K) P*dx+Q*dy+R*dz
 % int (K) r*dr = int (K) x*dx+y*dy+z*dz
 
 syms R t dt a real;
