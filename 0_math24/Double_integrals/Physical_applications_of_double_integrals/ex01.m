@@ -1,6 +1,5 @@
-% Определить координаты центра тяжести пластины, образованной параболами
-% y^2=x
-% y=x^2
+% Determine the coordinates of the center of gravity of the plate 
+% formed by parabolas y^2=x,y=x^2
 
 syms x y;
 m=int(int(1,y,x^2,sqrt(x)),x,0,1)

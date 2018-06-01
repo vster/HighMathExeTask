@@ -1,6 +1,6 @@
-% Вычислить моменты инерции треугольника, ограниченного прямыми
+% Calculate the moments of inertia of a triangle bounded by straight lines
 % x+y=1,x=0,y=0
-% и имеющего плостность ro(x,y)=x*y
+% and having a density ro(x,y)=x*y
 
 syms x y;
 ro=x*y

@@ -1,6 +1,5 @@
-% R:
-% y^2=a^2-a*x
-% y=a+x
+% Calculate area of area R:, bounded by lines
+% y^2=a^2-a*x, y=a+x
 
 syms x y a;
 eq1=y^2-a^2+a*x

@@ -1,4 +1,4 @@
-% Ќайти площадь лепестка розы, зад. уравнением
+% Find the area of the rose petal given by equation
 % ro=cos(2*teta)
 
 syms ro teta;

@@ -1,7 +1,5 @@
-% y=0
-% z=0
-% z=x
-% z+x=4
+% Find the volume of the body in the first octant bounded by the planes
+% y=0,z=0,z=x,z+x=4
 
 % x=2
 

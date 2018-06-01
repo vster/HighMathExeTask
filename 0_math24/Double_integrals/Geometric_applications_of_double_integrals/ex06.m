@@ -1,7 +1,5 @@
-% z=0
-% x+y=1
-% x^2+y^2=1
-% z=1-x
+% Find the volume of a body bounded by surfaces
+% z=0,x+y=1,x^2+y^2=1,z=1-x
 
 syms x y;
 V=int(int(1-x,y,1-x,sqrt(1-x^2)),x,0,1)

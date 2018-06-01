@@ -1,12 +1,18 @@
-% Вычислить объем единичного шара
+% Calculate the volume of the unit ball
 % x^2+y^2+z^2=1
 
 syms x y;
 z=sqrt(1-(x^2+y^2))
 
 syms ro teta;
-z=subs(z,[x y],[ro*cos(teta) ro*sin(teta)])
-z=simplify(z)
+x1=ro*cos(teta);
+y1=ro*sin(teta);
+J=ro
 
-V=2*int(int(z*ro,ro,0,1),teta,0,2*pi)
+z=subs(z,[x y],[x1 y1])
+z=simplify(z)
+% (1 - ro^2)^(1/2)
+% 0<=ro<=1
+
+V=2*int(int(z*J,ro,0,1),teta,0,2*pi)
 % (4*pi)/3

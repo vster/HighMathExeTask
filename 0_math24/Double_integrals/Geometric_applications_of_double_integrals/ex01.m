@@ -1,8 +1,5 @@
-% Найти площадь области R:
-% y=a^2/x
-% y=2*a^2/x
-% x=1
-% x=2
+% Find area area R:
+% y=a^2/x,y=2*a^2/x,x=1,x=2
 
 syms x y a;
 y1=a^2/x
