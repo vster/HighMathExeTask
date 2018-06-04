@@ -1,4 +1,4 @@
-% Найти объем области, ограниченной двумя параболоидами: 
+% Find the volume of the region bounded by two paraboloids: 
 % z1=x^2+y^2, z2=1-x^2-y^2
 
 syms x y real;
