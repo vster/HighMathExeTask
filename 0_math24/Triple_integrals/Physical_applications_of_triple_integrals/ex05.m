@@ -7,6 +7,7 @@ syms M m a R G ro0 real;
 % du = ro(r)*dr* int int (S) dS/delta
 % delta = sqrt(a^2+r^2-2*a*r*cos(teta))
 % du = ro(r)*dr* int int (S) dS/sqrt(a^2+r^2-2*a*r*cos(teta))
+% du = ro0*dr* I
 % dS=r^2*sin(teta)*d_teta*d_phi
 
 syms r teta phi dr d_teta d_phi real;
