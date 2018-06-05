@@ -22,6 +22,7 @@ z1=r*cos(teta)
 J=r^2*sin(teta)
 
 f1 = subs(f,z,z1)
+% r*cos(teta)
 
 I = int(int(int(f1*J,teta,0,pi/2),r,0,R),phi,0,2*pi)
 % (pi*R^4)/4
