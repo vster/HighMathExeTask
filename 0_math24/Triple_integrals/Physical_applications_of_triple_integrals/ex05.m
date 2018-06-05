@@ -7,6 +7,7 @@ syms M m a R G ro0 real;
 % du = ro(r)*dr* int int (S) dS/delta
 % delta = sqrt(a^2+r^2-2*a*r*cos(teta))
 % du = ro(r)*dr* int int (S) dS/sqrt(a^2+r^2-2*a*r*cos(teta))
+% ro(r) = ro0    - homogeneous ball density
 % du = ro0*dr* I
 % dS=r^2*sin(teta)*d_teta*d_phi
 
@@ -22,7 +23,7 @@ I=int(int(f,teta,0,pi),phi,0,2*pi)
 I=simplify(I)
 % (2*pi*r*(r - a + abs(a + r)))/a
 I=4*pi*r^2/a
-% ro(r) = ro0    - homogeneous ball density
+
 du=ro0*dr*I
 % (4*pi*dr*r^2*ro0)/a
 u=int(du/dr,r,0,R)
