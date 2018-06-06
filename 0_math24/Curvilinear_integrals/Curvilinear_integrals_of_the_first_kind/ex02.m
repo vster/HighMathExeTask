@@ -1,6 +1,6 @@
 % Compute the integral
 % int (C) y^2 ds,
-% where C is the arc of the circle x = a*cos(t), y = a*sin(t), 0?t?pi/2
+% where C is the arc of the circle x = a*cos(t), y = a*sin(t), 0<=t<=pi/2
 
 syms a t dt real;
 x=a*cos(t)
