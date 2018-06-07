@@ -8,7 +8,7 @@
 % int int (S) (P*cos_alfa+Q*cos_beta+R*cos_gamma)*dS = 
 % = int int int (T) (dP/dx+dQ/dy+dR/dz)*dx*dy*dz
 
-syms x y z;
+syms x y z a;
 P=x^3
 Q=y^3
 R=z^3
