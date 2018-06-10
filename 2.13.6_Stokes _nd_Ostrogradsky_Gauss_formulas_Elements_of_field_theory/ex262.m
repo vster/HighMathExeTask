@@ -31,8 +31,9 @@ C=int(df/dt,t,0,2*pi)
 % Application of the Stokes formula
 clear
 syms x y z a b real
+r=[x y z]
 F=[x+z,x-y,x]
-rot_F=curl(F,[x y z])
+rot_F=curl(F,r)
 % [0 0 1]
 f1=x^2/a^2+y^2/b^2-1
 

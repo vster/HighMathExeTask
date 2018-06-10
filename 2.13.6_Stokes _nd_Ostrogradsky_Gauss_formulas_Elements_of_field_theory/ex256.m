@@ -4,10 +4,10 @@
 % x^2+y^2<=R^2/h^2*z^2, 0<=z<=h
 
 syms x y z R h real;
+r=[x,y,z]
 F=[x^3,y^3,z^3]
 S=x^2+y^2-R^2/h^2*z^2
-
-f1=diff(F(1),x)+diff(F(2),y)+diff(F(3),z)
+f1=divergence(F,r)
 % 3*x^2 + 3*y^2 + 3*z^2
 
 % Transition to cylindrical coordinates

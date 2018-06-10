@@ -6,7 +6,7 @@ syms x y z R h real;
 r=[x y z]
 S = x^2+y^2-R^2/h^2*z^2
 
-f1=diff(r(1),x)+diff(r(2),y)+diff(r(3),z)
+f1=divergence(r,r)
 % 3
 
 % Transition to cylindrical coordinates

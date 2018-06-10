@@ -1,11 +1,12 @@
 % Find stream radius vector 
-% r=x*i+y*j*z*k
+% r=x*i+y*j+z*k
 % through the closed surface
 % z=1-sqrt(x^2+y^2),z=0 (0<=z<=1)
 
 syms x y z;
 r=[x y z]
-div_r=diff(r(1),x)+diff(r(2),y)+diff(r(3),z)
+% div_r=diff(r(1),x)+diff(r(2),y)+diff(r(3),z)
+div_r=divergence(r,r)
 % 3
 f2=z-1+sqrt(x^2+y^2)
 
@@ -31,5 +32,5 @@ f2=simplify(f2)
 % 0<=ro<=1
 % 0<=phi<=2*pi
 
-P = int(int(int(3*J,z,0,1-ro),ro,0,1),phi,0,2*pi)
+P = int(int(int(div_r*J,z,0,1-ro),ro,0,1),phi,0,2*pi)
 % pi

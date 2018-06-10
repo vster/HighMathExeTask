@@ -5,10 +5,11 @@
 % if 0<=x<=2,0<=y<=2,0<=z<=2
 
 syms x y z real;
+r=[x,y,z]
 F=[x^2,y^2,z^2]
 S=x^2+y^2+z^2-4
 
-f1=diff(F(1),x)+diff(F(2),y)+diff(F(3),z)
+f1=divergence(F,r)
 % 2*x + 2*y + 2*z
 
 % We proceed to spherical coordinates

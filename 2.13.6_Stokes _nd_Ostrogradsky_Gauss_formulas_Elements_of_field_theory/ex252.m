@@ -9,10 +9,9 @@
 % = int int int (T) (dP/dx+dQ/dy+dR/dz)*dx*dy*dz
 
 syms x y z a;
-P=x^3
-Q=y^3
-R=z^3
-f=diff(P,x)+diff(Q,y)+diff(R,z)
+r=[x,y,z]
+F=[x^3,y^3,z^3]
+div_F=divergence(F,r)
 % 3*x^2 + 3*y^2 + 3*z^2
 
 % We proceed to spherical coordinates
@@ -22,7 +21,7 @@ y1=ro*sin(phi)*sin(teta)
 z1=ro*cos(teta)
 J=ro^2*sin(teta)
 
-f1=subs(f,[x y z],[x1 y1 z1])
+f1=subs(div_F,[x y z],[x1 y1 z1])
 f1=simplify(f1)
 % 3*ro^2
 

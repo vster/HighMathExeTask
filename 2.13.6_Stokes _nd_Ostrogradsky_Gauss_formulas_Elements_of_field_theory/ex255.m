@@ -4,11 +4,9 @@
 % x^2+y^2=a^2 (-h<=z<=h)
 
 syms x y z a h real;
-P=x
-Q=y
-R=z
-
-f=diff(P,x)+diff(Q,y)+diff(R,z)
+r=[x y z]
+F=[x y z]
+f=divergence(F,r)
 % 3
 
 % Transition to cylindrical coordinates

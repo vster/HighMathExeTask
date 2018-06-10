@@ -8,10 +8,12 @@
 % = int int int (T) (dP/dx+dQ/dy+dR/dz)*dx*dy*dz
 
 syms x y z a;
+r=[x y z]
 P=z^2-y^2
 Q=x^2-y^2
 R=y^2-x^2
-f=diff(P,x)+diff(Q,y)+diff(R,z)
+F=[P Q R]
+f=divergence(F,r)
 % -2*y
 
 % We proceed to spherical coordinates
