@@ -11,7 +11,8 @@ hold off
 syms x y real;
 slv=solve(y==64/(x^2+16),y==x^2/8)
 slv.x
-
 % -4 4
+
 V=pi*int(y1^2-y2^2,-4,4)
+% pi*(16*pi + 128/5)
 vpa(V)

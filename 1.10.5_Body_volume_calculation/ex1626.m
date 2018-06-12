@@ -9,3 +9,4 @@ grid on
 
 syms x;
 V=pi*int((x-1)^3,1,2)
+% pi/4

@@ -14,5 +14,6 @@ slv.x
 
 % 0 4
 syms x;
-V=pi*int((x^2/2)^2-(x^3/8)^2,x,0,4)
+V=pi*int(y1^2-y2^2,x,0,4)
+% (512*pi)/35 - ? correct 4*pi/325 - ?
 vpa(V)
