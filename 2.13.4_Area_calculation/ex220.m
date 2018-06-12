@@ -1,4 +1,4 @@
-% Area of afigure
+% Area of a figure
 % S = 1/2*int (C) x*dy-y*dx
 
 % Calculate the area of a figure bounded by curves
