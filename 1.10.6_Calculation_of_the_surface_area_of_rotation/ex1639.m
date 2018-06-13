@@ -13,6 +13,6 @@ y1=simplify(y1)
 
 y2=simplify(y*sqrt(y1))
 
-S=simplify(2*pi*int(y2,t,0,2*pi))
+S=simplify(2*pi*int(y2,t,0,pi))
 
 pretty(S)

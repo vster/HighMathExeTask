@@ -14,7 +14,7 @@ dy=diff(y,x)
 %y1=simplify(y1)
 %y2=simplify(y*sqrt(y1))
 
-y2=simplify(y*sqrt(1+dy^2))
+y2=y*sqrt(1+dy^2)
 pretty(y2)
 
 y2=sqrt(b^2*x^2-a^2*(x^2-a^2))/a
