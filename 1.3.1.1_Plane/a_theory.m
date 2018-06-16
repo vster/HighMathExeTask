@@ -18,7 +18,7 @@
 % 3) If D/=0 we divide all the terms of the equation by -D
 % the equation of the plane can be reduced to the form
 % x/a+y/b+z/c=1
-% here a=-D/A, b=-D/B, c==D/C
+% here a=-D/A, b=-D/B, c=-D/C
 % This equation is called the equation of a plane in segments.
 
 % 4) Angle between planes
