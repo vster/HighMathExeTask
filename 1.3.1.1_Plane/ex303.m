@@ -1,3 +1,6 @@
+% Find the equations of the planes passing through the coordinate axes 
+% perpendicular to the plane 3*x-4*y+5*z-12=0
+
 syms x y z;
 f=3*x-4*y+5*z-12
 A1=3
