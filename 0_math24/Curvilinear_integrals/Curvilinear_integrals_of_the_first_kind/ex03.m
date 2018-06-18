@@ -4,7 +4,7 @@
 
 % int (C) F(x,y) *ds = int (a:b) F(x,f(x))*sqrt(1+diff(x)^2) *dx
 
-syms x dx;
+syms x dx e;
 f1=x^2
 f2=log(x)
 ds=sqrt(1+diff(f2)^2)
