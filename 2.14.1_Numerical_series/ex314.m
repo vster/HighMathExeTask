@@ -13,13 +13,14 @@ u(n)=(-1)^ceil(2/3*(n+1))*(1+6*(n-1))/10^n
 
 % Use the Leibniz test
 % 1 condition
-for n=1:6
-     a=vpa(abs(u(n)))
-end
+%for n=1:6
+%     a=vpa(abs(u(n)))
+%end
 % 0.1>0.07>0.013>0.0019>0.00025>3.1e-5
 
 % 2 condition
-syms n;
 L=limit(abs(u(n)),n,inf)
+% 0
+L=limit(u(n),n,inf)
 % 0
 % L=0 => series is converge

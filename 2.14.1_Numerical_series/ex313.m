@@ -20,4 +20,6 @@ end
 syms n;
 L=limit(abs(u(n)),n,inf)
 % 0
+L=limit(u(n),n,inf)
+% 0
 % L=0 => series is converge

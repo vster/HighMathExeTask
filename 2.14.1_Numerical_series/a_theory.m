@@ -1,3 +1,6 @@
+% If series u1+u2+u3+...+u(n)+... is converges,
+% then lim(n->inf)u(n)=0
+
 % The first sign of comparison
 % Given 2 series u(n) and v(n)
 % u(n)<=v(n)
