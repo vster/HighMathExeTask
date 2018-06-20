@@ -21,6 +21,15 @@ u(n)=(-1)^ceil(2/3*(n+1))*(1+6*(n-1))/10^n
 % 2 condition
 L=limit(abs(u(n)),n,inf)
 % 0
-L=limit(u(n),n,inf)
-% 0
 % L=0 => series is converge
+Su=0
+for n=1:30
+    Su=Su+u(n);  
+end
+vpa(Su)
+
+Sa=0
+for n=1:30
+    Sa=Sa+abs(u(n));  
+end
+vpa(Sa)
