@@ -22,14 +22,20 @@ u(n)=(-1)^ceil(2/3*(n+1))*(1+6*(n-1))/10^n
 L=limit(abs(u(n)),n,inf)
 % 0
 % L=0 => series is converge
-Su=0
-for n=1:30
-    Su=Su+u(n);  
-end
-vpa(Su)
 
-Sa=0
-for n=1:30
-    Sa=Sa+abs(u(n));  
+Sa=symsum(abs(u(n)),n,1,inf)
+% symsum(1/10^n*abs((-1)^ceil((2*n)/3 + 2/3))*(6*n - 5), n, 1, Inf)
+Su=symsum(u(n),n,1,inf)
+% symsum((-1)^ceil((2*n)/3 + 2/3)/10^n*(6*n - 5), n, 1, Inf)
+
+syms i;
+digits(3);
+Sa(1)=vpa(abs(u(1)));
+Su(1)=vpa(u(1));
+for i=2:10
+    Sa(i)=Sa(i-1)+vpa(abs(u(i)));
+    Su(i)=Su(i-1)+vpa(u(i));
 end
-vpa(Sa)
+Sa
+Su
+

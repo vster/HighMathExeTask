@@ -11,9 +11,10 @@ u(n)=(-1)^(n-1)*(n+1)/(n^2+n+1)
 S=symsum(u(n),n,1,inf)
 
 % 1 condition
-%for n=1:6
-%     a=vpa(abs(u(n)))
-%end
+syms i;
+for i=1:10
+     a(i)=vpa(abs(u(i)));
+end
 % 0.6667>0.4286>0.3077>0.2381>0.1935>0.1628>...
 
 % 2 condition
@@ -26,14 +27,14 @@ S=symsum(u(n),n,1,inf)
 S=symsum(abs(u(n)),n,1,inf)
 % symsum((abs((-1)^(n - 1))*(n + 1))/(n^2 + n + 1), n, 1, Inf)
 
-Su=0
-for n=1:20
-    Su=Su+u(n);  
+syms i;
+digits(4);
+Sa(1)=vpa(abs(u(1)));
+Su(1)=vpa(u(1));
+for i=2:20
+    Sa(i)=Sa(i-1)+vpa(abs(u(i)));
+    Su(i)=Su(i-1)+vpa(u(i));
 end
-vpa(Su)
+Sa
+Su
 
-Sa=0
-for n=1:20
-    Sa=Sa+abs(u(n));  
-end
-vpa(Sa)

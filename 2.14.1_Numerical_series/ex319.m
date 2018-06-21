@@ -7,9 +7,10 @@ u(n)=(-1)^n*1/(2*n+1)
 
 % Use the Leibniz test
 % 1 condition
-% for n=1:5
-%     a=vpa(abs(u(n)))
-% end
+syms i;
+for i=1:10
+     a(i)=vpa(abs(u(i)));
+end
 % 0.3333>0.2>0.1429>0.1111
 
 % 2 condition
@@ -17,6 +18,23 @@ L=limit(abs(u(n)),n,inf)
 % 0
 L=limit(u(n),n,inf)
 % 0
-S=symsum(u(n),n,1,inf)
+Sa=symsum(abs(u(n)),n,1,inf)
+% NaN
+Su=symsum(u(n),n,1,inf)
 % pi/4 - 1
-% series is converge
+% series is converge conditional
+
+digits(3);
+Sa(1)=vpa(abs(u(1)));
+for i=2:20
+    Sa(i)=Sa(i-1)+vpa(abs(u(i)));
+    Da(i)=Sa(i)-Sa(i-1);
+end
+Sa
+
+Su(1)=vpa(u(1));
+for i=2:20
+    Su(i)=Su(i-1)+vpa(u(i));
+    Du(i)=Su(i)-Su(i-1);
+end
+Su
