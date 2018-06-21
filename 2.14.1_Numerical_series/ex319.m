@@ -24,17 +24,13 @@ Su=symsum(u(n),n,1,inf)
 % pi/4 - 1
 % series is converge conditional
 
-digits(3);
+syms i;
+digits(4);
 Sa(1)=vpa(abs(u(1)));
-for i=2:20
-    Sa(i)=Sa(i-1)+vpa(abs(u(i)));
-    Da(i)=Sa(i)-Sa(i-1);
-end
-Sa
-
 Su(1)=vpa(u(1));
 for i=2:20
+    Sa(i)=Sa(i-1)+vpa(abs(u(i)));
     Su(i)=Su(i-1)+vpa(u(i));
-    Du(i)=Su(i)-Su(i-1);
 end
+Sa
 Su

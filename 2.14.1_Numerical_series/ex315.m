@@ -7,10 +7,6 @@ syms n;
 digits(4)
 u(n)=(-1)^(ceil(1/2*n)+1)*(3+1/2^n)
 
-% for n=1:10
-%    s(n)=u(n)
-% end
-
 % Use the Leibniz test
 % 1 condition
 for n=1:6

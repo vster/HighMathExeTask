@@ -6,12 +6,15 @@ clear
 syms n;
 digits(5)
 u(n)=(-1)^(n-1)*(3*n-2)/(3*n-1)
+
 % Use the Leibniz test
 % 1 condition
-for n=1:6
-    a=vpa(abs(u(n)))
+syms i;
+for i=1:10
+     a(i)=vpa(abs(u(i)));
 end
 % 0.5<0.8<0.875<0.90909<0.92857<0.94118...
+
 % 2 condition
 syms n;
 L=limit(abs(u(n)),n,inf)

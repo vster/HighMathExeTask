@@ -9,10 +9,12 @@ u(n)=(-1)^(n-1)*(1+n/10^n)
 % Use the Leibniz test
 
 % 1 condition
-for n=1:6
-     a=vpa(abs(u(n)))
+syms i;
+for i=1:10
+     a(i)=vpa(abs(u(i)));
 end
 % 1.1>1.02>1.003>1.0004>1.00005>...
+
 % 2 condition
 syms n;
 L=limit(abs(u(n)),n,inf)
