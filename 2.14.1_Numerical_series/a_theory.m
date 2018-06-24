@@ -24,7 +24,7 @@
 % Integral test
 % Given function f(x) on x>=1
 % S=sum(n=1:inf)u(n), where u(n)=f(x)
-% I=int(N:inf)f(x)dx
+% I=int(N:inf)f(x)dx (N>=1)
 % if I is converges then S is converges
 % if I is diverges then S is diverges 
 

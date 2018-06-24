@@ -6,6 +6,13 @@ digits(4)
 u(n)=(-1)^(n-1)*1/n
 
 % Use the Leibniz test
+% 1 condition
+syms i;
+for i=1:10
+     a(i)=vpa(abs(u(i)));
+end
+% [ 1.0, 0.5, 0.3333, 0.25, 0.2, 0.1667, 0.1429, 0.125, 0.1111, 0.1]
+
 % 2 condition
 L=limit(abs(u(n)),n,inf)
 % 0
