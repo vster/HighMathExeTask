@@ -31,6 +31,12 @@ F=simplify(F)
 I=subs(u,r,B)-subs(u,r,A)
 % 336
 
+P=subs(P,y,0)
+% 0
+U=int(P,x,0,x)+int(Q,y,0,y)
+U=expand(U)
+% y*x^3 + y*x
+
 v = -5:0.2:5;
 [x1,y1] = meshgrid(v);
 z = x1*y1*(x1^2 + 1);

@@ -27,4 +27,8 @@ u(x,y)=(x*(x + 2*y))/2+(-y^2/2)+C1
 u(x,y)=expand(u(x,y))
 % x^2/2 + x*y - y^2/2 + C1
 
-
+P=subs(P,y,0)
+% x
+U=int(P,x,0,x)+int(Q,y,0,y)
+U=expand(U)
+% x^2/2 + x*y - y^2/2 + C1
