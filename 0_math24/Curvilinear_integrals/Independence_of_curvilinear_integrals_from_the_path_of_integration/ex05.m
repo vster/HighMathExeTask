@@ -19,7 +19,7 @@ Duy=diff(u,y)
 DGy=2*y
 
 syms H(z)
-G(y,z)=int(DGy,y) +H(z)
+G(y,z)=int(DGy,y) + H(z)
 % y^2 + H(z)
 u=x*y*z+y^2 + H(z)
 
