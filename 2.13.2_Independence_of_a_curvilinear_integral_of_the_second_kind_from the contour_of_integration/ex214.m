@@ -1,6 +1,6 @@
-% Вычислить
+% Calculate
 % I  = int (0;0)-(pi;pi) (x+y)dx+(x-y)dy
-% по различным контурам, соединяющих точки
+% on various contours connecting points
 % O(0;0) and M(pi;pi)
 
 syms x y dx dy real;
@@ -14,7 +14,7 @@ dQx=diff(Q,x)
 % 1
 % dPy=dQx
 
-% 1) По прямой OM
+% 1) In a straight line OM
 y1=x
 dy1=dx
 df1=subs(df,[y dy],[y1 dy1])
@@ -22,7 +22,7 @@ df1=subs(df,[y dy],[y1 dy1])
 I1=int(df1/dx,x,0,pi)
 % pi^2
 
-% 2) По кривой y=x+sin(x)
+% 2) On the curve y=x+sin(x)
 y2=x+sin(x)
 dy2=diff(y2)*dx
 % (cos(x) + 1)*dx
@@ -31,7 +31,7 @@ df2=simplify(df2)
 I2=int(df2/dx,x,0,pi)
 % pi^2
 
-% 3) По ломаной OPM, где P(pi;0)
+% 3) In the broken OPM, where P(pi;0)
 % I1
 y1=0
 dy1=0
@@ -52,7 +52,7 @@ I2=int(df2/dy,y,0,pi)
 I=I1+I2
 % pi^2
 
-% 4) По параболе y=x^2/sym(pi)
+% 4) On the parabola y=x^2/sym(pi)
 y4=x^2/sym(pi)
 dy4=diff(y4)*dx
 df4=subs(df,[y dy],[y4 dy4])
