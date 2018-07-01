@@ -26,3 +26,9 @@ L5=limit(u(x,n),n,inf)
 
 % if |x|>1 => series is converge
 
+for i=1:3
+    ezplot(u(x,i))
+    hold on
+    grid on
+end
+hold off

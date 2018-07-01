@@ -27,3 +27,10 @@ a
 % then
 % |R(x,n)| < epsilon
 % So series is converges
+
+for i=1:3
+    ezplot(u(x,i))
+    hold on
+    grid on
+end
+hold off
