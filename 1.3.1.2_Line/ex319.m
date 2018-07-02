@@ -1,5 +1,11 @@
+% In the equations of the line
+% x/2 = y/-3 = z/n
+% define the parameter n so that this line intersects the line
+% (x+1)/3 = (y+5)/2 = z/1
+% and find the point of their intersection.
+
 syms x y z n;
-% Прямая 1
+% Straight 1
 % (x+1)/3=(y+5)/2=z/1
 x1=-1
 y1=-5
@@ -8,7 +14,7 @@ l1=3
 m1=2
 n1=1
 
-% Прямая 2
+% Straight 2
 % x/2=y/(-3)=z/n
 x2=0
 y2=0
