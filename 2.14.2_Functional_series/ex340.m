@@ -28,8 +28,10 @@ a
 % |R(x,n)| < epsilon
 % So series is converges
 
-for i=1:3
-    ezplot(u(x,i))
+x1=-3:0.2:3
+for i=1:5
+    y1=u(x1,i);
+    plot(x1,y1)
     hold on
     grid on
 end

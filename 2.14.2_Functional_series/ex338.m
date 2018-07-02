@@ -14,3 +14,12 @@ x=1
 u1(n)=u(x,n)
 D=limit(u1(n+1)/u1(n),n,inf)
 % 1/3 < 1 => series is converge
+
+x1=-2:0.2:2
+for i=1:3
+    y1=u(x1,i);
+    plot(x1,y1)
+    hold on
+    grid on
+end
+hold off
