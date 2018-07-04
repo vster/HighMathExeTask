@@ -2,6 +2,7 @@
 % y=1/x, Ox axis and vertical lines x = 1, x = 2.
 
 syms x real;
+y=1/x
 
 % S=-int(C)y*dx=-int(AB)y*dx-int(BD)y*dx-int(DE)y*dx-int(EA)y*dx
 
