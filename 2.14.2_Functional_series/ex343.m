@@ -22,7 +22,7 @@ Du1
 % All terms of Du(n) is less then terms of series
 % 1+1/2^(3/2)+1/3^(3/2)+...
 
-x1=-3:0.2:3
+x1=-3:0.2:3;
 for i=1:3
     y1=u(x1,i);
     plot(x1,y1)
