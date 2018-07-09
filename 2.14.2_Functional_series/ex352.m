@@ -38,7 +38,7 @@ S=symsum(u(x,n),n,1,inf)
 
 syms i;
 x1=-2:0.2:2;
-s=zeros(1,length(x1))
+s=zeros(1,length(x1));
 for i=1:4
     s=s+u(x1,i);
     plot(x1,s)

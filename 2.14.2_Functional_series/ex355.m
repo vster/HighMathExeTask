@@ -11,7 +11,7 @@ u(x,n)=cos(x)^(n-1)/factorial(n-1)
 
 syms i;
 x1=-2*pi:0.2:2*pi;
-s=zeros(1,length(x1))
+s=zeros(1,length(x1));
 for i=1:10
     s=s+u(x1,i);
     plot(x1,s)
