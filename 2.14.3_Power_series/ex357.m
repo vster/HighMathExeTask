@@ -6,7 +6,7 @@ u(x,n)=1/n*x^n
 a(n)=1/n
 digits(3)
 
-R=limit(abs(a(n)/a(n+a)),n,inf)
+R=limit(abs(a(n)/a(n+1)),n,inf)
 % 1 => -1 < x < 1
 
 x=-1
