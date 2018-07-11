@@ -6,3 +6,5 @@ u(n)=1/(n*sqrt(n+1))
 
 v(n)=1/n^(3/2)
 L=limit(u(n)/v(n),n,inf)
+% 1
+% v(n) converges => u(n) converges
