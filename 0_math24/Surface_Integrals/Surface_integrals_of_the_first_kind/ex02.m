@@ -5,11 +5,18 @@
 % S1 - lateral surface of the cone
 % S2 - its foundation
 
-syms x y;
-z=sqrt(x^2+y^2)
+syms x y z real;
+z1=sqrt(x^2+y^2)
 f1=z^2
 
-f2=f1*sqrt(1+diff(z,x)^2+diff(z,y)^2)
+% int_int(S)f(x,y,z)*dS=int_int(D)f(x,y,z(x,y))*sqrt(1+diff(z,x)^2+diff(z,y)^2)*dx*dy
+
+f1=subs(f1,z,z1)
+% x^2 + y^2
+dS=sqrt(1+diff(z1,x)^2+diff(z1,y)^2)
+% (x^2/(x^2 + y^2) + y^2/(x^2 + y^2) + 1)^(1/2)
+
+f2=f1*dS
 f2=simplify(f2)
 % 2^(1/2)*(x^2 + y^2)
 
