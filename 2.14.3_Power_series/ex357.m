@@ -9,8 +9,7 @@ digits(3)
 R=limit(abs(a(n)/a(n+1)),n,inf)
 % 1 => -1 < x < 1
 
-x=-1
-u1(n)=u(x,n)
+u1(n)=subs(u,x,-1)
 % (-1)^n/n
 
 % Use the Leibniz test
@@ -26,8 +25,7 @@ u2
 L=limit(abs(u1(n)),n,inf)
 % 0 => if x=-1 then series conerges
 
-x=1
-u1(n)=u(x,n)
+u1(n)=subs(u,x,1)
 % 1/n => series diverges
 % So, the domain of convergence of the series is 
 % -1 <= x < 1
