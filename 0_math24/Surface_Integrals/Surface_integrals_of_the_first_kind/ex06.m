@@ -8,14 +8,15 @@ syms x y z real;
 f1=sqrt(1+x^2+y^2)
 
 syms u v real;
-r=[u*cos(v),u*sin(v),v]
+r1=[u*cos(v),u*sin(v),v]
 x1=u*cos(v)
 y1=u*sin(v)
 z1=v
 
-dru=diff(r,u)
+
+dru=diff(r1,u)
 % [ cos(v), sin(v), 0]
-drv=diff(r,v)
+drv=diff(r1,v)
 % [ -u*sin(v), u*cos(v), 1]
 
 J=norm(cross(dru,drv))

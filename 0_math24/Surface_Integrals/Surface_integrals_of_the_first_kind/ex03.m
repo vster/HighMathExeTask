@@ -6,13 +6,15 @@
 % x^2-2*a*x+y^2=0 => (x-a)^2+y^2=a^2
 % D - circle with center at point (a,0)
 
-syms a x y dx dy real;
-z=sqrt(x^2+y^2)
+syms a x y z dx dy real;
+z1=sqrt(x^2+y^2)
 f1=x*y+y*z+z*x
+
+f1=subs(f1,z,z1)
 % x*(x^2 + y^2)^(1/2) + y*(x^2 + y^2)^(1/2) + x*y
 f2=x^2-2*a*x+y^2
 
-dS=sqrt(1+diff(z,x)^2+diff(z,y)^2)
+dS=sqrt(1+diff(z1,x)^2+diff(z1,y)^2)
 % (x^2/(x^2 + y^2) + y^2/(x^2 + y^2) + 1)^(1/2)
 f3=f1*dS
 f3=simplify(f3)

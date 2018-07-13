@@ -3,17 +3,18 @@
 % r(u,v) = (cos(v),sin(v),u), 0<=u<=2, pi/2<=v<=pi.
 
 syms x y z real;
+r=[x y z]
 F=[y,x,z]
 
 syms u v real;
-r=[cos(v),sin(v),u]
+r1=[cos(v),sin(v),u]
 x1=cos(v)
 y1=sin(v)
 z1=u
 
-dru=diff(r,u)
+dru=diff(r1,u)
 % [ 0, 0, 1]
-drv=diff(r,v)
+drv=diff(r1,v)
 % [ -sin(v), cos(v), 0]
 dS=cross(dru,drv)
 % [ -cos(v), -sin(v), 0]
