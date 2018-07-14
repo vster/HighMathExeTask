@@ -7,8 +7,8 @@ u(x,n)=x^n/n
 u1=diff(u)
 % x^(n - 1)
 % u1(x,n) - geometrical progression
-% S=a/(1-q)
-% a=1
+% S=a1/(1-q)
+% a1=1
 % q=x
 S1=1/(1-x)
 
