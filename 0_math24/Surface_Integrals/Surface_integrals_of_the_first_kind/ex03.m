@@ -25,6 +25,9 @@ x1=r*cos(phi)
 y1=r*sin(phi)
 J=r
 
+J2=jacobian([x1 y1],[r phi])
+J2=simplify(det(J2))
+
 f2=subs(f2,[x y],[x1 y1])
 % r^2*cos(phi)^2 + r^2*sin(phi)^2 - 2*a*r*cos(phi)
 slv=solve(f2,r)

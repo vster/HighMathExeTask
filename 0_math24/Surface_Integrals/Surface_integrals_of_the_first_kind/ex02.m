@@ -27,6 +27,11 @@ x1=r*cos(phi)
 y1=r*sin(phi)
 J=r
 
+J2=jacobian([x1 y1],[r phi])
+J2=det(J2)
+J2=simplify(J2)
+% r
+
 f3=subs(f2,[x y],[x1 y1])
 f3=simplify(f3)
 % 2^(1/2)*r^2
