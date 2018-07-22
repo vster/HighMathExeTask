@@ -11,7 +11,7 @@ ts=f0;
 for n=1:7
     df(n)=diff(f(x),x,n);
     df0(n)=subs(df(n),x,x0);
-    ts=ts+df0(n)/factorial(n)*x^n;
+    ts=ts+df0(n)/factorial(n)*(x-x0)^n;
     % ezplot(ts,[-1 1])
     % grid on
 end
