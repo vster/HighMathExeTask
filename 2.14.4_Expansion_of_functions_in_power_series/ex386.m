@@ -25,3 +25,18 @@ ts
 
 ts1=taylor(f(x),'ExpansionPoint', 2)
 % (x - 2)^2/8 - x/4 - (x - 2)^3/16 + (x - 2)^4/32 - (x - 2)^5/64 + 1
+
+% New algorithm
+syms x1;
+f(x1)=subs(f,x,x1)
+f0=subs(f(x1),x1,x0)
+ts=f0
+term=f
+for n=1:6
+    dterm=diff(term,x1)
+    term=dterm*(x-x0)/n
+    term0=subs(term,x1,x0)
+    ts=ts+term0
+end
+ts2=ts
+% (x - 2)^2/8 - x/4 - (x - 2)^3/16 + (x - 2)^4/32 - (x - 2)^5/64 + (x - 2)^6/128 + 1

@@ -37,3 +37,21 @@ ts1=f0+1/factorial(1)*((x-x0)*dfx0+(y-y0)*dfy0) + ...
     1/factorial(2)*((x-x0)^2*dfx2_0+...
     2*(x-x0)*(y-y0)*dfxy_0+(y-y0)^2*dfy2_0)
 % y - (y - 1)^2/2 + (2*x - 2)*(y - 1) - 1
+ts1=simplify(ts1)
+% -((y - 1)*(y - 4*x + 1))/2
+
+% New algorithm
+syms x1 y1;
+f(x1,y1)=subs(f,[x y],[x1 y1])
+f0=subs(f(x1,y1),[x1 y1],[x0 y0])
+ts=f0
+term=f(x1,y1)
+for n=1:2
+    dtermx=diff(term,x1)
+    dtermy=diff(term,y1)
+    term=(dtermx*(x-x0)+dtermy*(y-y0))/n
+    term0=subs(term,[x1 y1],[x0 y0])
+    ts=ts+term0
+end
+ts2=simplify(ts)
+% -((y - 1)*(y - 4*x + 1))/2

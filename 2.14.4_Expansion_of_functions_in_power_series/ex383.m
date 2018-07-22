@@ -43,3 +43,18 @@ ts2=taylor(cos(2*x),'Order',8)
 % - (4*x^6)/45 + (2*x^4)/3 - 2*x^2 + 1
 ts3=1/2*(1-ts2)
 % (2*x^6)/45 - x^4/3 + x^2
+
+% New algorithm
+syms x1;
+f(x1)=subs(f,x,x1)
+f0=subs(f(x1),x1,x0)
+ts=f0
+term=f
+for n=1:7
+    dterm=diff(term,x1)
+    term=dterm*(x-x0)/n
+    term0=subs(term,x1,x0)
+    ts=ts+term0
+end
+ts4=ts
+% (2*x^6)/45 - x^4/3 + x^2
