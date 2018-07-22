@@ -1,6 +1,7 @@
 % Expand in a power series x function 
 % f(x)=sin(x)^2
 
+clear
 syms x n;
 f(x)=sin(x)^2
 
@@ -8,12 +9,14 @@ x0=0;
 f0=subs(f,x,x0)
 % 0
 ts=f0;
+dfp=f;
 for n=1:7
-    df(n)=diff(f(x),x,n);
+    df(n)=diff(dfp,x);
     df0(n)=subs(df(n),x,x0);
     ts=ts+df0(n)/factorial(n)*(x-x0)^n;
     % ezplot(ts,[-1 1])
     % grid on
+    dfp=df(n);
 end
 df
 df=simplify(df)

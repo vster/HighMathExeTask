@@ -1,17 +1,20 @@
 % Expand in a power series x function f(x)=2^x
 
+clear
 syms x n;
 f(x)=2^x
 
 x0=0;
 f0=subs(f,x,x0);
 ts=f0;
+dfp=f;
 for n=1:5
-    df(n)=diff(f(x),x,n);
+    df(n)=diff(dfp,x);
     df0(n)=subs(df(n),x,x0);
     ts=ts+df0(n)/factorial(n)*(x-x0)^n;
     % ezplot(ts)
     % grid on
+    dfp=df(n);
 end
 df
 % [ 2^x*log(2), 2^x*log(2)^2, 2^x*log(2)^3, 2^x*log(2)^4, 2^x*log(2)^5]
