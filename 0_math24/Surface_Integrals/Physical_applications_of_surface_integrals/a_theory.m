@@ -39,7 +39,7 @@
 % not belonging to the surface, there is a body of mass m
 % The attractive force between the surface S and the point body m 
 % is given by
-% F = G*m* int_int (S) mu(x,y,z) r/r^3 dS
+% F = G*m int_int (S) mu(x,y,z) r/r^3 dS
 % where r = (x-x0, y-y0, z-z0), G is the gravitational constant, 
 % and mu (x, y, z) is the density function.
 
@@ -63,7 +63,7 @@
 % the surface S per unit time and is expressed by the formula
 % Phi = int_int (S) v(r)*dS
 
-% Similarly, the flux of a vector field F = ro*vv, where ro is the density, 
+% Similarly, the flux of a vector field F = ro*v, where ro is the density, 
 % is called the substance flux and is determined by the expression
 % Phi = int_int (S) ro*v(r)*dS
 % It is numerically equal to the mass of the substance passing 
@@ -79,9 +79,9 @@
 % The flow of electric displacement D through the closed surface S 
 % is equal to the algebraic sum of all charges located inside the surface:
 % Phi = int_int (S) D*dS = sum (i) Qi
-% where D = eps*eps0*E, E is the electric field strength, 
-% eps is the relative dielectric constant of the medium, 
-% eps0 = 8.85 ? E-12 Ph/m is the dielectric constant of the vacuum.
+% where D = epsilon*epsilon0*E, E is the electric field strength, 
+% epsilon is the relative dielectric constant of the medium, 
+% epsilon0 = 8.85*E-12 Ph/m is the dielectric constant of the vacuum.
 
 % The Gauss theorem is applicable to any closed surfaces. 
 % In the case of a surface with sufficient symmetry, 
