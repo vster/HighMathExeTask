@@ -15,9 +15,9 @@ R1(n)=subs(R,x,x0)
 syms i;
 s=0;
 for i=0:7
-    term=subs(u(x,n),[x n],[x0 i]);
-    s=s+term;
-    disp([i term vpa(term) s vpa(s) R1(i) vpa(R1(i))])
+    term0=subs(u(x,n),[x n],[x0 i]);
+    s=s+term0;
+    disp([i term0 vpa(term0) s vpa(s) R1(i) vpa(R1(i))])
     if (R1(i)<err)
         break
     end
