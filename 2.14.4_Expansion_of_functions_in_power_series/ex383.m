@@ -14,6 +14,7 @@ for n=1:7
     df(n)=diff(dfp,x);
     df0(n)=subs(df(n),x,x0);
     ts=ts+df0(n)/factorial(n)*(x-x0)^n;
+    disp([df(n) df0(n) ts])
     % ezplot(ts,[-1 1])
     % grid on
     dfp=df(n);
@@ -51,10 +52,12 @@ f0=subs(f(x1),x1,x0)
 ts=f0
 term=f
 for n=1:7
-    dterm=diff(term,x1)
-    term=dterm*(x-x0)/n
-    term0=subs(term,x1,x0)
-    ts=ts+term0
+    dterm=diff(term,x1);
+    dterm=simplify(dterm);
+    term=dterm*(x-x0)/n;
+    term0=subs(term,x1,x0);
+    ts=ts+term0;
+    disp([dterm term term0 ts])
 end
 ts4=ts
 % (2*x^6)/45 - x^4/3 + x^2
