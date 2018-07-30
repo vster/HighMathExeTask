@@ -7,22 +7,22 @@ f(x)=x^3
 
 x0=2;
 f0=subs(f,x,x0);
-ts=f0;
-dfp=f;
+term(1)=f0;
+ts=term(1);
+disp([0 f f0 term(1) ts])
 for n=1:3
-    df(n)=diff(dfp,x);
+    df(n)=diff(f,x,n);
     df0(n)=subs(df(n),x,x0);
-    ts=ts+df0(n)/factorial(n)*(x-x0)^n;
-    % fplot(ts, [-pi pi])
-    % hold on
-    % grid on
-    dfp=df(n);
+    term(n+1)=df0(n)/factorial(n)*(x-x0)^n;
+    ts=ts+term(n+1);
+    disp([n df(n) df0(n) term(n+1) ts]);
 end
-% hold off
 df
 % [ 3*x^2, 6*x, 6]
 df0
 % [ 12, 12, 6]
+term
+% [ 8, 12*x - 24, 6*(x - 2)^2, (x - 2)^3]
 ts 
 % 12*x + 6*(x - 2)^2 + (x - 2)^3 - 16
 
@@ -40,6 +40,7 @@ for n=1:3
     term=dterm*(x-x0)/n;
     term0=subs(term,x1,x0);
     ts=ts+term0;
+    disp([n dterm term term0 ts])
 end
 ts2=ts
 % 12*x + 6*(x - 2)^2 + (x - 2)^3 - 16

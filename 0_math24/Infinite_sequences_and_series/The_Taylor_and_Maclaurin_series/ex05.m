@@ -7,22 +7,22 @@ f(x)=(1+x)^mu
 
 x0=0;
 f0=subs(f,x,x0);
-ts=f0;
-dfp=f;
+term(1)=f0;
+ts=term(1);
+disp([0 f f0 term(1) ts])
 for n=1:4
-    df(n)=diff(dfp,x);
+    df(n)=diff(f,x,n);
     df0(n)=subs(df(n),x,x0);
-    ts=ts+df0(n)/factorial(n)*(x-x0)^n;
-    % fplot(ts, [-pi pi])
-    % hold on
-    % grid on
-    dfp=df(n);
+    term(n+1)=df0(n)/factorial(n)*(x-x0)^n;
+    ts=ts+term(n+1);
+    disp([n df(n) df0(n) term(n+1) ts]);
 end
-% hold off
 df
 %
 df0
 % [ mu, mu*(mu - 1), mu*(mu - 1)*(mu - 2), mu*(mu - 1)*(mu - 2)*(mu - 3)]
+term
+% [ 1, mu*x, (mu*x^2*(mu - 1))/2, (mu*x^3*(mu - 1)*(mu - 2))/6, (mu*x^4*(mu - 1)*(mu - 2)*(mu - 3))/24]
 ts 
 % (mu*(mu - 1)*(mu - 2)*(mu - 3)*x^4)/24 + (mu*(mu - 1)*(mu - 2)*x^3)/6 + (mu*(mu - 1)*x^2)/2 + mu*x + 1
 
@@ -40,6 +40,7 @@ for n=1:4
     term=dterm*(x-x0)/n;
     term0=subs(term,x1,x0);
     ts=ts+term0;
+    disp([n dterm term term0 ts])
 end
 ts2=ts
 % (mu*(mu - 1)*(mu - 2)*(mu - 3)*x^4)/24 + (mu*(mu - 1)*(mu - 2)*x^3)/6 + (mu*(mu - 1)*x^2)/2 + mu*x + 1
