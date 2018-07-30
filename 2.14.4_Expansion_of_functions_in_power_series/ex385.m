@@ -16,7 +16,6 @@ for n=1:7
     ts=ts+term(n+1);
     disp([n df(n) df0(n) term(n+1) ts]);
 end
-% hold off
 df
 % [ 1/x, -1/x^2, 2/x^3, -6/x^4, 24/x^5, -120/x^6]
 df0
