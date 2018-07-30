@@ -6,18 +6,16 @@ syms x n;
 f(x)=sin(x)^2
 
 x0=0;
-f0=subs(f,x,x0)
-% 0
-ts=f0;
-dfp=f;
+f0=subs(f,x,x0);
+term(1)=f0;
+ts=term(1);
+disp([0 f f0 term(1) ts])
 for n=1:7
-    df(n)=diff(dfp,x);
+    df(n)=diff(f,x,n);
     df0(n)=subs(df(n),x,x0);
-    ts=ts+df0(n)/factorial(n)*(x-x0)^n;
-    disp([df(n) df0(n) ts])
-    % ezplot(ts,[-1 1])
-    % grid on
-    dfp=df(n);
+    term(n+1)=df0(n)/factorial(n)*(x-x0)^n;
+    ts=ts+term(n+1);
+    disp([n df(n) df0(n) term(n+1) ts]);
 end
 df
 df=simplify(df)
@@ -26,6 +24,8 @@ df=simplify(df)
 % df(x,n+1)=2^n*sin(2*x+pi/2*n)
 df0
 % [ 0, 2, 0, -8, 0, 32, 0]
+term
+% [ 0, 0, x^2, 0, -x^4/3, 0, (2*x^6)/45, 0]
 ts
 % (2*x^6)/45 - x^4/3 + x^2
 syms x n c;
