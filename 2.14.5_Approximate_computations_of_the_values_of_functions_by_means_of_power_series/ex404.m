@@ -56,3 +56,5 @@ for n=1:10
 end
 vpa(s2)
 % 1.6487196
+
+term2=taylorterm(f,x0,10)
