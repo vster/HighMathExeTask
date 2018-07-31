@@ -39,6 +39,9 @@ L=limit(R1,n,inf)
 ts1=taylor(f(x),'Order',8)
 % (2*x^6)/45 - x^4/3 + x^2
 
+n=7
+term2=taylorterm(f,x0,n)
+
 % sin(x)^2=1/2*(1-cos(2*x))
 ts2=taylor(cos(2*x),'Order',8)
 % - (4*x^6)/45 + (2*x^4)/3 - 2*x^2 + 1

@@ -30,6 +30,9 @@ ts
 ts1=taylor(f(x),'Order',6)
 % x/(2*a^(1/2)) + a^(1/2) - x^2/(8*a^(3/2)) + x^3/(16*a^(5/2)) - (5*x^4)/(128*a^(7/2)) + (7*x^5)/(256*a^(9/2))
 
+n=6
+term2=taylorterm(f,x0,n)
+
 % New algorithm
 syms x1;
 f(x1)=subs(f,x,x1)

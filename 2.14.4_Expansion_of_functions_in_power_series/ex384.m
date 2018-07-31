@@ -28,6 +28,9 @@ ts
 ts1=taylor(f(x),'Order',8)
 % - x^6/6 + x^4/2 - x^2 + 1
 
+n=8
+term2=taylorterm(f,x0,n)
+
 % New algorithm
 syms x1;
 f(x1)=subs(f,x,x1)

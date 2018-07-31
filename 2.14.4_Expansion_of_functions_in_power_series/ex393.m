@@ -29,6 +29,9 @@ ts
 ts1=taylor(f(x),'Order',6)
 % x^4/3 + x^2
 
+n=6
+term2=taylorterm(f,x0,n)
+
 % New algorithm
 syms x1;
 f(x1)=subs(f,x,x1)

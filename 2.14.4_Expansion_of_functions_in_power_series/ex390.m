@@ -28,6 +28,9 @@ ts
 ts1=taylor(f(x),'Order',6)
 % (log(3)^5*x^5)/120 + (log(3)^4*x^4)/24 + (log(3)^3*x^3)/6 + (log(3)^2*x^2)/2 + log(3)*x + 1
 
+n=7
+term2=taylorterm(f,x0,n)
+
 % New algorithm
 syms x1;
 f(x1)=subs(f,x,x1)

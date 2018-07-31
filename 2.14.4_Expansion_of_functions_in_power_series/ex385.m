@@ -29,6 +29,9 @@ ts
 ts1=taylor(f(x),'ExpansionPoint', 1)
 % x - (x - 1)^2/2 + (x - 1)^3/3 - (x - 1)^4/4 + (x - 1)^5/5 - 1
 
+n=7
+term2=taylorterm(f,x0,n)
+
 % New algorithm
 syms x1;
 f(x1)=subs(f,x,x1)
