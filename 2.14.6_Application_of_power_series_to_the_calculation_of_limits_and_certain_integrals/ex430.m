@@ -10,8 +10,11 @@ f=taylor(log(1+x),'Order',5)/x
 f=simplify(f)
 % - x^3/4 + x^2/3 - x/2 + 1
 
-err1=vpa(abs(subs(-x^3/4,x,0.1)))
-% 0.00025 < err
+I=int(f)
+% - x^4/16 + x^3/9 - x^2/4 + x
+
+err1=vpa(subs(x^4/16,x,0.1))
+% 0.00000625 < err
 
 I=int(f,x,0,0.1)
 % 140551/1440000
