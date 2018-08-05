@@ -16,3 +16,17 @@ z=1*(cos(pi)+1i*sin(pi))
 % -i=0-1*i=1*(cos(-pi/2)+i*sin(-pi/2))
 z=1*(cos(-pi/2)+1i*sin(-pi/2))
 % 0.0000 - 1.0000i
+
+r=1;
+for n=1:4
+    phi=pi/2*(n-1);
+    zv(n)=r*(cos(phi)+1i*sin(phi));
+end
+disp(zv)
+
+r=1;
+for n=1:4
+    phi=pi/2*(n-1);
+    zv1(n)=r*exp(1i*phi);
+end
+disp(zv1)
