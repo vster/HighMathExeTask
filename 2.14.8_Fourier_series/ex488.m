@@ -23,18 +23,29 @@ a(m)=simplify(a(m))
 % (L*(2*cos((pi*m)/2) + m*pi*sin(pi*m) - 2))/(2*m^2*pi^2)
 %                              =0
 a(m)=L/(m^2*pi^2)*(cos((pi*m)/2) - 1)
+% (L*(cos((pi*m)/2) - 1))/(m^2*pi^2)
+af(m)=a(m)*cos(m*pi*x/L)
+% (L*cos((pi*m*x)/L)*(cos((pi*m)/2) - 1))/(m^2*pi^2)
 
 b(m)=(1/L)*int(f*sin(m*pi*x/L),x,-L,L)
 b(m)=simplify(b(m))
 % (L*(2*sin((pi*m)/2) - pi*m + 2*m*pi*sin((pi*m)/2)^2))/(2*m^2*pi^2)
+%                              =(1-(-1)^m)
+b(m)=(L*(2*sin((pi*m)/2) - pi*m + m*pi*(1-(-1)^m)))/(2*m^2*pi^2)
+b(m)=simplify(b(m))
+% (L*(2*sin((pi*m)/2) - pi*(-1)^m*m))/(2*m^2*pi^2)
+bf(m)=b(m)*sin(m*pi*x/L)
+% (L*sin((pi*m*x)/L)*(2*sin((pi*m)/2) - pi*(-1)^m*m))/(2*m^2*pi^2)
+abf(m)=af(m)+bf(m)
 
 f1=a0/2;
 for m=1:5
+    % disp([sin((pi*m)/2)^2 1/2*(1-(-1)^m)])
     % disp([m,a(m),b(m)]);
     m1(m)=sym(m);
     a1(m)=a(m);
     b1(m)=b(m);
-    % f1=f1+a(m)*cos(m*pi*x/L)+b(m)*sin(m*pi*x/L);
+    f1=f1+abf(m);
     % fplot(f1,[-4 4]);
     % hold on
     % grid on
