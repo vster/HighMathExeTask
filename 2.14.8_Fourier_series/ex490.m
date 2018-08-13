@@ -19,6 +19,7 @@ b(m)=(1/L)*int(f(x)*sin(m*pi*x/L),x,-1,1)
 % 0
 bf(m)=b(m)*sin(m*pi*x/L)
 % 0
+abf(m)=af(m)+bf(m)
 
 fplot(f(x),[-1 1]);
 hold on;
@@ -28,17 +29,21 @@ for m=1:5
     m1(m)=m;
     a1(m)=a(m);
     b1(m)=b(m);
-    af1(m)=af(m);
-    bf1(m)=bf(m);
-    f1=f1+af(m)+bf(m);
+    abf1(m)=abf(m);
+    f1=f1+abf(m);
     fplot(f1,[-1 1])
     grid on
 end
 hold off
 f1
-%
+% 1/2 - (4*cos(3*pi*x))/(9*pi^2) - (4*cos(5*pi*x))/(25*pi^2) - (4*cos(pi*x))/pi^2
 
 a0/2
 % 1/2
-ft=[m1;a1;b1;af1;bf1];
+ft=[m1;a1;b1;abf1];
 ft'
+% [ 1,      -4/pi^2, 0,        -(4*cos(pi*x))/pi^2]
+% [ 2,            0, 0,                          0]
+% [ 3,  -4/(9*pi^2), 0,  -(4*cos(3*pi*x))/(9*pi^2)]
+% [ 4,            0, 0,                          0]
+% [ 5, -4/(25*pi^2), 0, -(4*cos(5*pi*x))/(25*pi^2)]
