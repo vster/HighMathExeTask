@@ -1,5 +1,5 @@
 % Find the Fourier transform of the function
-syms x z;
+syms x z pi;
 f(x)=piecewise(x<-1,0,-1<=x<=-0.5,x+1,-0.5<x<0.5,1,0.5<=x<=1,-x+1,x>1,0)
 fplot(f)
 
