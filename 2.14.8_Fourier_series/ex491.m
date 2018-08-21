@@ -57,3 +57,13 @@ ft'
 % [ 3,     -sinh(pi)/(5*pi),   (3*sinh(pi))/(5*pi)]
 % [ 4, (2*sinh(pi))/(17*pi), -(8*sinh(pi))/(17*pi)]
 % [ 5,    -sinh(pi)/(13*pi),  (5*sinh(pi))/(13*pi)]
+
+x=0:20;
+y(1)=a0/2;
+for m=1:20
+    y(m+1)=a(m)+1i*b(m);
+end
+yd=20*log10(abs(y)/abs(y(2)));
+
+plot(x,yd)
+grid on;

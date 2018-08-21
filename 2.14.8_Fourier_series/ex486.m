@@ -1,7 +1,7 @@
 % Expand the Fourier series of a periodic function f(x) with period 2, 
 % given in the interval (-1;1) by the equation f(x)=x^2.
 
-
+clear;
 syms x pi;
 f(x)=x^2;
 L=1;
@@ -51,3 +51,12 @@ ft'
 % [ 4,   1/(4*pi^2), 0,       cos(4*pi*x)/(4*pi^2)]
 % [ 5, -4/(25*pi^2), 0, -(4*cos(5*pi*x))/(25*pi^2)] 
 
+x=0:20;
+y(1)=a0/2;
+for m=1:20
+    y(m+1)=a(m)+1i*b(m);
+end
+yd=20*log10(abs(y)/abs(y(2)));
+
+plot(x,yd)
+grid on;
