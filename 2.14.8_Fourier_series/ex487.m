@@ -57,3 +57,19 @@ ft'
 % [ 5,           0, 0,                         0]
 % [ 6, -2/(9*pi^2), 0, -(2*cos(3*pi*x))/(9*pi^2)]
 % [ 7,           0, 0,                         0]
+
+syms m k;
+abf2(k)=subs(abf(m),m,2*k)
+% -(cos(pi*k*x)*((-1)^(2*k) + 1))/(k^2*pi^2)
+%                 =1
+abf2(k)=-(2*cos(pi*k*x))/(k^2*pi^2)
+
+for k=1:3
+    k3(k)=k;
+    abf3(k)=abf2(k);
+end
+ft2=[k3;abf3]
+ft2'
+% [ 1,       -(2*cos(pi*x))/pi^2]
+% [ 2,     -cos(2*pi*x)/(2*pi^2)]
+% [ 3, -(2*cos(3*pi*x))/(9*pi^2)]

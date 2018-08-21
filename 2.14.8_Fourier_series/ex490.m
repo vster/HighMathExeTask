@@ -8,19 +8,21 @@ f(x)=abs(x);
 L=1;
 
 a0=(1/L)*int(f(x),x,-1,1)
-% 1/2
+% 1
 syms m integer;
 assume(m>=1)
 a(m)=(1/L)*int(f(x)*cos(m*pi*x/L),x,-1,1)
-% -(2*(4*sin((pi*m)/4)^2 - m*pi*sin((pi*m)/2)))/(m^2*pi^2)
+% -(2*(2*sin((pi*m)/2)^2 - m*pi*sin(pi*m)))/(m^2*pi^2)
+%      =(1-(-1)^m)              =0
+a(m)=-(2*(1-(-1)^m))/(m^2*sym(pi)^2)
 af(m)=a(m)*cos(m*pi*x/L)
-
+% (cos(pi*m*x)*(2*(-1)^m - 2))/(m^2*pi^2)
 b(m)=(1/L)*int(f(x)*sin(m*pi*x/L),x,-1,1)
 % 0
 bf(m)=b(m)*sin(m*pi*x/L)
 % 0
 abf(m)=af(m)+bf(m)
-
+% (cos(pi*m*x)*(2*(-1)^m - 2))/(m^2*pi^2)
 fplot(f(x),[-1 1]);
 hold on;
 
@@ -47,3 +49,19 @@ ft'
 % [ 3,  -4/(9*pi^2), 0,  -(4*cos(3*pi*x))/(9*pi^2)]
 % [ 4,            0, 0,                          0]
 % [ 5, -4/(25*pi^2), 0, -(4*cos(5*pi*x))/(25*pi^2)]
+
+syms m k pi;
+abf2(k)=subs(abf(m),m,2*k-1)
+% (cos(x*pi*(2*k - 1))*(2*(-1)^(2*k - 1) - 2))/(pi^2*(2*k - 1)^2)
+%                       =-2
+abf2(k)=-4*cos(x*pi*(2*k - 1))/(pi^2*(2*k - 1)^2)
+
+for k=1:3
+    k3(k)=k;
+    abf3(k)=abf2(k);
+end
+ft2=[k3;abf3];
+ft2'
+% [ 1,        -(4*cos(pi*x))/pi^2]
+% [ 2,  -(4*cos(3*pi*x))/(9*pi^2)]
+% [ 3, -(4*cos(5*pi*x))/(25*pi^2)]
