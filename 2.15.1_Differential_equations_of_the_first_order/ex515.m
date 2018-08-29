@@ -1,3 +1,4 @@
+% Solve equation
 % log(cos(y))dx+x*tan(y)dy=0
 % dx/x+tan(y)*dy/log(cos(y))=0
 
