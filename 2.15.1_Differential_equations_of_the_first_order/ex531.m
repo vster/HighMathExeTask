@@ -11,4 +11,14 @@ syms C;
 eq2=eq1+C
 eq3=subs(eq2,[x y],[1 1])
 % C+2 => C=-2
-% x + y + 2*log(x) - log(y) - 2 = 0
+% x + y + 2*log(x) - log(y) = 2
+
+% 2)
+% dy/(y*(x+2))=dx/(x*(1-y))
+% y'=(y*(x+2))/(x*(1-y))
+clear
+syms x y(x);
+eqn=diff(y(x),x)==(y*(x+2))/(x*(1-y))
+cond=y(1)==1
+ySol=dsolve(eqn,cond)
+% -lambertw(0, -x^2*exp(-2)*exp(x))
