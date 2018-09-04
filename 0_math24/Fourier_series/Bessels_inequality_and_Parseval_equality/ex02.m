@@ -1,6 +1,6 @@
 % Apply Parseval's formula to the function f(x) = x^2.
 
-syms x n;
+syms x n pi;
 f(x)=x^2
 
 a0=(2*pi^2)/3
