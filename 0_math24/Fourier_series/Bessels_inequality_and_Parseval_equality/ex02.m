@@ -18,4 +18,4 @@ I=1/pi*int(f(x)^2,x,-pi,pi)
 % ((2*pi^2)/3)^2+sum(n=1:inf)(2*2*n*pi*(-1)^n/(n^3*pi))^2=1/pi*int(-pi:pi)x^4*dx
 % 2*pi^4/9+16*sum(n=1:inf)1/n^4=2*pi^4/5
 % sum(n=1:inf)1/n^4=pi^4/90
-% sum(n=1:inf)1/n^4 is Riemann zeta function
+% dzeta(4)=sum(n=1:inf)1/n^4=pi^4/90 is Riemann zeta function
