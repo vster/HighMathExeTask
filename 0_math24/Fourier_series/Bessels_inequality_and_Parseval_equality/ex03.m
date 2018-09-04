@@ -19,11 +19,7 @@ a0=(2*d)/pi
 syms n integer;
 assume(n>=1)
 a(n)=(2*sin(d*n))/(n*pi);
-af(n)=a(n)*cos(n*x)
 b(n)= sym(0)
-bf(n)=b(n)*sin(n*x)
-abf(n)=af(n)+bf(n)
-% (2*sin(d*n)*cos(n*x))/(n*pi)
 
 % Parseval's formula
 % a0^2/2+sum(n=1:inf)(a(n)^2+b(n)^2)=1/pi*int(-pi:pi)f(x)^2*dx
