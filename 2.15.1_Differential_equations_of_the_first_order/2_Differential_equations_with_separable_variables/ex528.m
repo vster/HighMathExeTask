@@ -25,3 +25,8 @@ cond=y(0)==0;
 ySol=dsolve(eqn,cond)
 % y=log(tan(pi/4 + exp(x) - 1))
 
+% Checking
+ySol2=log(tan(exp(x)-1+pi/4))
+eq5=diff(y(x),x)-exp(x)*(exp(y)+exp(-y))
+eq6=simplify(subs(eq5,y,ySol2))
+% 0

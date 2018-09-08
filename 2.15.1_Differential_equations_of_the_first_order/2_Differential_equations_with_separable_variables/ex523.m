@@ -5,6 +5,7 @@
 % 1)
 % y/log(y)=y'=dy/dx
 % dx=dy*log(y)/y
+clear
 syms x y;
 eq1=int(1,x)-int(log(y)/y,y)
 % x - log(y)^2/2
@@ -25,3 +26,8 @@ cond = y(2)==1
 ySol=dsolve(eqn,cond)
 %  exp(2^(1/2)*(x - 2)^(1/2))
 % exp(-2^(1/2)*(x - 2)^(1/2))
+
+% Checking
+ySol2=exp(2^(1/2)*(x - 2)^(1/2))
+eq5=diff(y(x),x)-y/log(y)
+eq6=simplify(subs(eq5,y,ySol2))

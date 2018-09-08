@@ -23,3 +23,8 @@ eqn = diff(y,x) == -y/(1+x^2)
 cond = y(1) == 1;
 ySol(x)=dsolve(eqn,cond)
 % exp(pi/4)*exp(-atan(x))
+
+% Checking
+eq5=diff(y,x)+y/(1+x^2)
+eq6=subs(eq5,y,ySol)
+% 0

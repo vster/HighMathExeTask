@@ -24,3 +24,9 @@ eqn=diff(y(x),x)==-x*(y^6+1)/(y^2*(x^4+1))
 cond=y(0)==1
 ySol=dsolve(eqn,cond)
 % tan(pi/4 - (3*atan(x^2))/2)^(1/3)
+
+% Checking
+ySol2=tan(pi/4 - (3*atan(x^2))/2)^(1/3)
+eq5=diff(y(x),x)+x*(y^6+1)/(y^2*(x^4+1))
+eq6=simplify(subs(eq5,y,ySol2))
+% 0

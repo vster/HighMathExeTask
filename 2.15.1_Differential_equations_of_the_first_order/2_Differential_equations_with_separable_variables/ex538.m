@@ -23,3 +23,10 @@ eqn=diff(y(x),x)==-5*exp(x)*sin(2*y)/(2*(1-exp(x)))
 ySol=dsolve(eqn)
 %                                  0
 % atan(exp(C11 + 5*log(exp(x) - 1)))
+
+% Checking
+syms C11;
+ySol2=atan(exp(C11+5*log(exp(x) - 1)))
+eq5=diff(y(x),x)+5*exp(x)*sin(2*y)/(2*(1-exp(x)))
+eq6=simplify(subs(eq5,y,ySol2))
+% ?

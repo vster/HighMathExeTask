@@ -16,3 +16,10 @@ eqn=diff(y(x),x)==-2*cos(x)*sin(y)
 ySol=dsolve(eqn)
 %                            0
 % 2*atan(exp(C23 - 2*sin(x)))
+
+% Checking
+syms C;
+ySol2=2*atan(exp(C-2*sin(x)))
+eq5=diff(y(x),x)+2*cos(x)*sin(y)
+eq6=simplify(subs(eq5,y,ySol2))
+% 0

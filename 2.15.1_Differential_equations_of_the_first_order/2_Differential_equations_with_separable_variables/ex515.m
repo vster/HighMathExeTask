@@ -16,3 +16,10 @@ syms x y(x);
 eqn = diff(y(x)) == -log(cos(y))/(x*tan(y))
 ySol(x) = dsolve(eqn)
 % acos(exp(C5*x))
+
+% Checking
+syms C5;
+ySol=acos(exp(C5*x))
+eq5=diff(y,x)+log(cos(y))/(x*tan(y))
+eq6=simplify(subs(eq5,y,ySol))
+% ?

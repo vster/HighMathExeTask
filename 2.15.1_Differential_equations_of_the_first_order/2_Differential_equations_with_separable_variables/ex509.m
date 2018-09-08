@@ -27,3 +27,11 @@ ySol(x)=dsolve(eqn)
 % piecewise(~x in Dom::ImageSet(pi*(k + 1/2), k, Z_), asin(exp(C15)/cos(x)))
 % y=asin(exp(C15)/cos(x))
 % sin(y)*cos(x)=exp(C15)
+
+% Checking
+syms C15
+ySol2=asin(exp(C15)/cos(x))
+eq5=diff(ySol2,x)-tan(x)*tan(ySol2)
+eq5=simplify(eq5)
+% 0
+

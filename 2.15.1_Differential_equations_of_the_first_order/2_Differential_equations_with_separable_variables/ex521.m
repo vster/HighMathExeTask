@@ -25,3 +25,9 @@ ySol=dsolve(eqn,cond)
 % (log(log(2)) + log(2^x/log(2) - 3/(32*log(2))))/log(2)
 ySol=simplify(ySol)
 % y=log(2^x - 3/32)/log(2)
+
+% Checking
+ySol2=log(2^x - sym(3/32))/log(sym(2))
+eq5=diff(y(x),x)-2^(x-y)
+eq6=simplify(subs(eq5,y,ySol2))
+% 0

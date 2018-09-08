@@ -26,6 +26,11 @@ cond=y(pi/4)==pi/4
 ySol=dsolve(eqn,cond)
 % y=pi/2 - acos(cos(2*x))/2
 
+% Checking
+ySol2=pi/2 - acos(cos(2*x))/2
+eq5=diff(y(x),x)+(cos(y)*sin(y))/(cos(x)*sin(x))
+eq6=simplify(subs(eq5,y,ySol2))
+% 0
 
 
 

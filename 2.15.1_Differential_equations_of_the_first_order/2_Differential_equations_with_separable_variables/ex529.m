@@ -20,3 +20,8 @@ ySol=dsolve(eqn)
 %               (pi*1i)/2
 %              -(pi*1i)/2
 
+syms C
+ySol2=log(tan(cosh(x) + C))
+eq5=diff(y(x),x)-2*cosh(y)*sinh(x)
+eq6=simplify(subs(eq5,y,ySol2))
+% 0

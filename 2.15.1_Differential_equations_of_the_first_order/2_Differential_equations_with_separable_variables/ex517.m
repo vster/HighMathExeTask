@@ -22,3 +22,8 @@ eqn = diff(y(x),x) == -3*exp(x)*tan(y)*cos(y)^2/(1+exp(x))
 cond = y(0) == pi/4
 ySol = dsolve(eqn,cond)
 % y = pi/2 - acos(tanh(log(8) - 3*log(exp(x) + 1)))/2 
+
+% Checking
+eq5=diff(y(x),x) +3*exp(x)*tan(y)*cos(y)^2/(1+exp(x))
+eq6=simplify(subs(eq5,y,ySol))
+% 0
