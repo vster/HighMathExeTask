@@ -12,6 +12,7 @@ eq2=simplify(eq2)
 % dt*x^2 + dx*abs(x)*(t^2 + 1)^(1/2)
 % dt/(t^2 + 1)^(1/2)+dx/x
 eq3=int(1/(t^2 + 1)^(1/2),t)+int(1/x,x)
+syms C;
 % asinh(t) + log(x)=log(C)
 % asinh(y/x)+log(x)=log(C)
 eq4=asinh(y/x)+log(x)-log(C)
