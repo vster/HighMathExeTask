@@ -19,15 +19,16 @@ dPy=diff(P,y)
 dQx=diff(Q,x)
 % cos(y) + 1
 % dPy==dQx
+
 % U(x,y)
-% dUx=Q, dUy=P
+% dUx=P, dUy=Q
 U=int(P(x,y),x)
 % exp(x) + x*(y + sin(y))
 syms C(y)
 U=U+C(y)
 % C(y) + exp(x) + x*(y + sin(y))
-dUy=diff(U,y)
-% diff(C(y), y) + x*(cos(y) + 1) = exp(y)+x+x*cos(y) => 
+
+% diff(C(y), y) + x*(cos(y) + 1) == exp(y)+x+x*cos(y) => 
 % dCy=exp(y) =>
 C(y)=exp(y)
 U=exp(x) + x*(y + sin(y))+exp(y)

@@ -19,8 +19,9 @@ dPy=diff(P,y)
 dQx=diff(Q,x)
 % 1
 % dPy==dQx
+
 % U(x,y)
-% dUx=Q, dUy=P
+% dUx=P, dUy=Q
 U=int(P(x,y),x,0,x)+int(Q(0,y),y,0,y)
 % x^2/2 + (y - 1)*x + exp(y) - 1
 % exp(y) + x^2/2 + y*x - x == C

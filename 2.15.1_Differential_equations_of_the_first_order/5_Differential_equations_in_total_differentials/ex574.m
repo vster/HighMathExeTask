@@ -17,6 +17,8 @@ dPy=diff(P,y)
 % cos(y) + x*cos(y) - y*sin(y)
 dQx=diff(Q,x)
 % cos(y)
+% dPy /= dQx
+
 eq1=(dPy-dQx)/Q
 % 1
 mu=exp(int(eq1,x))
@@ -30,8 +32,9 @@ dP1y=diff(P1,y)
 dQ1x=diff(Q1,x)
 % exp(x)*(x*cos(y) - y*sin(y)) + exp(x)*cos(y)
 % dP1y==dQ1x
+
 % U(x,y)
-% dUy=Q1, dUxy=P1
+% dUy=Q1, dUx=P1
 % dUy=exp(x)*(x*cos(y) - y*sin(y))
 % dUx=exp(x)*(y*cos(y) + x*sin(y))
 syms C(x)
