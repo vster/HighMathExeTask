@@ -28,5 +28,5 @@ dUy=diff(U,y)
 % x^2/(2*y) + x + diff(C(y), y)
 dCy=simplify(dUy-Q)
 % diff(C(y), y) - 1
-C(y)=y+C1
+% C(y)=y+C1
 % log(y)*x^2 + 2*y*x + 2*y = C2

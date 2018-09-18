@@ -28,6 +28,6 @@ dUy=diff(U,y)
 % diff(C(y), y) + x*cos(y)
 dCy=simplify(dUy-Q)
 % diff(C(y), y) - 1
-C(y)=y+C1
+% C(y)=y+C1
 % x^3/3 + sin(y)*x + y = C2
 
