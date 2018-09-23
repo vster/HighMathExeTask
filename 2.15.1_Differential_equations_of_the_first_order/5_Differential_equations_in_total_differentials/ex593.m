@@ -1,7 +1,7 @@
 % y*dx-(x+y^2)*dy=0 (mu=phi(y))
 
-clear
 % 1)
+clear
 % y'=y/(x+y^2)
 syms x y(x)
 eqn=diff(y(x))==y/(x+y^2)
@@ -12,8 +12,8 @@ ySol=dsolve(eqn)
 % x^(1/2)*(exp(C5 - log(x)/2)/2 + (exp(2*C5 - log(x)) + 4)^(1/2)/2)
 % x^(1/2)*(exp(C5 - log(x)/2)/2 - (exp(2*C5 - log(x)) + 4)^(1/2)/2)
 
-clear
 % 2)
+clear
 % x'=(x+y^2)/y
 syms y x(y)
 eqn=diff(x(y))==(x+y^2)/y
