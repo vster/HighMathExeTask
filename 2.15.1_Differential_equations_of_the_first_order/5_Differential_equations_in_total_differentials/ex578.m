@@ -6,9 +6,10 @@ clear
 % y'=-(x^2+y^2+y)/(2*x*y+x+exp(y))
 syms x y(x)
 eqn=diff(y(x))==-(x^2+y^2+y)/(2*x*y+x+exp(y))
-ySol=dsolve(eqn)
-% solve(exp(y) + x*y*(y + 1) == - x^3/3 - C5, y)
-% exp(y) + x*y*(y + 1) == - x^3/3 - C5
+cond=y(0)==0
+ySol=dsolve(eqn,cond)
+% solve(exp(y) + x*y*(y + 1) == 1 - x^3/3, y)
+% exp(y) + x*y*(y + 1) == 1 - x^3/3
 
 % 2)
 syms x y
@@ -30,3 +31,8 @@ dUy=diff(U,y)
 dCy=simplify(dUy-Q)
 % diff(C(y), y) - exp(y) => dCy=exp(y) => C(y)=exp(y)
 % exp(y) + x*(y^2 + y) + x^3/3 = C1
+syms C1
+eq1=exp(y) + x*(y^2 + y) + x^3/3 - C1
+eq2=subs(eq1,[x y],[0 0])
+% C1=1
+% exp(y) + x*(y^2 + y) + x^3/3 = 1
