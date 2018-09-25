@@ -39,3 +39,19 @@ eq3=y-tan(x)+1-C2*exp(-tan(x))
 eq4=subs(eq3,[x y],[0 0])
 % C2=1
 % y=tan(x)-1+exp(-tan(x))
+
+% 3)
+% y'*cos(x)^2+y=tan(x)
+% y'+y/cos(x)^2=tan(x)/cos(x)^2
+syms x y
+a(x)=1/cos(x)^2
+f(x)=tan(x)/cos(x)^2
+u(x)=exp(int(a(x),x))
+% exp(tan(x))
+syms C
+y(x)=(int(u(x)*f(x),x)+C)/u(x)
+y(x)=expand(y(x))
+y(x)=C*exp(-tan(x))-1+tan(x)
+y1(x)=subs(y(x),x,0)
+% C=1
+% y(x)=exp(-tan(x))-1+tan(x)
