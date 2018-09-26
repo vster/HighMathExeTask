@@ -12,6 +12,15 @@ ySol=dsolve(eqn)
 % solve(y - (2*C7*y)/(C7 - exp(y*2i)*1i) == -x*1i, y)
 
 % 2)
+clear
+% x'=-(x^2+y^2-x)/x
+syms y x(y)
+eqn=diff(x(y))==-(x^2+y^2-x)/y
+xSol=dsolve(eqn)
+%                                               -y*1i
+% - y*1i + (2*exp(log(y) + y*2i))/(C6 - exp(y*2i)*1i)
+
+% 3)
 syms x y
 P=y
 Q=x^2+y^2-x
