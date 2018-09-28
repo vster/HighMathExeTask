@@ -10,3 +10,10 @@ ySol=dsolve(eqn)
 %                          2*log(5)
 %  log(25*tan(C7 + (5*x)/2)^2 + 25)
 % log(25*tan(C10 - (5*x)/2)^2 + 25)
+
+% Checking
+for i=1:2
+eqn10=y-log(25+diff(y(x))^2)
+chk(i)=simplify(subs(eqn10,y(x),ySol(i)))
+end
+% [ 0, 0]
