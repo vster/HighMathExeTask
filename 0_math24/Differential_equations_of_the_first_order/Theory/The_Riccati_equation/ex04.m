@@ -11,7 +11,8 @@ ySol=dsolve(eqn)
 % 5/(x*(5*C10*x^5 - 6)) + 1/(2*x)
 
 % Checking
-ySol2=ySol(2)
+for i=1:2
 eqn10=diff(y)+6*y^2-1/x^2
-eqn11=simplify(subs(eqn10,y(x),ySol2))
-% 0
+chk(i)=simplify(subs(eqn10,y(x),ySol(i)))
+end
+% [ 0, 0]

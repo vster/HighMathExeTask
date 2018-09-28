@@ -12,10 +12,12 @@ ySol=dsolve(eqn)
 %                      - (3^(1/2)*1i)/2 - 1/2
 
 % Checking
-ySol2=ySol(1)
+for i=1:3
 eqn10=diff(y)-y-y^2-1
-eqn11=simplify(subs(eqn10,y(x),ySol2))
-% 0
+chk(i)=simplify(subs(eqn10,y(x),ySol(i)))
+end
+disp(chk)
+% [ 0, 0, 0]
 
 % 2)
 % dy/dx=y+y^2+1
