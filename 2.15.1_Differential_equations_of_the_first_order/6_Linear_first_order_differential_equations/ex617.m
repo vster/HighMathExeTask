@@ -13,5 +13,6 @@ ySol=simplify(dsolve(eqn))
 % Checking
 for i=1:3
 chk(i)=simplify(subs(eqn,y(x),ySol(i)))
+pretty(chk(i))
 end
 % [ TRUE, TRUE, TRUE]
