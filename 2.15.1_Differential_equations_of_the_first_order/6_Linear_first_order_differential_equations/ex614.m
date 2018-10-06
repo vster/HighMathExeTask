@@ -31,3 +31,14 @@ eqn10=(2*x*y+3)-y^2*diff(x)==0
 chk(i)=simplify(subs(eqn10,x(y),xSol(i)))
 end
 % TRUE
+
+% 3)
+% x'-2*x/y=3/y^2
+syms x y
+a(y)=-2/y
+f(y)=3/y^2
+u(y)=simplify(exp(int(a(y),y)))
+% 1/y^2
+syms C
+x(y)=simplify((int(u(y)*f(y),y)+C)/u(y))
+% (C*y^3 - 1)/y

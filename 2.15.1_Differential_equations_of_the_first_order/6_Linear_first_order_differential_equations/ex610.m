@@ -4,6 +4,20 @@
 
 % 1)
 clear
+syms x y e
+a(x)=-1/(x*log(x))
+f(x)=x*log(x)
+u(x)=simplify(exp(int(a(x),x)))
+% 1/log(x)
+syms C
+y(x)=simplify((int(u(x)*f(x),x)+C)/u(x))
+% log(x)*(x^2/2 + C)
+y2=subs(y,x,e)
+% log(e)*(e^2/2 + C) = e^2/2 + C = e^2/2 => C=0
+% y=log(x)*x^2/2
+
+% 2)
+clear
 syms x e y(x)
 eqn=diff(y)-y/(x*log(x))==x*log(x)
 cond=y(e)==e^2/2
@@ -18,3 +32,4 @@ eqn10=diff(y)-y/(x*log(x))-x*log(x)
 chk(i)=simplify(subs(eqn10,y(x),ySol(i)))
 end
 % 0
+

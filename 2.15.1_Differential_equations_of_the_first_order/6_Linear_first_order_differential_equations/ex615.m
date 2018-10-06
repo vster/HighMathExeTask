@@ -33,3 +33,14 @@ for i=1
 chk(i)=simplify(subs(eqn,x(y),xSol(i)))
 end
 % TRUE
+
+% 3)
+% x'-2*x/y=y^3
+syms x y
+a(y)=-2/y
+f(y)=y^3
+u(y)=simplify(exp(int(a(y),y)))
+% 1/y^2
+syms C
+x(y)=simplify((int(u(y)*f(y),y)+C)/u(y))
+% y^2*(y^2/2 + C)

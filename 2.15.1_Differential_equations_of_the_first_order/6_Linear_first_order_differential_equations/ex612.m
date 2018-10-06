@@ -34,3 +34,14 @@ eqn10=diff(x)-(x+y^2)/y
 chk(i)=simplify(subs(eqn10,x(y),xSol(i)))
 end
 % 0
+
+% 3)
+% x'-x/y=y
+syms x y
+a(y)=-1/y
+f(y)=y
+u(y)=simplify(exp(int(a(y),y)))
+% 1/y
+syms C
+x(y)=simplify((int(u(y)*f(y),y)+C)/u(y))
+% y*(C + y)
