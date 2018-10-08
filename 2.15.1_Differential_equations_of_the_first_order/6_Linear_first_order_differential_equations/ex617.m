@@ -27,7 +27,7 @@ z=1/y
 dz=diff(z,y)
 % dz=-dy/y^2 => dy/y^2=-dz
 
-% y'/y^2-1/(y*(x-1))=
+% y'/y^2-1/(y*(x-1))=1/(x-1)
 % -dz-z/(x-1)=1/(x-1)
 % dz+z/(x-1)=-1/(x-1)
 % We have the linear equation
