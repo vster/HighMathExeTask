@@ -17,3 +17,18 @@ eqn10=y-log(25+diff(y(x))^2)
 chk(i)=simplify(subs(eqn10,y(x),ySol(i)))
 end
 % [ 0, 0]
+
+% 2)
+% Put y'=p, then
+% y=log(25+p^2)
+
+syms x y p;
+y1=log(25+p^2)
+dy1=simplify(diff(y1))
+% (2*p)/(p^2 + 25) = dy = p*dx
+dx1=2/(p^2 + 25)
+x1=int(dx1,p)
+% (2*atan(p/5))/5
+
+% / x=(2*atan(p/5))/5+C
+% \ y=log(25+p^2)
