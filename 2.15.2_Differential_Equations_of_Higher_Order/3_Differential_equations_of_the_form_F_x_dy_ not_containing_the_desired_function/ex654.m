@@ -6,7 +6,7 @@ clear
 syms x a y(x)
 assume(y(x),'real')
 eqn=(1+x^2)*diff(y,x,2)+1+diff(y,x)^2==0
-ySol=dsolve(eqn)
+ySol=simplify(dsolve(eqn))
 % C20 - x/tan(C18) + (log(x*tan(C18) + 1)*(tan(C18)^2 + 1))/tan(C18)^2
 %                                                           C20 + x*1i
 %                                                           C20 - x*1i

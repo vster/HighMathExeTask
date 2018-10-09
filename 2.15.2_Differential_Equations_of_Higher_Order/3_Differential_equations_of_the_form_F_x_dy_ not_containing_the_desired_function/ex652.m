@@ -6,7 +6,7 @@ clear
 syms x y(x)
 assume(y(x),'real')
 eqn=(1-x^2)*diff(y,x,2)-x*diff(y,x)==2
-ySol=dsolve(eqn)
+ySol=simplify(dsolve(eqn))
 % C11 - log(x + (x^2 - 1)^(1/2))^2 + C10*log(x + (x^2 - 1)^(1/2))
 
 % Checking
