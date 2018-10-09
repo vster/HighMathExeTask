@@ -22,3 +22,4 @@ dy=diff(y,x)
 syms x y(x) alfa
 eqn=diff(y,x)==-sin(x*sqrt(1-diff(y,x)^2)/y+alfa)
 ySol=dsolve(eqn)
+% ???
