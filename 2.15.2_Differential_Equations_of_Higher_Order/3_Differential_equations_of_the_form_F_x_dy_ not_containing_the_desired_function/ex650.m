@@ -25,6 +25,12 @@ eq1=int(1/(a^2-v^2),v)-k/m*t
 % v=ds/dt
 % ds/dt=a*tanh(sqrt(k*g/m)*t)
 s=simplify(int(a*tanh(sqrt(k*g/m)*t),t))
-% a*t - (a*log(tanh(t*((g*k)/m)^(1/2)) + 1))/((g*k)/m)^(1/2)
+% a*t - (a*log(tanh(t*((g*k)/m)^(1/2)) + 1))/((g*k)/m)^(1/2)+C2
+% a*t-m/k*log(tanh(t*((g*k)/m)^(1/2)) + 1))+C2
+% t=0,s=0 => C2=0
+s=m/k*log(tanh(t*((g*k)/m)^(1/2)))
+v=a*tanh(t*((g*k)/m)^(1/2))
+% where a=sqrt(m*g/k)
+% lim(t->inf)=a=sqrt(P/k)
 
 
