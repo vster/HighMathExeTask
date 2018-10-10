@@ -3,7 +3,7 @@
 % Find the orthogonal trajectories to these curves.
 
 syms x C
-y1=C/x => % C=x*y1
+y1=C/x % C=x*y1
 dy1=diff(y1)
 % -C/x^2 => -x*y1/x^2 => -y1/x
 % y'=-y/x
