@@ -3,7 +3,8 @@
 
 % 1)
 clear
-syms x a y(x)
+syms x real
+syms y(x)
 assume(y(x),'real')
 eqn=1+diff(y,x)^2==y*diff(y,x,2)
 ySol=simplify(dsolve(eqn))
@@ -14,7 +15,7 @@ ySol=simplify(dsolve(eqn))
 
 % Checking
 eqn10=1+diff(y,x)^2-y*diff(y,x,2)
-for i=1:4
+for i=1:length(ySol)
 chk(i)=simplify(subs(eqn10,y(x),ySol(i)))
 end
 % [ 0, 0, 0, 0]

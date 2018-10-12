@@ -3,7 +3,9 @@
 
 % 1)
 clear
-syms x y(x) a
+syms x a real
+syms y(x)
+assume(y(x),'real')
 eqn=a^2*diff(y,x,2)^2==1+diff(y,x)^2
 ySol=simplify(dsolve(eqn))
 % C18 + exp((C35 + x)/a)/2 + (a^2*exp(-(C35 + x)/a))/2
@@ -15,7 +17,7 @@ ySol=simplify(dsolve(eqn))
 
 % Checking
 eqn10=a^2*diff(y,x,2)^2-(1+diff(y,x)^2)
-for i=1:6
+for i=1:length(ySol)
 chk(i)=simplify(subs(eqn10,y(x),ySol(i)))
 end
 % [ 0, 0, 0, 0, 0, 0]
