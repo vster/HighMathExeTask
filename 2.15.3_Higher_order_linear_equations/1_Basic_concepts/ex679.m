@@ -46,3 +46,11 @@ syms x y(x)
 eqn10=diff(y,x,2)-diff(y,x)/x+y/x^2
 chk2=simplify(subs(eqn10,y(x),y3))
 % 0
+
+% 3)
+syms x
+a1=-1/x
+y1=x
+y2=simplify(y1*int(exp(-int(a1,x))/y1^2))
+% x*log(x)
+% y=C1*x+C2*x*log(x)

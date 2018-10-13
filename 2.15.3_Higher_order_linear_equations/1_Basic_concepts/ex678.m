@@ -36,3 +36,11 @@ eq4=int(C1*tan(x)^2,x)
 % -C1*(x - tan(x))+C2
 y2=simplify(cot(x)*(C2-C1*(x - tan(x))))
 % y=C1+cot(x)*(C2-C1*x)
+
+% 3)
+syms x
+a1=0
+y1=cot(x)
+y2=simplify(y1*int(exp(-int(a1,x))/y1^2))
+% -(x - tan(x))/tan(x) =1-x*cot(x)
+% y=C1*cot(x)+C2*(1-x*cot(x))

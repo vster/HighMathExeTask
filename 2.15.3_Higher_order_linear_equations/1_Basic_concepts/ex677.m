@@ -42,3 +42,11 @@ ySol2=subs(ySol,[exp(x*1i) exp(2*x*1i)],[cos(x)+1i*sin(x) cos(2*x)+1i*sin(2*x)])
 ySol2=simplify(ySol2)
 % (2*C12*cos(x) + C13*cos(x)*1i + C12*sin(x)*2i + C13*sin(x))/(2*x)
 % C21*cos(x)/x+C22*sin(x)/x
+
+% 3)
+syms x
+a1=2/x
+y1=sin(x)/x
+y2=simplify(y1*int(exp(-int(a1,x))/y1^2))
+% -cos(x)/x
+% y=C1*sin(x)/x-C2*cos(x)/x
