@@ -2,16 +2,16 @@ syms x y z t;
 M=[1,1,1]
 %(x-1)/2=y/3=(z+1)/(-1)
 
-% Уравнение плоскости, проецирующей точку M на прямую
+% Equation of the plane projecting the point M onto a straight line
 % pl=A*(x-1)+B*(y-1)+C*(z-1)
 pl=2*(x-1)+3*(y-1)-(z-1)
 % 2*x + 3*y - z - 4 = 0
 
-% Парам ур. прямой
+% Parametric equation of line
 x=2*t+1
 y=3*t
 z=-t-1
-% Точка пересечения
+% Intersection point
 tP=solve(2*x + 3*y - z - 4==0,t)
 % t=1/14
 P=subs([x y z],t,tP)

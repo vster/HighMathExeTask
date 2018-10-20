@@ -1,7 +1,7 @@
 syms x y z;
-% Уравнение прямой, проходящее через точку
+% Equation of line passing through a point
 M=[5,3,4]
-% и параллельно вектору
+% and parallel to the vector
 s=[2,5,-8]
 
 % (x-x1)/l=(y-y1)m=(z-z1)/n

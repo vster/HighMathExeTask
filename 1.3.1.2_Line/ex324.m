@@ -1,7 +1,7 @@
 syms x y z lam;
-% Прямая
+% Straight
 % (x-1)/1=(y+1)/2=z/3
-% Найти уравнение проекции на плоскость
+% Find the projection equation on the plane
 % x+y+2*z-5=0
 A1=1
 B1=1
@@ -17,14 +17,14 @@ pl2=(x-1)/1-z/3
 pl2=pl2*3
 % 3*x - z - 3 = 0
 
-% Уравнение пучка плоскостей
+% Plane beam equation
 pl3=pl1+lam*pl2
 pl3=expand(pl3)
 A2=2+3*lam
 B2=-1
 C2=-lam
 
-% Условие перпендикулярности плоскостей
+% The condition of perpendicular planes
 % A1*A2+B1*B2+C1*C2=0
 slv=solve(A1*A2+B1*B2+C1*C2==0,lam)
 lam1=slv
@@ -33,7 +33,7 @@ pl3=subs(pl3,lam,lam1)
 pl3=-pl3
 % x + y - z = 0
 
-% Линия пересечения двух плоскостей
+% Line of intersection of two planes
 % x+y+2*z-5=0
 % x+y-z=0
 
