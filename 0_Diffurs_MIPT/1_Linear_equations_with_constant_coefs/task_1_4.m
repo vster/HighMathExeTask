@@ -1,4 +1,3 @@
-% 1)
 clear
 syms x y(x)
 eqn=diff(y,x,4)+diff(y,x,3)-diff(y,x,2)-2*diff(y,x)-(2*x+2*sin(x))

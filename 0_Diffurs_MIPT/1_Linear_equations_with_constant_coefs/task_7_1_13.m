@@ -1,4 +1,3 @@
-% 1)
 clear
 syms x y(x)
 eqn=diff(y,x,3)+5*diff(y,x,2)+9*diff(y,x)+5*y-(2*exp(-x)+5*x+4)

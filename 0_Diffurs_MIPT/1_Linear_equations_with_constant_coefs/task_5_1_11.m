@@ -1,4 +1,3 @@
-% 1)
 clear
 syms x y(x)
 eqn=diff(y,x,3)-3*diff(y,x,2)+3*diff(y,x)-y-(6*exp(x)+x)

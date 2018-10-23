@@ -1,4 +1,3 @@
-% 1)
 clear
 syms x y(x)
 eqn=diff(y,x,3)-diff(y,x,2)-diff(y,x)+y-(x^2+4*exp(x))
