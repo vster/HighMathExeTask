@@ -4,9 +4,7 @@ eqn1=diff(x1,t)-(7*x1+3*x2)
 eqn2=diff(x2,t)-(6*x1+4*x2)
 eqns=[eqn1,eqn2]
 [x1Sol x2Sol]=dsolve(eqns)
-%x1Sol =
 % C30*exp(10*t) - (C29*exp(t))/2
-%x2Sol =
 % C29*exp(t) + C30*exp(10*t)
 
 % Checking
