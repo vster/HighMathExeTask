@@ -1,11 +1,11 @@
 clear
 syms t x1(t) x2(t)
-eqn1=diff(x1,t)-(8*x2-x1)
-eqn2=diff(x2,t)-(x1+x2)
+eqn1=diff(x1,t)-(x1-2*x2)
+eqn2=diff(x2,t)-(x1-x2)
 eqns=[eqn1,eqn2]
 [x1Sol x2Sol]=dsolve(eqns)
-% 2*C11*exp(3*t) - 4*C12*exp(-3*t)
-% C11*exp(3*t) + C12*exp(-3*t)
+% C22*(cos(t) - sin(t)) - C21*(cos(t) + sin(t))
+% C22*cos(t) - C21*sin(t)
 
 % Checking
 chk1=simplify(subs(eqn1,[x1 x2],[x1Sol x2Sol])) 
