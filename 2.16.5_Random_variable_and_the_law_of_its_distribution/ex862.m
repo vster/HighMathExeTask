@@ -8,6 +8,8 @@ for i=1:5
     P(i)=sum(p(1:i))
 end
 
+P2=cumsum(p)
+
 hold on
 plot(x,P)
 grid
