@@ -1,4 +1,4 @@
-syms a b
+syms a b x
 assume(a<b)
 f(x)=piecewise(x<a,0,a<=x<=b,1/(b-a),x>b,0)
 
