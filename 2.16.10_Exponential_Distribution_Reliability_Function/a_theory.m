@@ -19,3 +19,7 @@ DX=int(x^2*f(x),x,0,inf)-MX^2
 
 sigma=sqrt(DX)
 % 1/lam
+
+% Reliability function
+syms t
+R(t)=exp(-lam*t)
