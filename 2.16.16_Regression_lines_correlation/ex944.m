@@ -40,10 +40,17 @@ rr=abs(rxy)*sqrt(n-1)
 
 syms x
 digits(5)
-yxm=ym+rxy*sigy/sigx*(x-xm)
-vpa(yxm)
+yxm=ym+rxy*(sigy/sigx)*(x-xm)
+yxm=vpa(yxm)
 % yxm=1.1856 - 0.80288*x
 syms y
-xym=xm+rxy*sigx/sigy*(y-ym)
-vpa(xym)
-% xym=1.1856 - 0.80288*x
+xym=xm+rxy*(sigx/sigy)*(y-ym)
+xym=vpa(xym)
+% xym=1.1841 - 0.7749*y
+
+fplot(yxm,[7 16])
+hold on
+y1=(1.1841-x)/0.7749
+fplot(y1,[7 16])
+hold off
+grid
