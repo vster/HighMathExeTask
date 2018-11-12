@@ -1,4 +1,5 @@
 clear
+digits(5)
 n=17
 i=1:n
 X=[0.25 0.37 0.44 0.55 0.60 0.62 0.68 0.70 0.73...
@@ -38,7 +39,6 @@ rr=abs(rxy)*sqrt(n-1)
 % create a regression equation
 % yxm-ym=rxy*sigy/sigx*(x-xm)
 syms x
-digits(5)
 yxm=ym+rxy*sigy/sigx*(x-xm)
 vpa(yxm)
 % 3.0332 - 2.0698*x

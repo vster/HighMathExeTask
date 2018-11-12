@@ -1,4 +1,5 @@
 clear
+digits(5)
 x=[7.0 7.5 8.0 8.5 9.0 9.5 10.0 10.5 11.0...
     11.5 12.0 12.5 13.0 13.5 14.0 14.5 15.0 15.5 16.0]
 X=[x;x;x;x;x].'
@@ -56,7 +57,6 @@ rr=abs(rxy)*sqrt(n-1)
 % 3.1065  > 3 => connection between X and Y is likely enough
 
 syms x
-digits(5)
 yxm=ym+rxy*sigy/sigx*(x-xm)
 yxm=vpa(yxm)
 % 1.0612*x - 0.5135
