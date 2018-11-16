@@ -23,3 +23,13 @@ ss=sum(((W-P).^2)./P)
 % 0.0271
 hi2=80*ss
 % 2.1647
+l=7
+t=3
+r=4
+% If hi2=2 then p=0.7358
+% If hi2=3 then p=0.5578
+% If hi2=2.1647
+p=0.7358-0.1647*0.178
+% 0.7065 > 0.1
+% The statistical distribution is fully consistent 
+% with the law of distribution
