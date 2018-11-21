@@ -1,7 +1,7 @@
 % 1 week - 50 %
 % 4 weeks - 90 %
 
-syms Lmax r k M
+syms Lmax r k M t
 L=Lmax-r*Lmax*exp(-k*t)
 
 L1=subs(L,t,1)
