@@ -17,9 +17,24 @@ d=b^2-a*c
 % x*y=C1, y/x=C2
 
 syms ksi eta
-syms u(x,y,ksi,eta)
-ksi1=x*y
-eta1=y/x
+syms u(x,y)
+ksif=x*y
+etaf=y/x
+
+syms u1(ksi,eta)
+duksi=diff(u1,ksi)
+dueta=diff(u1,eta)
+dksi_x=diff(ksif,x)
+deta_x=diff(etaf,x)
+dux=duksi*dksi_x+dueta*deta_x
+% y*diff(u1(ksi, eta), ksi) - (y*diff(u1(ksi, eta), eta))/x^2
+dksi_y=diff(ksif,y)
+deta_y=diff(etaf,y)
+duy=duksi*dksi_y+dueta*deta_y
+% diff(u1(ksi, eta), eta)/x + x*diff(u1(ksi, eta), ksi)
+
+
+
 
 % du1x=diff(u,x)
 dux=diff(u,ksi)*diff(ksi1,x)+diff(u,eta)*diff(eta1,x)
