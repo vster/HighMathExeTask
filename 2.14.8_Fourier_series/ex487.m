@@ -15,13 +15,18 @@ assume(m>=1)
 a(m)=(2/L)*int(f*cos(m*pi*x/L),x,0,2)
 % (8*sin(pi*m))/(m^3*pi^3) - (4*cos(pi*m))/(m^2*pi^2) - 4/(m^2*pi^2)
 %     =0                          (-1)^m
-a(m)=-((-1)^m+1)*(4/(m^2*pi^2))
+a(m)=simplify(subs(a(m),[sin(pi*m) cos(pi*m)],[0 (-1)^m]))
+% -(4*((-1)^m + 1))/(m^2*pi^2)
+
+% a(m)=-((-1)^m+1)*(4/(m^2*pi^2))
 af(m)=a(m)*cos(m*pi*x/L)
 % -(4*cos((pi*m*x)/2)*((-1)^m + 1))/(m^2*pi^2)
 
 b(m)=(2/L)*int(f*sin(m*pi*x/L),x,0,2);
 % (16*sin((pi*m)/2)^2)/(m^3*pi^3) - (4*sin(pi*m))/(m^2*pi^2)
 %        =0                               =0
+b(m)=simplify(subs(b(m),[sin(pi*m) sin((pi*m)/2)^2],[0 (1-(-1)^m)/2]))
+
 b(m)=sym(0)
 bf(m)=b(m)*sin(m*pi*x/L)
 % 0

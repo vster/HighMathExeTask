@@ -14,8 +14,8 @@ assume(m>=1)
 a(m)=(2/L)*int(f(x)*cos(m*pi*x/L),x,0,1)
 % (2*(m^2*pi^2*sin(pi*m) - 2*sin(pi*m) + 2*m*pi*cos(pi*m)))/(m^3*pi^3)
 %                =0             =0               =(-1)^m 
-% a(m)=4*m*pi*(-1)^m/(m^3*pi^3)
-a(m)=4*(-1)^m/(m^2*pi^2)
+a(m)=subs(a(m),[sin(pi*m) cos(pi*m)],[0 (-1)^m])
+% (4*(-1)^m)/(m^2*pi^2)
 af(m)=a(m)*cos(m*pi*x/L)
 % (4*(-1)^m*cos(pi*m*x))/(m^2*pi^2)
 

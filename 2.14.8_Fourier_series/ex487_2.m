@@ -24,7 +24,7 @@ b(m)=(1/L)*int(f*sin(m*pi*x/L),x,-2,2)
 b(m)=simplify(b(m))
 % (4*(4*sin((pi*m)/2)^2 - m*pi*sin(pi*m)))/(m^3*pi^3)
 %     =2*(1-(-1)^m)            =0
-b(m)=8*(1-(-1)^m)/(m^3*pi^3)
+b(m)=simplify(subs(b(m),[sin(pi*m) sin((pi*m)/2)^2],[0 (1-(-1)^m)/2]))
 % -(8*(-1)^m - 8)/(m^3*pi^3)
 bf(m)=b(m)*sin(m*pi*x/L)
 % -(sin((pi*m*x)/2)*(8*(-1)^m - 8))/(m^3*pi^3)
