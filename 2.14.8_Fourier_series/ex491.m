@@ -15,16 +15,16 @@ assume(m>=1)
 a(m)=int(f(x)*cos(m*x),x,-pi,pi)/pi
 % -((exp(-pi)*(cos(pi*m) - m*sin(pi*m)))/(m^2 + 1) - (exp(pi)*(cos(pi*m) + m*sin(pi*m)))/(m^2 + 1))/pi
 %                =(-1)^m       =0                               =(-1)^m
-a(m) = -((exp(-pi)*(-1)^m)/(m^2 + 1) - (exp(pi)*(-1)^m)/(m^2 + 1))/pi          
-a(m)=simplify(a(m))
+a(m)=simplify(subs(a(m),[sin(pi*m),sin((pi*m)/2)^2,cos(pi*m)],...
+    [0,(1-(-1)^m)/2,(-1)^m]))
 % (2*(-1)^m*sinh(pi))/(pi*(m^2 + 1))
 af(m)=a(m)*cos(m*x)
 % (2*(-1)^m*cos(m*x)*sinh(pi))/(pi*(m^2 + 1))
 
 b(m)=int(f(x)*sin(m*x),x,-pi,pi)/pi
 % ((exp(-pi)*(sin(pi*m) + m*cos(pi*m)))/(m^2 + 1) + (exp(pi)*(sin(pi*m) - m*cos(pi*m)))/(m^2 + 1))/pi
-b(m)= ((exp(-pi)*(m*(-1)^m))/(m^2 + 1) + (exp(pi)*( - m*(-1)^m))/(m^2 + 1))/pi
-b(m)=simplify(b(m))
+b(m)=simplify(subs(b(m),[sin(pi*m),sin((pi*m)/2)^2,cos(pi*m)],...
+    [0,(1-(-1)^m)/2,(-1)^m]))
 % -(2*(-1)^m*m*sinh(pi))/(pi*(m^2 + 1))
 bf(m)=b(m)*sin(m*x)
 % -(2*(-1)^m*m*sin(m*x)*sinh(pi))/(pi*(m^2 + 1))
