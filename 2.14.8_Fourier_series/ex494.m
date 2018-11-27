@@ -25,7 +25,9 @@ af(m)=a(m)*cos(m*x)
 b(m)=int(f(x)*sin(m*x),x,-pi,pi)/pi
 b(m)=simplify(b(m))
 % (4*h*sin((pi*m)/2)^2)/(m*pi)
-b(m)=(2*h*(1-(-1)^m))/(m*pi)
+b(m)=simplify(subs(b(m),[sin(pi*m),sin((pi*m)/2)^2,cos(pi*m)],...
+    [0,(1-(-1)^m)/2,(-1)^m]))
+% -(2*h*((-1)^m - 1))/(m*pi)
 bf(m)=b(m)*sin(m*x)
 % -(2*h*sin(m*x)*((-1)^m - 1))/(m*pi)
 

@@ -22,9 +22,9 @@ af(m)=a(m)*cos(m*x)
 b(m)=int(f(x)*sin(m*x),x,-pi,pi)/pi
 %  -((m*(cos(pi*m) - 1))/(m^2 - 4) - (2*m*sin((pi*m)/2)^2)/(m^2 - 4))/pi
 %        =(-1)^m                          =(1-(-1)^m)
-b(m)=-((m*((-1)^m - 1))/(m^2 - 4) - (m*(1-(-1)^m)/(m^2 - 4)))/pi
-b(m)=simplify(b(m))
-% -(2*m*((-1)^m - 1))/(pi*(m^2 - 4))
+b(m)=simplify(subs(b(m),[sin(pi*m),sin((pi*m)/2)^2,cos(pi*m)],...
+    [0,(1-(-1)^m)/2,(-1)^m]))
+% piecewise(m == -2, 0, m ~= -2, -(2*m*((-1)^m - 1))/(pi*(m^2 - 4)))
 bf(m)=b(m)*sin(m*x)
 % -(2*m*sin(m*x)*((-1)^m - 1))/(pi*(m^2 - 4))
 

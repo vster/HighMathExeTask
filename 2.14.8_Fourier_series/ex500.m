@@ -18,8 +18,9 @@ syms m integer;
 assume(m>=1)
 a(m)=(1/L)*int(f(x)*cos(m*pi*x/L),x,-2,2)
 % - (2*(4*sin((pi*m)/4)^2 - m*pi*sin((pi*m)/2)))/(m^2*pi^2) - (8*sin((pi*m)/4)^2 - 8*sin((pi*m)/2)^2 + 2*m*pi*sin((pi*m)/2))/(m^2*pi^2)
-a(m)=simplify(a(m))
-% -(8*cos((pi*m)/2)*(cos((pi*m)/2) - 1))/(m^2*pi^2)
+a(m)=simplify(subs(a(m),[sin(pi*m),sin((pi*m)/2)^2,cos(pi*m)],...
+    [0,(1-(-1)^m)/2,(-1)^m]))
+% -(4*(-1)^m - 8*cos((pi*m)/2) + 4)/(m^2*pi^2)
 af(m)=a(m)*cos(m*pi*x/L)
 % -(8*cos((pi*m)/2)*cos((pi*m*x)/2)*(cos((pi*m)/2) - 1))/(m^2*pi^2)
 

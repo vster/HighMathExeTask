@@ -18,7 +18,8 @@ assume(m>=1)
 a(m)=int(f(x)*cos(m*x),x,-pi,pi)/pi
 % -(5*(2*sin((pi*m)/2)^2 - m*pi*sin(pi*m)))/(m^2*pi)
 %      =(1-(-1)^m)              =0
-a(m)=-(5*(1-(-1)^m))/(m^2*pi)
+a(m)=simplify(subs(a(m),[sin(pi*m),sin((pi*m)/2)^2,cos(pi*m)],...
+    [0,(1-(-1)^m)/2,(-1)^m]))
 % (5*(-1)^m - 5)/(m^2*pi)
 af(m)=a(m)*cos(m*x)
 % (cos(m*x)*(5*(-1)^m - 5))/(m^2*pi)

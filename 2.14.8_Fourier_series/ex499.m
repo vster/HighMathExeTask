@@ -21,8 +21,9 @@ af(m)=a(m)*cos(m*pi*x/L)
 b(m)=(1/L)*int(f(x)*sin(m*pi*x/L),x,-1,1)
 % (2*(sin(pi*m) - m*pi*cos(pi*m)))/(m^2*pi^2)
 %     =0               =(-1)^m
-b(m)=(2*(-1)^(m+1))/(m*pi)
-% (2*(-1)^(m + 1))/(m*pi)
+b(m)=simplify(subs(b(m),[sin(pi*m),sin((pi*m)/2)^2,cos(pi*m)],...
+    [0,(1-(-1)^m)/2,(-1)^m]))
+% -(2*(-1)^m)/(m*pi)
 bf(m)=b(m)*sin(m*pi*x/L)
 % (2*(-1)^(m + 1)*sin(pi*m*x))/(m*pi)
 abf(m)=af(m)+bf(m)
