@@ -1,6 +1,7 @@
 % x=0, x=3
 
-syms x t 
+clear
+syms x t a
 phi=piecewise(0<=x<=2,-0.05*x,2<=x<=3,0.1*(x-3))
 L=3
 

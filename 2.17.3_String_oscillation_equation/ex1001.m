@@ -1,6 +1,6 @@
 % x=0, x=L
 % u(t=0)=0
-
+clear
 syms x t L h v0 a
 assume(h>0)
 phi=0

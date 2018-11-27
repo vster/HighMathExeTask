@@ -1,6 +1,6 @@
 % x=0, x=1
-
-syms x t h
+clear
+syms x t h a
 phi=h*(x^4-2*x^3+x)
 L=1
 
