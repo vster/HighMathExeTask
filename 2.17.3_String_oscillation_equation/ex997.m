@@ -20,6 +20,12 @@ pretty(ak)
 
 ut=ak*cos(k*pi*a*t/L)*sin(k*pi*x/L)
 pretty(ut)
+%      / pi k \    / pi k x \    / pi a k t \
+% h sin| ---- | sin| ------ | cos| -------- | 8
+%      \   2  /    \    L   /    \     L    /
+% ---------------------------------------------
+%                      2   2
+%                     k  pi
 
 for i=1:7
     ut1(i)=subs(ut,k,i);

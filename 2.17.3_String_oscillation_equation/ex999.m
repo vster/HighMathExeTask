@@ -18,3 +18,9 @@ ak=simplify(subs(ak,sin(pi*k),0))
 ut=ak*cos(k*pi*a*t/L)*sin(k*pi*x/L)
 % -(9*sin((pi*k*x)/3)*cos((pi*a*k*t)/3)*sin((2*pi*k)/3))/(10*k^2*pi^2)
 pretty(ut)
+%      / pi k x \    / pi a k t \    / 2 pi k \
+%   sin| ------ | cos| -------- | sin| ------ | 9
+%      \    3   /    \     3    /    \    3   /
+% - ---------------------------------------------
+%                         2   2
+%                     10 k  pi

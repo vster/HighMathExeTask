@@ -18,6 +18,12 @@ pretty(bk)
 ut=bk*sin(a*k*pi*t/L)*sin(k*pi*x/L)
 % (4*L*v0*sin((pi*a*k*t)/L)*sin((pi*k)/2)*sin((pi*h*k)/(2*L))*sin((pi*k*x)/L))/(a*k^2*pi^2)
 pretty(ut)
+%         / pi a k t \    / pi k \    / pi h k \    / pi k x \
+% L v0 sin| -------- | sin| ---- | sin| ------ | sin| ------ | 4
+%         \     L    /    \   2  /    \   2 L  /    \    L   /
+% --------------------------------------------------------------
+%                               2   2
+%                            a k  pi
 
 for i=1:7
     ut1(i)=subs(ut,k,i);

@@ -23,6 +23,10 @@ ut=subs(ut,k,2*n+1)
 pretty(ut)
 ut=simplify(subs(ut,(-1)^(2*n+1),-1))
 pretty(ut)
+% h cos(a t pi (2 n + 1)) sin(x pi (2 n + 1)) 96
+% ----------------------------------------------
+%                   5          5
+%                 pi  (2 n + 1)
 
 for i=1:7
     ut1(i)=subs(ut,n,i);
