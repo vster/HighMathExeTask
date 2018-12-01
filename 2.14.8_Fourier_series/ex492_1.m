@@ -1,18 +1,21 @@
 % Expand Fourier series of periodic functions f(x) with period T, 
 % given on the indicated intervals:
-% f(x)=exp(x); T=2*pi; [-pi;pi]
+% f(x)=x^3; T=2*pi; [-pi;pi]
 
 clear
+pi1=pi;
 syms x real;
 syms pi;
-f(x)=exp(x);
+f(x)=x^3;
 
 syms m integer;
 assume(m>=1)
 [a0,a(m),b(m),abf(m)]=fourierseries(f)
 
-fplot(f(x),[-3 3]);
+fplot(f(x),[-pi1 pi1]);
+grid on
 hold on
+
 f1=a0/2;
 for m=1:5
     m1(m)=m;
@@ -20,20 +23,20 @@ for m=1:5
     b1(m)=b(m);
     abf1(m)=abf(m);
     f1=f1+abf(m);
-    fplot(f1,[-3 3])
+    fplot(f1,[-pi1 pi1])
     grid on
 end
 hold off
 
 a0/2
-% sinh(pi)/pi
+% 0
 ft=[m1;a1;b1;abf1];
 ft'
-%[ 1,         -sinh(pi)/pi,           sinh(pi)/pi,                   (sinh(pi)*sin(x))/pi - (sinh(pi)*cos(x))/pi]
-%[ 2,  (2*sinh(pi))/(5*pi),  -(4*sinh(pi))/(5*pi),   (2*cos(2*x)*sinh(pi))/(5*pi) - (4*sin(2*x)*sinh(pi))/(5*pi)]
-%[ 3,     -sinh(pi)/(5*pi),   (3*sinh(pi))/(5*pi),     (3*sin(3*x)*sinh(pi))/(5*pi) - (cos(3*x)*sinh(pi))/(5*pi)]
-%[ 4, (2*sinh(pi))/(17*pi), -(8*sinh(pi))/(17*pi), (2*cos(4*x)*sinh(pi))/(17*pi) - (8*sin(4*x)*sinh(pi))/(17*pi)]
-%[ 5,    -sinh(pi)/(13*pi),  (5*sinh(pi))/(13*pi),   (5*sin(5*x)*sinh(pi))/(13*pi) - (cos(5*x)*sinh(pi))/(13*pi)]
+% [ 1, 0,         2*pi^2 - 12,          sin(x)*(2*pi^2 - 12)]
+% [ 2, 0,          3/2 - pi^2,   -(sin(2*x)*(8*pi^2 - 12))/8]
+% [ 3, 0,    (2*pi^2)/3 - 4/9,  (sin(3*x)*(18*pi^2 - 12))/27]
+% [ 4, 0,       3/16 - pi^2/2, -(sin(4*x)*(32*pi^2 - 12))/64]
+% [ 5, 0, (2*pi^2)/5 - 12/125, (sin(5*x)*(50*pi^2 - 12))/125]
 
 x=0:20;
 y(1)=a0/2;

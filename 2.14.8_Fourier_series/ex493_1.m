@@ -12,30 +12,8 @@ syms pi;
 % 1)
 f(x)=piecewise(-pi<x<=0,pi+2*x,0<=x<pi,pi-2*x)
 
-fplot(f(x),[-pi1 pi1]);
-
-a0=int(f(x),x,-pi,pi)/pi
-% 0
-
 syms m integer;
-assume(m>=1)
-a(m)=int(f(x)*cos(m*x),x,-pi,pi)/pi
-% ((8*sin((pi*m)/2)^2)/m^2 - (2*pi*sin(pi*m))/m)/pi
-%   =4*(1-(-1)^m)                  =0
-a(m)=simplify(subs(a(m),[sin(pi*m),sin((pi*m)/2)^2,cos(pi*m)],...
-    [0,(1-(-1)^m)/2,(-1)^m]))
-% -(4*(-1)^m - 4)/(m^2*pi)
-af(m)=a(m)*cos(m*x)
-% -(cos(m*x)*(4*(-1)^m - 4))/(m^2*pi)
-
-b(m)=int(f(x)*sin(m*x),x,-pi,pi)/pi
-b(m)=simplify(b(m))
-% 0
-bf(m)=b(m)*sin(m*x)
-% 0
-
-abf(m)=af(m)+bf(m)
-% -(cos(m*x)*(4*(-1)^m - 4))/(m^2*pi)
+[a0,a(m),b(m),abf(m)]=fourierseries(f)
 
 fplot(f(x),[-pi1 pi1]);
 grid on
@@ -62,3 +40,22 @@ ft'
 % [ 3,  8/(9*pi), 0,  (8*cos(3*x))/(9*pi)]
 % [ 4,         0, 0,                    0]
 % [ 5, 8/(25*pi), 0, (8*cos(5*x))/(25*pi)]
+
+function [a0,a,b,abf]=fourierseries(f)
+syms x real
+syms m integer
+
+a0=int(f(x),x,-pi,pi)/pi;
+
+a(m)=int(f(x)*cos(m*x),x,-pi,pi)/pi;
+a(m)=simplify(subs(a(m),[sin(pi*m),sin((pi*m)/2)^2,cos(pi*m)],...
+    [0,(1-(-1)^m)/2,(-1)^m]));
+af(m)=a(m)*cos(m*x);
+
+b(m)=int(f(x)*sin(m*x),x,-pi,pi)/pi;
+b(m)=simplify(subs(b(m),[sin(pi*m),sin((pi*m)/2)^2,cos(pi*m)],...
+    [0,(1-(-1)^m)/2,(-1)^m]));
+bf(m)=b(m)*sin(m*x);
+
+abf(m)=af(m)+bf(m);
+end
