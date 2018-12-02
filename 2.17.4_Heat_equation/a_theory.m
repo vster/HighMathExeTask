@@ -45,7 +45,7 @@
 % boundary condition
 % u(0,t)=phi(t)
 % u(x,t)=1/(2*a*sqrt(pi*t))*int(0:inf)f(ksi)*
-%     [exp(-(ksi-x)^2/(4*a^2*t)*exp(-(ksi+x)^2/(4*a^2*t)]d_ksi+
+%     [exp(-(ksi-x)^2/(4*a^2*t)-exp(-(ksi+x)^2/(4*a^2*t)]d_ksi+
 % +1/(2*a*sqrt(pi*t))*int(0:t)phi(eta)*exp(-x^2/(4*a^2*(t-eta)))*
 %   *(t-eta)^(-3/2)d_eta
 

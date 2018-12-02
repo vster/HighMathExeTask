@@ -5,7 +5,6 @@
 % boundary condition
 % u(x=0)=0
 
-
 syms t x ksi u0
 u=1/(2*sqrt(pi*t))*int(u0*(exp(-(ksi-x)^2/(4*t))-...
         exp(-(ksi+x)^2/(4*t))),ksi,0,+inf)
