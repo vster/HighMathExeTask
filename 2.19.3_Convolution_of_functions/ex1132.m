@@ -1,5 +1,5 @@
 clear
-syms t p real
+syms t p
 f1(t)=t
 f2(t)=cos(t)
 

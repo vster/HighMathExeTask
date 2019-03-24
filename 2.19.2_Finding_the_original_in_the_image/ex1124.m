@@ -1,5 +1,5 @@
 clear
-syms t p real
+syms t p
 F=1/(p*(p^2+1)*(p^2+4))
 
 f=ilaplace(F,p,t)

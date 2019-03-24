@@ -1,5 +1,5 @@
 clear
-syms t p a b real
+syms t p a b
 f=t*cosh(b*t)
 
 F=int(exp(-p*t)*f,t,0,inf)

@@ -1,5 +1,5 @@
 clear
-syms t p real
+syms t p
 F=p^2/(p^2+1)^2
 
 f=ilaplace(F,p,t)

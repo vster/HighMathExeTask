@@ -1,5 +1,5 @@
 clear
-syms t p real
+syms t p
 f=cos(t)^3
 
 F=int(exp(-p*t)*f,t,0,inf)

@@ -1,5 +1,5 @@
 clear
-syms t p a k real
+syms t p a k
 assume(k>0)
 F=1/(p^k+a^k)
 

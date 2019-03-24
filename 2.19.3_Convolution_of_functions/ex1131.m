@@ -2,7 +2,7 @@
 % if y0=1 and Y(p) -> y(t)
 
 clear 
-syms t p real
+syms t p
 syms y(t) Y(p)
 y0=1
 

@@ -1,5 +1,8 @@
 clear 
 syms t p
+syms n integer
+assume(n>0)
+syms alfa beta
 
 f=1
 F=laplace(f,t,p)
@@ -7,29 +10,24 @@ F=laplace(f,t,p)
 f1=ilaplace(F,p,t)
 % 1
 
-syms n integer
-assume(n>0)
 f=t^n/factorial(n)
 F=laplace(f,t,p)
 % gamma(n + 1)/(p^(n + 1)*factorial(n))
 f1=ilaplace(F,p,t)
 % t^n/factorial(n)
 
-syms alfa
 f=exp(alfa*t)
 F=laplace(f,t,p)
 % -1/(alfa - p)
 f1=ilaplace(F,p,t)
 % exp(alfa*t)
 
-syms beta
 f=cos(beta*t)
 F=laplace(f,t,p)
 % p/(beta^2 + p^2)
 f1=ilaplace(F,p,t)
 % cos(beta*t)
 
-syms beta
 f=sin(beta*t)
 F=laplace(f,t,p)
 % beta/(beta^2 + p^2)

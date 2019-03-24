@@ -1,5 +1,5 @@
 clear
-syms t p real
+syms t p
 F=1/(p*(1+p^4))
 
 f=ilaplace(F,p,t)

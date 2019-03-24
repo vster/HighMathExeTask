@@ -1,5 +1,5 @@
 clear
-syms t p real
+syms t p
 F=p/((p-1)^3*(p+2)^2)
 
 f=ilaplace(F,p,t)

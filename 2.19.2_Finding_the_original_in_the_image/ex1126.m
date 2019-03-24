@@ -1,5 +1,5 @@
 clear
-syms t p real
+syms t p
 F=(p+3)/(p*(p^2-4*p+3))
 
 f=ilaplace(F,p,t)

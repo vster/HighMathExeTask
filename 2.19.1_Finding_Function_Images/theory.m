@@ -1,4 +1,4 @@
-syms t p alfa beta real
+syms t p alfa beta
 assume(p>0)
 syms n integer
 

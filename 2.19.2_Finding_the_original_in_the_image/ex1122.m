@@ -1,5 +1,5 @@
 clear
-syms t p real
+syms t p
 F=(p+1)/(p*(p-1)*(p-2)*(p-3))
 
 f=ilaplace(F,p,t)

@@ -2,7 +2,7 @@
 % if y0=0, y(t) <- Y(p)
 
 clear
-syms t p real
+syms t p
 syms y(t) Y(p)
 % y(t) <- Y(p)
 y0=0

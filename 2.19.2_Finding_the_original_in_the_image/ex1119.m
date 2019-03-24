@@ -1,5 +1,5 @@
 clear
-syms t p real
+syms t p
 F=p/(p^2-2*p+5)
 
 f=ilaplace(F,p,t)

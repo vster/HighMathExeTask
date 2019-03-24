@@ -1,5 +1,5 @@
 clear
-syms t p a real
+syms t p a
 assume(a>0)
 f=exp(t*log(a))
 
