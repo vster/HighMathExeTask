@@ -10,13 +10,13 @@ y0=0
 dy0=0
 
 % y'(t) <-
-Y1(p)=p*Y(p)-y0
+D1Y(p)=p*Y(p)-y0
 % p*Y(p)
 
 % y"(t) <-
-Y2(p)=p^2*Y(p)-p*y0-dy0
+D2Y(p)=p^2*Y(p)-p*y0-dy0
 % p^2*Y(p)
 
 % y"(t)-y'(t)-y(t) <-
-Y2(p)-Y1(p)-Y(p)
+D2Y(p)-D1Y(p)-Y(p)
 % p^2*Y(p) - p*Y(p) - Y(p)
