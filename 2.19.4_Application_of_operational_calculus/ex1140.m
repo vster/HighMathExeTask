@@ -14,3 +14,6 @@ Y=solve(eq3==0,Y)
 
 y=ilaplace(Y,p,t)
 % 1
+
+y2=opercalc(eq1,0,0)
+% 1
