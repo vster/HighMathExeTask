@@ -17,5 +17,5 @@ Y=solve(eq3==0,Y)
 y=ilaplace(Y,p,t)
 % 0
 
-y2=opercalc(eq1,0,0)
+y2=opercalc(eq1,y0,dy0)
 % 0
