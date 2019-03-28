@@ -15,6 +15,8 @@ Y=solve(eq3==0,Y)
 
 y=ilaplace(Y,p,t)
 % exp(t)/2 - exp(-t)/2
+% sinh(t)
 
 y2=opercalc(eq1,y0,0)
 % exp(t)/2 - exp(-t)/2
+% sinh(t)
