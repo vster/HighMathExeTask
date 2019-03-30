@@ -13,10 +13,15 @@ eq3=subs(eq2,[laplace(y(t),t,p) y(0) subs(diff(y(t),t))],[Y y0 0])
 Y=solve(eq3==0,Y)
 % 1/(p^2 - 1)
 
-y=ilaplace(Y,p,t)
+y1=ilaplace(Y,p,t)
 % exp(t)/2 - exp(-t)/2
 % sinh(t)
 
 y2=opercalc(eq1,y0,0)
+% exp(t)/2 - exp(-t)/2
+% sinh(t)
+
+cond=([y(0) == y0])
+y3=dsolve(eq1,cond)
 % exp(t)/2 - exp(-t)/2
 % sinh(t)

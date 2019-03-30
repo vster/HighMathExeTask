@@ -11,7 +11,7 @@ eq3=Y-1/p-Y/p
 Y=solve(eq3==0,Y)
 % 1/(p - 1)
 
-y=ilaplace(Y,p,t)
+y1=ilaplace(Y,p,t)
 % exp(t)
 
 y2=opercalc(eq1,0,0)

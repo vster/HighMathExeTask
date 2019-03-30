@@ -14,8 +14,12 @@ eq3=subs(eq2,[laplace(y(t),t,p) y(0) subs(diff(y(t),t))],[Y y0 dy0])
 Y=solve(eq3==0,Y)
 % -(p^2 - 2)/(p^3 - 3*p + 2)
 
-y=ilaplace(Y,p,t)
+y1=ilaplace(Y,p,t)
 % (t*exp(t))/3 - (7*exp(t))/9 - (2*exp(-2*t))/9
 
 y2=opercalc(eq1,y0,dy0)
+% (t*exp(t))/3 - (7*exp(t))/9 - (2*exp(-2*t))/9
+
+cond=([ y(0) == y0, subs(diff(y(t), t), t, 0) == dy0])
+y3=dsolve(eq1,cond)
 % (t*exp(t))/3 - (7*exp(t))/9 - (2*exp(-2*t))/9

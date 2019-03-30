@@ -14,8 +14,12 @@ eq3=subs(eq2,[laplace(y(t),t,p) y(0) subs(diff(y(t),t))],[Y y0 dy0])
 Y=solve(eq3==0,Y)
 % 0
 
-y=ilaplace(Y,p,t)
+y1=ilaplace(Y,p,t)
 % 0
 
 y2=opercalc(eq1,y0,dy0)
+% 0
+
+cond=([ y(0) == y0, subs(diff(y(t), t), t, 0) == dy0])
+y3=dsolve(eq1,cond)
 % 0
