@@ -8,7 +8,7 @@ dy0=0
 eq2=laplace(eq1,t,p)
 % p*laplace(y(t), t, p) - y(0) - 1/(p - 1) - p*y(0) + p^2*laplace(y(t), t, p) - subs(diff(y(t), t), t, 0) - 2*laplace(y(t), t, p)
 
-eq3=subs(eq2,[laplace(y(t),t,p) y(0) subs(diff(y(t),t))],[Y y0 dy0])
+eq3=subs(eq2,[laplace(y(t),t,p) y(0) subs(diff(y(t), t), t, 0)],[Y y0 dy0])
 % p - 2*Y + Y*p - 1/(p - 1) + Y*p^2 + 1
 
 Y=solve(eq3==0,Y)
