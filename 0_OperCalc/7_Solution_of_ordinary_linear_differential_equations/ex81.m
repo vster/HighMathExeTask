@@ -4,6 +4,7 @@ syms x(t) X
 eq1=diff(x,t,2)-4*diff(x,t)+5*x
 x0=0
 dx0=1
+d2x0=0
 
 eq2=laplace(eq1,t,p)
 % 4*x(0) - 4*p*laplace(x(t), t, p) - p*x(0) + p^2*laplace(x(t), t, p) - subs(diff(x(t), t), t, 0) + 5*laplace(x(t), t, p)
@@ -14,9 +15,9 @@ X=solve(eq3==0,X)
 x1=ilaplace(X,p,t)
 % exp(2*t)*sin(t)
 
-x2=opercalc(eq1,x0,dx0)
+x2=opercalc(eq1,x0,dx0,d2x0)
 % exp(2*t)*sin(t)
 
-cond=([x(0)==0,subs(diff(x(t), t), t, 0)==dx0])
+cond=([x(0)==x0,subs(diff(x(t), t), t, 0)==dx0])
 x3=dsolve(eq1,cond)
 % exp(2*t)*sin(t)
