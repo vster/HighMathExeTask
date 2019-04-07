@@ -28,3 +28,4 @@ U2=u0/p*sinh(sqrt(p/a)*x)/sinh(sqrt(p/a)*h)
 
 u2=ilaplace(U2,p,t)
 % u0*ilaplace(sinh(x*(p/a)^(1/2))/(p*sinh(h*(p/a)^(1/2))), p, t)
+% ... - ?

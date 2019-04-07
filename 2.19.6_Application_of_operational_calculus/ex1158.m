@@ -6,6 +6,7 @@
 clear
 syms t x p u0
 syms a real
+assume(a>0)
 assume(x>0)
 assume(t>0)
 syms u(x,t)
@@ -26,4 +27,15 @@ U1=dsolve(eq3)
 U1=u0/p*exp(-(p^(1/2)*x)/a)
 u1=ilaplace(U1,p,t)
 % u0*ilaplace(exp(-(p^(1/2)*x)/a)/p, p, t)
-  
+
+u3=u0*Erf(x/(2*a*t^(1/2)))  % correct answer
+
+% Checking
+U3=laplace(u3,t,p)
+% (u0*exp(-(p^(1/2)*x)/a))/p
+simplify(U1-U3)
+% 0
+
+function E=Erf(x)
+E=1-erf(x)
+end
