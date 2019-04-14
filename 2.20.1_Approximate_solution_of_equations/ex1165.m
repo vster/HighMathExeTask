@@ -23,16 +23,32 @@ x3=vpa(x2-f(x2)/df(x2))
 % 1.64293
 
 err=0.0001
-x=1.7;
+b=1.7;
 for j=1:10
-    xa(j)=vpa(x-f(x)/df(x))
-    ya(j)=vpa(f(x))
-    if (abs(xa(j)-x)<err)
+    c=vpa(b-f(b)/df(b)) 
+    xa(j)=c
+    ya(j)=vpa(f(c))    
+    if (abs(b-c)<err)
         break;
     end
-    x=xa(j);
+    b=c
 end
 % xa =
 % [ 1.64606, 1.64294, 1.64293]
 % ya =
 % [ 0.9521, 0.0493874, 0.000157837]
+
+b=1.8
+xsol=solvetangent(f,b,err)
+% 1.64293
+
+function c=solvetangent(f,b,err)
+df=diff(f);
+for j=1:10
+    c=vpa(b-f(b)/df(b)) ;
+    if (abs(b-c)<err)
+        break;
+    end
+    b=c;
+end
+end
