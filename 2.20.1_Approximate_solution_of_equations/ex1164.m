@@ -27,17 +27,32 @@ x4=x3-(b-x2)*f(x3)/(f(b)-f(x3))
 f(x4)
 
 err=0.0001
-x=a
 for j=1:10
-    x1=vpa(a-(b-a)*f(a)/(f(b)-f(a)))
-    xa(j)=x1
-    ya(j)=f(x1)
-    if (abs(x1-a)<err)
+    c=vpa(a-(b-a)*f(a)/(f(b)-f(a)))
+    xa(j)=c
+    ya(j)=f(c)
+    if (abs(c-a)<err)
         break;
     end
-    a=x1;
+    a=c;
 end
 % xa =
 % [ 1.58803, 1.63972, 1.64275, 1.64292, 1.64293]
 % ya =
 % [ -0.816418, -0.050453, -0.00287442, -0.000162987, -0.00000923925]
+
+a=1
+b=2
+err=0.0001
+digits(6)
+xsol=solvechord(f,a,b,err)
+
+function c=solvechord(g,a,b,err)
+for j=1:20
+    c=vpa(a-(b-a)*g(a)/(g(b)-g(a)));
+    if (abs(c-a)<err)
+        break;
+    end
+    a=c;
+end
+end
