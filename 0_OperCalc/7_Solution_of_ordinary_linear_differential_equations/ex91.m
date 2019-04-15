@@ -25,3 +25,6 @@ cond=([x(0)==x0,subs(diff(x(t), t), t, 0)==dx0,subs(diff(x(t),t,t), t, 0)==d2x0]
 x3=dsolve(eq1,cond)
 x3=simplify(x3)
 % 
+
+adx0=[0 1 0]
+x4=opercalc2(eq1,adx0)

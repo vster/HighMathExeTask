@@ -23,5 +23,9 @@ x3=dsolve(eq1,cond)
 x3=simplify(x3)
 % (exp(-t)*(c1*sin(3*t) + c2*sin(3*t) + t*sin(3*t) + 3*c1*cos(3*t)))/3
 
+adx0=[c1 c2 0]
+x4=opercalc2(eq1,adx0)
+% c1*exp(-t)*(cos(3*t) + sin(3*t)*((2*c1 + c2)/(3*c1) - 1/3)) + (t*sin(3*t)*exp(-t))/3
+
 simplify(x2-x3)
 % 0

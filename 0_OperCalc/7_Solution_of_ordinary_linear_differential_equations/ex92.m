@@ -24,3 +24,8 @@ cond=([x(0)==x0,subs(diff(x(t), t), t, 0)==dx0,subs(diff(x(t),t,t), t, 0)==d2x0]
 x3=dsolve(eq1,cond)
 x3=simplify(x3)
 % exp(2*t)/10 + (2*cos(t))/5 - sin(t)/5 - 1/2
+
+adx0=[0 0 0]
+x4=opercalc2(eq1,adx0)
+% exp(2*t)/10 + (2*cos(t))/5 - sin(t)/5 - 1/2
+

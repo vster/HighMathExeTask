@@ -21,3 +21,7 @@ x2=opercalc(eq1,x0,dx0,d2x0)
 cond=([x(0)==x0,subs(diff(x(t), t), t, 0)==dx0])
 x3=dsolve(eq1,cond)
 % exp(-t)/16 - exp(3*t)/16 + (t*exp(3*t))/4
+
+adx0=[0 0 0]
+x4=opercalc2(eq1,adx0)
+% exp(-t)/16 - exp(3*t)/16 + (t*exp(3*t))/4

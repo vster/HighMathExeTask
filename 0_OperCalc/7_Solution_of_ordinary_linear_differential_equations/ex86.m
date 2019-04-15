@@ -21,3 +21,7 @@ x2=opercalc(eq1,x0,dx0,d2x0)
 cond=([x(0)==x0])
 x3=dsolve(eq1,cond)
 % exp(2*t)
+
+adx0=[1 0 0]
+x4=opercalc2(eq1,adx0)
+% exp(2*t)

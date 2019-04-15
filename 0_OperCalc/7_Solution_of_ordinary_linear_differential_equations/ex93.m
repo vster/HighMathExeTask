@@ -20,4 +20,6 @@ x1=ilaplace(X,p,t)
 x2=opercalc(eq1,x0,dx0,d2x0)
 % exp(t)
 
-
+adx0=[1 1 1]
+x4=opercalc2(eq1,adx0)
+% exp(t)

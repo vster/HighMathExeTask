@@ -22,3 +22,7 @@ x2=opercalc(eq1,x0,dx0,d2x0)
 cond=([x(0)==x0,subs(diff(x(t), t), t, 0)==dx0,subs(diff(x(t),t,t), t, 0)]==d2x0)
 x3=dsolve(eq1,cond)
 % t/4 - sin(2*t)/8
+
+adx0=[0 0 0]
+x4=opercalc2(eq1,adx0)
+% t/4 - sin(2*t)/8
