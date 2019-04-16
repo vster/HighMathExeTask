@@ -25,3 +25,9 @@ cond=([y(0) == y0])
 y3=dsolve(eq1,cond)
 % exp(t)/2 - exp(-t)/2
 % sinh(t)
+
+ady0=[y0]
+y3=opercalc2(eq1,ady0)
+% exp(t)/2 - exp(-t)/2
+y3=rewrite(y3,'sinh')
+% sinh(t)

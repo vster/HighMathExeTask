@@ -26,3 +26,9 @@ x1=ilaplace(X,p,t)
 % (8*exp(3*t))/3 - 2*exp(-t) - 2/3
 y1=ilaplace(Y,p,t)
 % 2*exp(-t) + (8*exp(3*t))/3 + 1/3
+
+[x2 y2]=opercalcsys(eq1,eq2,x0,y0)
+% x2 =
+% (8*exp(3*t))/3 - 2*exp(-t) - 2/3
+% y2 =
+% 2*exp(-t) + (8*exp(3*t))/3 + 1/3

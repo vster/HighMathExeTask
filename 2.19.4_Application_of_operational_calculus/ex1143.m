@@ -23,3 +23,6 @@ cond=([y(0) == y0])
 y3=dsolve(eq1,cond)
 % exp(2*t)
 
+ady0=[y0]
+y3=opercalc2(eq1,ady0)
+% exp(2*t)

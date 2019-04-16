@@ -23,3 +23,7 @@ cond=([ y(0) == y0, subs(diff(y(t), t), t, 0) == dy0,...
        subs(diff(y(t), t, 2), t, 0) == d2y0])
 y3=dsolve(eq1,cond)
 % 4*exp(2*t) - (3*exp(3*t))/2 - (5*exp(t))/2
+
+ady0=[y0 dy0 d2y0]
+y3=opercalc2(eq1,ady0)
+% 4*exp(2*t) - (3*exp(3*t))/2 - (5*exp(t))/2

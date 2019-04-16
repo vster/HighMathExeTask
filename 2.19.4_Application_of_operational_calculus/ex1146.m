@@ -23,3 +23,7 @@ y2=opercalc(eq1,y0,dy0)
 cond=([ y(0) == y0, subs(diff(y(t), t), t, 0) == dy0])
 y3=dsolve(eq1,cond)
 % (t*exp(t))/3 - (7*exp(t))/9 - (2*exp(-2*t))/9
+
+ady0=[y0 dy0]
+y3=opercalc2(eq1,ady0)
+% (t*exp(t))/3 - (7*exp(t))/9 - (2*exp(-2*t))/9

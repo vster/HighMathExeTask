@@ -16,3 +16,7 @@ y1=ilaplace(Y,p,t)
 
 y2=opercalc(eq1,0,0)
 % exp(t)
+
+ady0=[0 0]
+y3=opercalc2(eq1,ady0)
+% exp(t)

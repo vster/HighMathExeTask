@@ -33,3 +33,9 @@ cond=([x(0)==2,y(0)==2])
 % 2*exp(2*t)
 % y2 =
 % 2*exp(2*t)
+
+[x3 y3]=opercalcsys(eq11,eq12,x0,y0)
+% x3 =
+% 2*exp(2*t)
+% y3 =
+% 2*exp(2*t)
