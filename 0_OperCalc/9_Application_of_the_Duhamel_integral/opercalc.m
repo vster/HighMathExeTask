@@ -1,4 +1,4 @@
-function x=opercalc2(eq,adx0)
+function x=opercalc(eq,adx0)
 syms t p x(t) X
 len=length(adx0);
 

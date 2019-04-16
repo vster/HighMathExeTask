@@ -11,5 +11,5 @@ x3=simplify(x3)
 % t^2/2 - exp(-t) - t + 1
 
 adx0=[x0 dx0]
-x4=opercalc2(eq1,adx0)
+x4=opercalc(eq1,adx0)
 % t^2/2 - exp(-t) - t + 1
