@@ -26,7 +26,7 @@ x4=x3-(b-x2)*f(x3)/(f(b)-f(x3))
 % 1.6429
 f(x4)
 
-err=0.0001
+err=0.01
 for j=1:10
     c=vpa(a-(b-a)*f(a)/(f(b)-f(a)))
     xa(j)=c
@@ -43,9 +43,21 @@ end
 
 a=1
 b=2
-err=0.0001
+err=0.01
 digits(6)
 xsol=solvechord(f,a,b,err)
+
+xc=vpa(solve(f))
+xc2=xc(2)
+% 1.64293
+
+d1f(x)=diff(f)
+% 4*x^3 - 2
+d2f(x)=diff(f,x,2)
+% 12*x^2
+
+xl=a:(b-a)/10:b;
+-(f(a)*f(b)/2)*max(abs(vpa(d2f(xl)./(d1f(xl).^3))))
 
 function c=solvechord(g,a,b,err)
 for j=1:20
