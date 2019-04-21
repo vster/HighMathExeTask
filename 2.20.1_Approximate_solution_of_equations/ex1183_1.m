@@ -27,3 +27,9 @@ ksi1=vpa(x0-b0*D0/D(1))   % 1.732352941
 ksi2=vpa(x0-b0*D(1)/D(2)) % 1.732047986
 ksi3=vpa(x0-b0*D(2)/D(3)) % 1.732050834
 ksi4=vpa(x0-b0*D(3)/D(4)) % 1.732050807
+
+for k=1:4
+    ksi(k)=solvecheb(f,x0,k)
+end
+
+

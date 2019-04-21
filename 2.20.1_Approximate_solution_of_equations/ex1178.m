@@ -22,3 +22,8 @@ x3=solvetan(f,a,b,err)
 x4=solvechordtan(f,a,b,err)
 % -0.567078
 
+for k=1:4
+    ksi1(k)=solvecheb(f,-0.5,k);
+end
+ksi1
+% [ -0.566311, -0.567152, -0.567143, -0.567143]

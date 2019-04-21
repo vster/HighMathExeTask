@@ -17,3 +17,9 @@ x3=solvetan(f,a,b,err)
 % 0.513544
 x4=solvechordtan(f,a,b,err)
 % 0.513534
+
+for k=1:4
+    ksi1(k)=solvecheb(f,0.5,k);
+end
+ksi1
+% [ 0.513514, 0.513543, 0.513544, 0.513544]
