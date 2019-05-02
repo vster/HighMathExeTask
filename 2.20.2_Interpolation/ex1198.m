@@ -8,7 +8,6 @@ DY=zeros(n-1,n-1)
 x=2.03
 h=0.1
 
-
 for k=1:n-1
     DY(k,1)=Y(k+1)-Y(k)
 end
