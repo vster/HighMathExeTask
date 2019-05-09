@@ -20,6 +20,7 @@ S=pi*a*b
 I=S/3*(f(1)+2*f(1/2)+2*f(1)+4*f(1/2))
 % ?
 
-I2=a*b*int(int(ro*f,ro,0,1),phi,0,2*pi)
-% (12*pi)/5
+I2=vpa(a*b*int(int(ro*f,ro,0,1),phi,0,2*pi))
+% (12*pi)/5 =7.53982
+
 
