@@ -3,14 +3,15 @@ clear
 % y(1)=1
 % y(e)=2
 
-syms x y dy
-F=x*dy^2-2*dy
-% dF/dy'=
-dFdy=diff(F,dy)
-% 2*dy*x - 2 = C1
+% y'=yd=dy/dx
+syms x y yd
+F=x*yd^2-2*yd
+% dF/dyd=
+dFdyd=diff(F,yd)
+% 2*yd*x - 2 = C1
 syms C1
-dy=(C1+2)/(2*x)
-y=int(dy,x)
+yd=(C1+2)/(2*x)
+y=int(yd,x)
 % log(x)*(C1/2 + 1)+C2
 
 syms x y C1 C2 e
