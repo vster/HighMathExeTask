@@ -13,6 +13,7 @@ yd=(C1+2)/(2*x)
 y1=int(yd,x)
 y1=y1+C2
 % C2 + log(x)*(C1/2 + 1)
+
 eq1=y-y1
 % y - log(x)*(C1/2 + 1)
 eq2=subs(eq1,[x y],[1 1])

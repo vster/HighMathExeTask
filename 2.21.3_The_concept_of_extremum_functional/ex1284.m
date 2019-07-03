@@ -13,17 +13,19 @@ F2yd=diff(F,yd,2)
 
 % Euler equation
 % F2yd*y''=0 => 2*y''=0
-syms x C1 C2
-y=C1*x+C2
-syms y x
-eq1=y-(C1*x+C2)
+syms C1 C2
+y1=C1*x+C2
+
+eq1=y-y1
+% y - C2 - C1*x
 eq2=subs(eq1,[x y],[0 1])
 % 1 - C2
 eq3=subs(eq1,[x y],[1 2])
 % 2 - C2 - C1
-[C1 C2]=solve([eq2 eq3],[C1 C2])
-% C1 =
+[C11 C21]=solve([eq2 eq3],[C1 C2])
+% C11 =
 % 1
-% C2 =
+% C21 =
 % 1
-y=x+1
+y=subs(y1,[C1 C2],[C11 C21])
+% x + 1
