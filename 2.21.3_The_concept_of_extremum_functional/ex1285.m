@@ -4,27 +4,27 @@ clear
 % y(e)=2
 
 % y'=yd=dy/dx
-syms x y yd
+syms x y yd C1 C2 e
 F=x*yd^2-2*yd
 % dF/dyd=
 dFdyd=diff(F,yd)
 % 2*yd*x - 2 = C1
-syms C1
 yd=(C1+2)/(2*x)
-y=int(yd,x)
-% log(x)*(C1/2 + 1)+C2
-
-syms x y C1 C2 e
-eq1=y-(log(x)*(C1/2 + 1)+C2)
+y1=int(yd,x)
+y1=y1+C2
+% C2 + log(x)*(C1/2 + 1)
+eq1=y-y1
+% y - log(x)*(C1/2 + 1)
 eq2=subs(eq1,[x y],[1 1])
 % 1 - C2
 eq3=subs(eq1,[x y],[e 2])
 % 2 - log(e)*(C1/2 + 1) - C2
 eq3=subs(eq3,log(e),1)
 % 1 - C2 - C1/2
-[C1 C2]=solve([eq2 eq3],[C1 C2])
-% C1 =
+[C11 C21]=solve([eq2 eq3],[C1 C2])
+% C11 =
 % 0
-% C2 =
+% C21 =
 % 1
-y=log(x)+1
+y1=subs(y1,[C1 C2],[C11 C21])
+% log(x) + 1
