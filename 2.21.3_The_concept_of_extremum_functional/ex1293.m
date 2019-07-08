@@ -27,3 +27,11 @@ eq3=subs(eq1,[x y],[1 1/4])
 % 1
 y1=expand(subs(y1,[C1 C2],[C11 C21]))
 % x^2/4 - x + 1
+
+% 2)
+syms x y(x)
+eq10=diff(x-2*diff(y))
+cond=[y(0)==1,y(1)==1/4]
+y2=dsolve(eq10,cond)
+y2=expand(y2)
+% x^2/4 - x + 1

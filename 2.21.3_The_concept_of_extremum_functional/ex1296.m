@@ -14,6 +14,8 @@ eq1=diff(p*yd,x)-q*y-f
 % 2*exp(-x)*yd(x) - exp(-x)*y(x) - 2*exp(-x)*diff(yd(x), x)
 eq1=simplify(eq1/exp(-x))
 % 2*yd(x) - y(x) - 2*diff(yd(x), x)
+
+% 1)
 eq2=2*diff(y)-y-2*diff(y,x,2)
 y1=dsolve(eq2)
 % C4*cos(x/2)*exp(x/2) + C5*sin(x/2)*exp(x/2)
@@ -32,4 +34,11 @@ eq5=subs(eq3,[x y],[3*pi/2 exp(3*pi/4)])
 % C21 =
 % 2^(1/2)
 y=subs(y1,[C1 C2],[C11 C21])
+% 2^(1/2)*sin(x/2)*exp(x/2)
+
+% 2)
+syms x y(x)
+eq2=2*diff(y)-y-2*diff(y,x,2)
+cond=[y(0)==0,y(3*pi/2)==exp(3*pi/4)]
+y2=dsolve(eq2,cond)
 % 2^(1/2)*sin(x/2)*exp(x/2)

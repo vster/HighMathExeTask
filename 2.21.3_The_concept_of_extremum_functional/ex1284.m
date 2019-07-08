@@ -11,6 +11,7 @@ Fyd=diff(F,yd)
 F2yd=diff(F,yd,2)
 % 2
 
+% 1)
 % Euler equation
 % F2yd*y''=0 => 2*y''=0
 syms C1 C2
@@ -28,4 +29,11 @@ eq3=subs(eq1,[x y],[1 2])
 % C21 =
 % 1
 y=subs(y1,[C1 C2],[C11 C21])
+% x + 1
+
+% 2)
+syms x y(x)
+eq10=diff(y,x,2)
+cond=[y(0)==1 y(1)==2]
+y2=dsolve(eq10,cond)
 % x + 1

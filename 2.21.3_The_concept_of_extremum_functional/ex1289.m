@@ -11,6 +11,8 @@ eq1=diff(p*yd,x)-q*y-f
 % exp(-x)*diff(yd(x), x) - 2*y*exp(-x) - exp(-x) - exp(-x)*yd(x)
 eq1=simplify(eq1/exp(-x))
 % diff(yd(x), x) - yd(x) - 2*y(x) - 1
+
+% 1)
 eq2=diff(y,x,2)-diff(y,x)-2*y-1
 ySol=dsolve(eq2)
 % C9*exp(2*x) + C10*exp(-x) - 1/2
@@ -29,4 +31,11 @@ eq5=subs(eq3,[x y],[log(sym(2)) 0])
 % C21 =
 % 3/7
 y=subs(y1,[C1 C2],[C11 C21])
+% (3*exp(-x))/7 + exp(2*x)/14 - 1/2
+
+% 2)
+syms x y(x)
+eq2=diff(y,x,2)-diff(y,x)-2*y-1
+cond=[y(0)==0,y(log(sym(2)))==0]
+y2=dsolve(eq2,cond)
 % (3*exp(-x))/7 + exp(2*x)/14 - 1/2
