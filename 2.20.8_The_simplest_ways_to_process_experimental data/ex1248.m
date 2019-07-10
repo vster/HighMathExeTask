@@ -6,11 +6,15 @@ eq=u-(a0+a1*x)
 eq1=subs(eq,[x u],[X(1) U(1)])
 eq2=subs(eq,[x u],[X(8) U(8)])
 [a0 a1]=solve([eq1 eq2])
-u=a0+a1*x
+u(x)=a0+a1*x
 % 32 - (3*x)/2
-D=a1*X+a0-U
+U2=u(X)
+% [ 32, 29, 23, 20, 17, 11, 8, 2]
+D=U2-U
 % [ 0, -1/5, -3/10, 1/10, -1/5, -3/10, 1/5, 0]
 SD=vpa(sum(D))
 % -0.7
 SD2=vpa(sum(D.^2))
 % 0.31
+plot(X,U,'o',X,U2)
+grid

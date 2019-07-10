@@ -36,11 +36,8 @@ phi(x)=a0*x^2+a1*x+a2
 Y2=phi(X)
 % [ 7.4762, 8.3429, 8.9857, 9.4048, 9.6, 9.5714, 9.319]
 
-plot(X,Y)
-hold on
-plot(X,Y2)
-grid on
-hold off
+plot(X,Y,'o',X,Y2)
+grid
 
 
 
