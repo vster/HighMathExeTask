@@ -38,8 +38,5 @@ phi(t)=approxpwr(T,S)
 S3=phi(T)
 % [ 5.7219, 22.354, 49.606, 87.329, 135.42]
 
-plot(T,S)
-hold on
-plot(T,S2)
+plot(T,S,'o',T,S2)
 grid
-hold off

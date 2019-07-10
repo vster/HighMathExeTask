@@ -9,8 +9,5 @@ syms x
 phi2(x)=approxlin(X,Y)
 Y2=phi2(X)
 
-plot(X,Y)
-hold on
-plot(X,Y2)
-grid on
-hold off
+plot(X,Y,'o',X,Y2)
+grid

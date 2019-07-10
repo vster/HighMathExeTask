@@ -39,8 +39,5 @@ S3=phi(T)
 D=S-S3
 % [ 1.1593, -0.97931, -0.93661, 0.8063]
 
-plot(T,S)
-hold on
-plot(T,S2)
+plot(T,S,'o',T,S2)
 grid
-hold off

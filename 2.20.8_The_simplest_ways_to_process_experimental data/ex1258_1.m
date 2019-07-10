@@ -35,9 +35,7 @@ phi2(x)=approxlin(X,Y)
 % 3.0229*x - 1.08
 Y3=phi2(X)
 
-plot(X,Y)
-hold on
-plot(X,Y2)
-grid on
-hold off
+plot(X,Y,'o',X,Y2)
+grid
+
 

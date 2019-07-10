@@ -35,8 +35,5 @@ A=10^lgA
 S2=A*exp(c*T)
 % [ 1285.5, 641.42, 320.05, 159.7, 79.686, 39.761, 19.84]
 
-plot(T,S)
-hold on
-plot(T,S2)
+plot(T,S,'o',T,S2)
 grid
-hold off

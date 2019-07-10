@@ -43,13 +43,8 @@ phi3(x)=approxsqr(X,Y)
 % - 0.14762*x^2 + 3.3881*x - 13.171
 Y3=phi3(X)
 
-
-plot(X,Y)
-hold on
-plot(X,Y2)
-grid on
-hold off
-
+plot(X,Y,'o',X,Y2)
+grid
 
 
 

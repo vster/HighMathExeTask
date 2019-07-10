@@ -11,8 +11,5 @@ Y2=phi(X)
 D=Y-Y2
 % [ -0.0020773, 0.0013457, 0.0039336, -0.0043137, 0.0011117]
 
-plot(X,Y)
-hold on
-plot(X,Y2)
-grid on
-hold off
+plot(X,Y,'o',X,Y2)
+grid
