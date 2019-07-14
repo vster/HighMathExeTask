@@ -1,0 +1,6 @@
+syms lam
+A=[lam 5*lam -lam;...
+    2*lam lam 10*lam;...
+    -lam -2*lam -3*lam]
+ra=rank(A)
+% 2
