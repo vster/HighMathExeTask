@@ -1,3 +1,4 @@
+clear
 % f=x^2*sin(x*y/2)/y
 % x^2=pi*y/3
 % x^2=2*pi*y/3
