@@ -1,0 +1,90 @@
+% This LaTeX was auto-generated from MATLAB code.
+% To make changes, update the MATLAB code and export to LaTeX again.
+
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{epstopdf}
+\usepackage{matlab}
+
+\sloppy
+\epstopdfsetup{outdir=./}
+\graphicspath{ {./ex516_images/} }
+
+\begin{document}
+
+\begin{matlabcode}
+% Solve equation
+% log(cos(y))dx+x*tan(y)dy=0
+% dx/x+tan(y)*dy/log(cos(y))=0
+
+% 1)
+syms x y;
+eq1=int(1/x,x)+int(tan(y)/log(cos(y)),y)
+\end{matlabcode}
+\begin{matlabsymbolicoutput}
+eq1 = 
+    $\displaystyle \log \left(x\right)-\log \left(\log \left(\cos \left(y\right)\right)\right)$
+\end{matlabsymbolicoutput}
+\begin{matlabcode}
+% log(log(cos(y))) = log(x) + log(C)
+% log(cos(y))=C*x
+% y=acos(exp(C*x))
+
+% 2)
+% log(cos(y))dx+x*tan(y)dy=0
+% dy/dx = -log(cos(y))/(x*tan(y))
+syms x y(x);
+eqn = diff(y(x)) == -log(cos(y))/(x*tan(y))
+\end{matlabcode}
+\begin{matlabsymbolicoutput}
+eqn(x) = 
+    $\displaystyle \frac{\partial }{\partial x}\text{ }y\left(x\right)=-\frac{\log \left(\cos \left(y\left(x\right)\right)\right)}{x \tan \left(y\left(x\right)\right)}$
+\end{matlabsymbolicoutput}
+\begin{matlabcode}
+ySol(x) = dsolve(eqn)
+\end{matlabcode}
+\begin{matlabsymbolicoutput}
+ySol(x) = 
+    $\displaystyle \left\lbrace \begin{array}{cl}
+\text{acos}\left(e^{x e^{-C_{13} } } \right) & \text{ if  }e^{x e^{-C_{13} } } \in \left\lbrack -1,1\right\rbrack 
+\end{array}\right.$
+\end{matlabsymbolicoutput}
+\begin{matlabcode}
+% acos(exp(C5*x))
+
+% Checking
+syms C5;
+ySol=acos(exp(C5*x))
+\end{matlabcode}
+\begin{matlabsymbolicoutput}
+ySol = 
+    $\displaystyle \text{acos}\left(e^{C_5  x} \right)$
+\end{matlabsymbolicoutput}
+\begin{matlabcode}
+eq5=diff(y,x)+log(cos(y))/(x*tan(y))
+\end{matlabcode}
+\begin{matlabsymbolicoutput}
+eq5(x) = 
+    $\displaystyle \frac{\partial }{\partial x}\text{ }y\left(x\right)+\frac{\log \left(\cos \left(y\left(x\right)\right)\right)}{x \tan \left(y\left(x\right)\right)}$
+\end{matlabsymbolicoutput}
+\begin{matlabcode}
+eq6=simplify(subs(eq5,y,ySol))
+\end{matlabcode}
+\begin{matlabsymbolicoutput}
+eq6(x) = 
+    $\displaystyle \frac{e^{C_5  x}  {\left(\log \left(e^{C_5  x} \right)-C_5  x\right)}}{x \sqrt{1-e^{2 C_5  x} }}$
+\end{matlabsymbolicoutput}
+\begin{matlabcode}
+% ?
+\end{matlabcode}
+
+\end{document}

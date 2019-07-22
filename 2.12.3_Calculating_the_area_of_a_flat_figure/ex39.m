@@ -1,3 +1,4 @@
+clear
 syms x y a;
 eq1=(x^2+y^2)^2-2*a^2*x*y
 

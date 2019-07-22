@@ -1,3 +1,4 @@
+clear
 syms x y;
 % x=y^2-2*y
 % x+y=0
