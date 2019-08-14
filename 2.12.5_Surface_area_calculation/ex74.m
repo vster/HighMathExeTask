@@ -12,7 +12,9 @@ fs=simplify(fs)
 % ((2*x^2)/(x^2 - y^2))^(1/2)
 
 syms ro teta;
-fs=subs(fs,[x y],[ro*cos(teta) ro*sin(teta)])
+x1=ro*cos(teta)
+y1=ro*sin(teta)
+fs=subs(fs,[x y],[x1 y1])
 fs=simplify(fs)
 
 S1=int(fs*ro,ro,0,1)
