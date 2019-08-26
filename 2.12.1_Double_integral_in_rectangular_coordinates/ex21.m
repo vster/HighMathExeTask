@@ -1,4 +1,4 @@
-syms x y;
+syms x y f(x,y);
 I=int(int(f,y,(1-x^2)/2,sqrt(1-x^2)),x,0,1)
 
 y1=(1-x^2)/2
