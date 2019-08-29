@@ -1,8 +1,8 @@
 % Calculate the area of a figure bounded by given lines
 % y=-x^2, x+y+2=0
 syms x y;
-f1=-x^2
-f2=-x-2
+y1=-x^2
+y2=-x-2
 
 ezplot(y1)
 hold on
