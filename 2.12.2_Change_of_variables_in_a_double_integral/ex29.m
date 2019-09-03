@@ -7,12 +7,12 @@ clear
 
 % x*y=u
 % x^2/y=v
-syms u v;
-syms x y;
-slv=solve(x*y==u*v,x^2/y==v)
-x1=slv.x(1)
+syms u v real;
+syms x y real;
+slv=solve([x*y==u,x^2/y==v],[x,y])
+x1=slv.x(2)
 % (u^2*v)^(2/3)/u
-y1=slv.y(1)
+y1=slv.y(2)
 % (u^2*v)^(1/3)
 
 % Jacobian
