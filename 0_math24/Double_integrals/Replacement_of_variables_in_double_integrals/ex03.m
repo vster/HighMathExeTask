@@ -13,14 +13,14 @@
 % y^2=3*x => y^2/x=3 => u=3
 % x*y=1 => v=1
 % x*y=2 => v=2
-
+clear
 syms u v;
 syms x y;
-slv=solve(u==y^2/x,v==x*y)
-x=slv.x(1)
-% (u*v)^(2/3)/u
-y=slv.y(1)
-% (u*v)^(1/3)
+% slv=solve(u==y^2/x,v==x*y,[x y])
+% x=slv.x(1)
+x=(u*v)^(2/3)/u
+% y=slv.y(1)
+y=(u*v)^(1/3)
 
 % Находим якобиан
 J=det([diff(x,u),diff(x,v);diff(y,u),diff(y,v)])
